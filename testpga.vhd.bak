@@ -1,0 +1,56 @@
+use IEEE.numeric_std.all;
+	
+architecture test of de0_nano_soc_baseline is
+		procedure bcd_inc (variable rh : inout integer range 0 to 10;
+						 variable lh : inout integer range 0 to 10;
+						 signal led : out std_logic_vector(7 downto 0)) is
+		begin
+				rh := rh + 1;
+				if rh = 10 then
+					lh := lh + 1;
+					rh := 0;
+				end if;
+				if lh = 10 then
+					lh := 0;
+				end if;
+		end bcd_inc;
+		procedure bcd_disp (variable rh : inout integer range 0 to 10;
+						 variable lh : inout integer range 0 to 10;
+						 signal led : out std_logic_vector(7 downto 0)) is
+		begin
+				led <= std_logic_vector(shift_left(to_unsigned(lh, 8), 4)) or std_logic_vector(to_unsigned(rh, 8));
+		end bcd_disp;
+		procedure ctr_inc (variable ctr : inout integer range 0 to 255) is
+		begin
+			ctr := ctr + 1;
+		end ctr_inc;
+		procedure ctr_disp (variable ctr : inout integer range 0 to 255;
+								  signal led : out std_logic_vector(7 downto 0)) is
+		begin
+			led <= std_logic_vector(to_unsigned(ctr, 8));
+		end ctr_disp;
+begin
+	process(FPGA_CLK_50)
+			variable lh : integer range 0 to 10 := 0;
+			variable rh : integer range 0 to 10 := 0;
+			variable a : integer range 0 to 25000000 := 0;
+			variable ctr : integer range 0 to 255 := 0;
+	begin
+		if rising_edge(FPGA_CLK_50) then
+			if a = 25000000 then
+				if sw(0) = '1' then
+					bcd_disp(rh, lh, led);
+			   else 
+					ctr_disp(ctr, led);
+				end if;
+				if KEY(1) = '0' then
+					bcd_inc(rh, lh, led);
+					ctr_inc(ctr);
+				end if;
+			end if;
+		end if;
+		if rising_edge(FPGA_CLK_50) then
+			a := a + 1;
+		end if;
+	end process;
+end test;

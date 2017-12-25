@@ -1,0 +1,132 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+library reflib;
+use reflib.types.all;
+
+entity r32 is 
+		port(
+			clk : in std_logic;
+			rval : in std_logic_vector(31 downto 0);
+			rout : out std_logic_vector(31 downto 0);
+			enable : in std_logic
+		);
+end r32;
+
+architecture register32 of r32 is 
+begin
+		process(clk)
+	   begin 
+			if rising_edge(clk) then
+				if enable = '1' then
+					rout <= rval;
+				end if;
+			end if;
+		end process;
+end register32;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+package types is
+	type reginarray is array (0 to 15) of std_logic_vector(31 downto 0);
+	type regoutarray is array (0 to 15) of std_logic_vector(31 downto 0);
+	type regclrarray is array (0 to 15) of std_logic;
+end types;
+library work;
+use work.types.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity regbank32 is
+	port(
+		clk : in std_logic;
+		enable : in std_logic;
+   	regp1 : in std_logic_vector(3 downto 0);
+		regp2 : in std_logic_vector(3 downto 0);
+		regp3 : in std_logic_vector(3 downto 0);
+		rval : in std_logic_vector(31 downto 0);
+		rout : in std_logic_vector(31 downto 0);
+		rout2 : in std_logic_vector(31 downto 0);
+		regin : in reginarray;
+		regout : out regoutarray;
+		regclr : in regclrarray
+	);
+end regbank32;	
+
+architecture bank of regbank32 is
+	component register32 is
+		port(
+			clk : in std_logic;
+			rval : in std_logic_vector(31 downto 0);
+			rout : out std_logic_vector(31 downto 0);
+			enable : in std_logic
+		);
+	end component;
+begin
+	r32_gen:
+	for i in 0 to 15 generate
+		registers : register32 port map
+			(clk, regin(i), regout(i), regclr(i));
+	end generate r32_gen;
+	process (clk)
+	begin
+		
+	end process;
+end bank;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+architecture test of de0_nano_soc_baseline is
+		procedure bcd_inc (variable rh : inout integer range 0 to 10;
+						 variable lh : inout integer range 0 to 10;
+						 signal led : out std_logic_vector(7 downto 0)) is
+		begin
+				rh := rh + 1;
+				if rh = 10 then
+					lh := lh + 1;
+					rh := 0;
+				end if;
+				if lh = 10 then
+					lh := 0;
+				end if;
+		end bcd_inc;
+		procedure bcd_disp (variable rh : inout integer range 0 to 10;
+						 variable lh : inout integer range 0 to 10;
+						 signal led : out std_logic_vector(7 downto 0)) is
+		begin
+				led <= std_logic_vector(shift_left(to_unsigned(lh, 8), 4)) or std_logic_vector(to_unsigned(rh, 8));
+		end bcd_disp;
+		procedure ctr_inc (variable ctr : inout integer range 0 to 255) is
+		begin
+			ctr := ctr + 1;
+		end ctr_inc;
+		procedure ctr_disp (variable ctr : inout integer range 0 to 255;
+								  signal led : out std_logic_vector(7 downto 0)) is
+		begin
+			led <= std_logic_vector(to_unsigned(ctr, 8));
+		end ctr_disp;
+begin
+	process(FPGA_CLK_50)
+			variable lh : integer range 0 to 10 := 0;
+			variable rh : integer range 0 to 10 := 0;
+			variable a : integer range 0 to 25000000 := 0;
+			variable ctr : integer range 0 to 255 := 0;
+	begin
+		if rising_edge(FPGA_CLK_50) then
+			if a = 25000000 then
+				if sw(0) = '1' then
+					bcd_disp(rh, lh, led);
+			   else 
+					ctr_disp(ctr, led);
+				end if;
+				if KEY(1) = '0' then
+					bcd_inc(rh, lh, led);
+					ctr_inc(ctr);
+				end if;
+			end if;
+		end if;
+		if rising_edge(FPGA_CLK_50) then
+			a := a + 1;
+		end if;
+	end process;
+end test;

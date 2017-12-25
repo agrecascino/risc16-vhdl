@@ -1,0 +1,587 @@
+EDA Netlist Writer report for testpga
+Sat Dec 23 15:07:11 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. Board-Level Settings
+  6. Board-Level Generated Files
+  7. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                                    ;
++---------------------------------------+---------------------------------------+
+; EDA Netlist Writer Status             ; Successful - Sat Dec 23 15:07:11 2017 ;
+; Revision Name                         ; testpga                               ;
+; Top-level Entity Name                 ; de0_nano_soc_baseline                 ;
+; Family                                ; Cyclone V                             ;
+; Simulation Files Creation             ; Successful                            ;
+; Board Signal Integrity Files Creation ; Successful                            ;
+; Board Timing Analysis Files Creation  ; Successful                            ;
+; Board Boundary Scan Files Creation    ; Successful                            ;
++---------------------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate functional simulation netlist                                                            ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++-----------------------------------------------+
+; Simulation Generated Files                    ;
++-----------------------------------------------+
+; Generated Files                               ;
++-----------------------------------------------+
+; /root/fpgamess/simulation/modelsim/testpga.vo ;
++-----------------------------------------------+
+
+
++-----------------------------------------+
+; Board-Level Settings                    ;
++-------------------------------+---------+
+; Option                        ; Setting ;
++-------------------------------+---------+
+; Board Signal Integrity Format ; HSPICE  ;
+; Board Timing Analysis Format  ; STAMP   ;
+; Board Boundary Scan Format    ; BSDL    ;
++-------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Board-Level Generated Files                                                                         ;
++-----------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                     ;
++-----------------------------------------------------------------------------------------------------+
+; Board Signal Integrity                                                                              ;
+;     /root/fpgamess/board/hspice/5csema4_c12_fpga_clk2_50_in.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_aa13_fpga_clk3_50_in.sp                                     ;
+;     /root/fpgamess/board/hspice/5csema4_u9_adc_convst_out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_v10_adc_sclk_out.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_ac4_adc_sdi_out.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_ad4_adc_sdo_in.sp                                           ;
+;     /root/fpgamess/board/hspice/5csema4_ah17_key_0__in.sp                                           ;
+;     /root/fpgamess/board/hspice/5csema4_ah16_key_1__in.sp                                           ;
+;     /root/fpgamess/board/hspice/5csema4_w15_led_0__out.sp                                           ;
+;     /root/fpgamess/board/hspice/5csema4_aa24_led_1__out.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_v16_led_2__out.sp                                           ;
+;     /root/fpgamess/board/hspice/5csema4_v15_led_3__out.sp                                           ;
+;     /root/fpgamess/board/hspice/5csema4_af26_led_4__out.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_ae26_led_5__out.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_y16_led_6__out.sp                                           ;
+;     /root/fpgamess/board/hspice/5csema4_aa23_led_7__out.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_l10_sw_0__in.sp                                             ;
+;     /root/fpgamess/board/hspice/5csema4_l9_sw_1__in.sp                                              ;
+;     /root/fpgamess/board/hspice/5csema4_h6_sw_2__in.sp                                              ;
+;     /root/fpgamess/board/hspice/5csema4_h5_sw_3__in.sp                                              ;
+;     /root/fpgamess/board/hspice/5csema4_ag13_arduino_io_0__in.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_ag13_arduino_io_0__out.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_af13_arduino_io_1__in.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_af13_arduino_io_1__out.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ag10_arduino_io_2__in.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_ag10_arduino_io_2__out.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ag9_arduino_io_3__in.sp                                     ;
+;     /root/fpgamess/board/hspice/5csema4_ag9_arduino_io_3__out.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_u14_arduino_io_4__in.sp                                     ;
+;     /root/fpgamess/board/hspice/5csema4_u14_arduino_io_4__out.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_u13_arduino_io_5__in.sp                                     ;
+;     /root/fpgamess/board/hspice/5csema4_u13_arduino_io_5__out.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_ag8_arduino_io_6__in.sp                                     ;
+;     /root/fpgamess/board/hspice/5csema4_ag8_arduino_io_6__out.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_ah8_arduino_io_7__in.sp                                     ;
+;     /root/fpgamess/board/hspice/5csema4_ah8_arduino_io_7__out.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_af17_arduino_io_8__in.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_af17_arduino_io_8__out.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ae15_arduino_io_9__in.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_ae15_arduino_io_9__out.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_af15_arduino_io_10__in.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_af15_arduino_io_10__out.sp                                  ;
+;     /root/fpgamess/board/hspice/5csema4_ag16_arduino_io_11__in.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ag16_arduino_io_11__out.sp                                  ;
+;     /root/fpgamess/board/hspice/5csema4_ah11_arduino_io_12__in.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ah11_arduino_io_12__out.sp                                  ;
+;     /root/fpgamess/board/hspice/5csema4_ah12_arduino_io_13__in.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ah12_arduino_io_13__out.sp                                  ;
+;     /root/fpgamess/board/hspice/5csema4_ah9_arduino_io_14__in.sp                                    ;
+;     /root/fpgamess/board/hspice/5csema4_ah9_arduino_io_14__out.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ag11_arduino_io_15__in.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ag11_arduino_io_15__out.sp                                  ;
+;     /root/fpgamess/board/hspice/5csema4_ah7_arduino_reset_n_in.sp                                   ;
+;     /root/fpgamess/board/hspice/5csema4_ah7_arduino_reset_n_out.sp                                  ;
+;     /root/fpgamess/board/hspice/5csema4_v12_gpio_0_0__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_v12_gpio_0_0__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af7_gpio_0_1__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_af7_gpio_0_1__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_w12_gpio_0_2__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_w12_gpio_0_2__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af8_gpio_0_3__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_af8_gpio_0_3__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_y8_gpio_0_4__in.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_y8_gpio_0_4__out.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_ab4_gpio_0_5__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_ab4_gpio_0_5__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_w8_gpio_0_6__in.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_w8_gpio_0_6__out.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_y4_gpio_0_7__in.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_y4_gpio_0_7__out.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_y5_gpio_0_8__in.sp                                          ;
+;     /root/fpgamess/board/hspice/5csema4_y5_gpio_0_8__out.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_u11_gpio_0_9__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_u11_gpio_0_9__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_t8_gpio_0_10__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_t8_gpio_0_10__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_t12_gpio_0_11__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_t12_gpio_0_11__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah5_gpio_0_12__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ah5_gpio_0_12__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah6_gpio_0_13__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ah6_gpio_0_13__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah4_gpio_0_14__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ah4_gpio_0_14__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag5_gpio_0_15__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ag5_gpio_0_15__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah3_gpio_0_16__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ah3_gpio_0_16__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah2_gpio_0_17__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ah2_gpio_0_17__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af4_gpio_0_18__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af4_gpio_0_18__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag6_gpio_0_19__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ag6_gpio_0_19__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af5_gpio_0_20__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af5_gpio_0_20__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae4_gpio_0_21__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ae4_gpio_0_21__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_t13_gpio_0_22__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_t13_gpio_0_22__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_t11_gpio_0_23__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_t11_gpio_0_23__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae7_gpio_0_24__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ae7_gpio_0_24__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af6_gpio_0_25__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af6_gpio_0_25__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af9_gpio_0_26__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af9_gpio_0_26__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae8_gpio_0_27__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ae8_gpio_0_27__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad10_gpio_0_28__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad10_gpio_0_28__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ae9_gpio_0_29__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ae9_gpio_0_29__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad11_gpio_0_30__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad11_gpio_0_30__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_af10_gpio_0_31__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af10_gpio_0_31__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ad12_gpio_0_32__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad12_gpio_0_32__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ae11_gpio_0_33__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae11_gpio_0_33__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_af11_gpio_0_34__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af11_gpio_0_34__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ae12_gpio_0_35__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae12_gpio_0_35__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_y15_gpio_1_0__in.sp                                         ;
+;     /root/fpgamess/board/hspice/5csema4_y15_gpio_1_0__out.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ag28_gpio_1_1__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ag28_gpio_1_1__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_aa15_gpio_1_2__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_aa15_gpio_1_2__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah27_gpio_1_3__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ah27_gpio_1_3__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag26_gpio_1_4__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ag26_gpio_1_4__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah24_gpio_1_5__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ah24_gpio_1_5__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af23_gpio_1_6__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af23_gpio_1_6__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae22_gpio_1_7__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ae22_gpio_1_7__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af21_gpio_1_8__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_af21_gpio_1_8__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag20_gpio_1_9__in.sp                                        ;
+;     /root/fpgamess/board/hspice/5csema4_ag20_gpio_1_9__out.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag19_gpio_1_10__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag19_gpio_1_10__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_af20_gpio_1_11__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af20_gpio_1_11__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ac23_gpio_1_12__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ac23_gpio_1_12__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ag18_gpio_1_13__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag18_gpio_1_13__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ah26_gpio_1_14__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah26_gpio_1_14__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_aa19_gpio_1_15__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_aa19_gpio_1_15__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ag24_gpio_1_16__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag24_gpio_1_16__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_af25_gpio_1_17__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af25_gpio_1_17__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ah23_gpio_1_18__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah23_gpio_1_18__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ag23_gpio_1_19__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag23_gpio_1_19__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ae19_gpio_1_20__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae19_gpio_1_20__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_af18_gpio_1_21__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af18_gpio_1_21__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ad19_gpio_1_22__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad19_gpio_1_22__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ae20_gpio_1_23__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae20_gpio_1_23__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ae24_gpio_1_24__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae24_gpio_1_24__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ad20_gpio_1_25__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad20_gpio_1_25__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_af22_gpio_1_26__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_af22_gpio_1_26__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ah22_gpio_1_27__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah22_gpio_1_27__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ah19_gpio_1_28__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah19_gpio_1_28__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ah21_gpio_1_29__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah21_gpio_1_29__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ag21_gpio_1_30__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ag21_gpio_1_30__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ah18_gpio_1_31__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ah18_gpio_1_31__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ad23_gpio_1_32__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ad23_gpio_1_32__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ae23_gpio_1_33__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ae23_gpio_1_33__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_aa18_gpio_1_34__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_aa18_gpio_1_34__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_ac22_gpio_1_35__in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_ac22_gpio_1_35__out.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_v11_fpga_clk_50_in.sp                                       ;
+;     /root/fpgamess/board/hspice/lib/io_octrt_calibrated.lib                                         ;
+;     /root/fpgamess/board/hspice/lib/output_delay_control.lib                                        ;
+;     /root/fpgamess/board/hspice/lib/lvds_vod_select.lib                                             ;
+;     /root/fpgamess/board/hspice/lib/lvds_preemphasis_select.lib                                     ;
+;     /root/fpgamess/board/hspice/lib/slew_rate_control.lib                                           ;
+;     /root/fpgamess/board/hspice/lib/drive_select_io.lib                                             ;
+;     /root/fpgamess/board/hspice/lib/cv_ss.inc                                                       ;
+;     /root/fpgamess/board/hspice/cir/lvds_input_load.inc                                             ;
+;     /root/fpgamess/board/hspice/lib/cv_tt.inc                                                       ;
+;     /root/fpgamess/board/hspice/cir/io_buffer_octrt.inc                                             ;
+;     /root/fpgamess/board/hspice/cir/lvds_oct_load.inc                                               ;
+;     /root/fpgamess/board/hspice/cir/lvds_oct_rd.inc                                                 ;
+;     /root/fpgamess/board/hspice/lib/io_octrs_calibrated.lib                                         ;
+;     /root/fpgamess/board/hspice/cir/lvds_output.inc                                                 ;
+;     /root/fpgamess/board/hspice/lib/io_load.lib                                                     ;
+;     /root/fpgamess/board/hspice/cir/lvds_output_load.inc                                            ;
+;     /root/fpgamess/board/hspice/cir/io_buffer.inc                                                   ;
+;     /root/fpgamess/board/hspice/lib/package.lib                                                     ;
+;     /root/fpgamess/board/hspice/cir/io_buffer_load.inc                                              ;
+;     /root/fpgamess/board/hspice/cir/io_buffer_octrs.inc                                             ;
+;     /root/fpgamess/board/hspice/lib/cv_ff.inc                                                       ;
+; Board Timing Analysis                                                                               ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_6_1100mv_85c_board_slow.mod    ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_6_1100mv_85c_board_slow.data   ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_6_1100mv_0c_board_slow.mod     ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_6_1100mv_0c_board_slow.data    ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_min_1100mv_0c_board_fast.mod   ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_min_1100mv_0c_board_fast.data  ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_min_1100mv_85c_board_fast.mod  ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_min_1100mv_85c_board_fast.data ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_board.mod                      ;
+;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_board.data                     ;
+; Board Boundary Scan                                                                                 ;
+;     /root/fpgamess/board/bsd/5CSEMA4U23C6_pre.bsd                                                   ;
++-----------------------------------------------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Sat Dec 23 15:07:08 2017
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off testpga -c testpga
+Warning (125092): Tcl Script File ddr3.sip not found
+    Info (125063): set_global_assignment -name SIP_FILE ddr3.sip
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
+Info (204019): Generated file testpga.vo in folder "/root/fpgamess/simulation/modelsim/" for EDA simulation tool
+Info (199047): Generated files "/root/fpgamess/timing/stamp//testpga_6_1100mv_85c_board_slow.mod" and "/root/fpgamess/timing/stamp//testpga_6_1100mv_85c_board_slow.data"
+Info (199047): Generated files "/root/fpgamess/timing/stamp//testpga_6_1100mv_0c_board_slow.mod" and "/root/fpgamess/timing/stamp//testpga_6_1100mv_0c_board_slow.data"
+Info (199047): Generated files "/root/fpgamess/timing/stamp//testpga_min_1100mv_0c_board_fast.mod" and "/root/fpgamess/timing/stamp//testpga_min_1100mv_0c_board_fast.data"
+Info (199047): Generated files "/root/fpgamess/timing/stamp//testpga_min_1100mv_85c_board_fast.mod" and "/root/fpgamess/timing/stamp//testpga_min_1100mv_85c_board_fast.data"
+Info (199047): Generated files "/root/fpgamess/timing/stamp//testpga_board.mod" and "/root/fpgamess/timing/stamp//testpga_board.data"
+Warning (199059): Can't generate files for ViewDraw EDA tool -- device family not supported in ViewDraw Flow
+Info (199053): Generated 220 HSPICE Output files for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_c12_fpga_clk2_50_in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa13_fpga_clk3_50_in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u9_adc_convst_out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v10_adc_sclk_out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac4_adc_sdi_out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad4_adc_sdo_in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah17_key_0__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah16_key_1__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_w15_led_0__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa24_led_1__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v16_led_2__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v15_led_3__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af26_led_4__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae26_led_5__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y16_led_6__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa23_led_7__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_l10_sw_0__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_l9_sw_1__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_h6_sw_2__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_h5_sw_3__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag13_arduino_io_0__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag13_arduino_io_0__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af13_arduino_io_1__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af13_arduino_io_1__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag10_arduino_io_2__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag10_arduino_io_2__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag9_arduino_io_3__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag9_arduino_io_3__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u14_arduino_io_4__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u14_arduino_io_4__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u13_arduino_io_5__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u13_arduino_io_5__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag8_arduino_io_6__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag8_arduino_io_6__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah8_arduino_io_7__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah8_arduino_io_7__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af17_arduino_io_8__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af17_arduino_io_8__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae15_arduino_io_9__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae15_arduino_io_9__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af15_arduino_io_10__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af15_arduino_io_10__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag16_arduino_io_11__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag16_arduino_io_11__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah11_arduino_io_12__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah11_arduino_io_12__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah12_arduino_io_13__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah12_arduino_io_13__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah9_arduino_io_14__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah9_arduino_io_14__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag11_arduino_io_15__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag11_arduino_io_15__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah7_arduino_reset_n_in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah7_arduino_reset_n_out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v12_gpio_0_0__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v12_gpio_0_0__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af7_gpio_0_1__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af7_gpio_0_1__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_w12_gpio_0_2__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_w12_gpio_0_2__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af8_gpio_0_3__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af8_gpio_0_3__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y8_gpio_0_4__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y8_gpio_0_4__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ab4_gpio_0_5__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ab4_gpio_0_5__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_w8_gpio_0_6__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_w8_gpio_0_6__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y4_gpio_0_7__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y4_gpio_0_7__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y5_gpio_0_8__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y5_gpio_0_8__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u11_gpio_0_9__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u11_gpio_0_9__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t8_gpio_0_10__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t8_gpio_0_10__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t12_gpio_0_11__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t12_gpio_0_11__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah5_gpio_0_12__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah5_gpio_0_12__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah6_gpio_0_13__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah6_gpio_0_13__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah4_gpio_0_14__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah4_gpio_0_14__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag5_gpio_0_15__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag5_gpio_0_15__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah3_gpio_0_16__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah3_gpio_0_16__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah2_gpio_0_17__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah2_gpio_0_17__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af4_gpio_0_18__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af4_gpio_0_18__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag6_gpio_0_19__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag6_gpio_0_19__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af5_gpio_0_20__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af5_gpio_0_20__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae4_gpio_0_21__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae4_gpio_0_21__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t13_gpio_0_22__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t13_gpio_0_22__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t11_gpio_0_23__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_t11_gpio_0_23__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae7_gpio_0_24__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae7_gpio_0_24__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af6_gpio_0_25__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af6_gpio_0_25__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af9_gpio_0_26__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af9_gpio_0_26__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae8_gpio_0_27__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae8_gpio_0_27__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad10_gpio_0_28__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad10_gpio_0_28__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae9_gpio_0_29__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae9_gpio_0_29__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad11_gpio_0_30__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad11_gpio_0_30__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af10_gpio_0_31__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af10_gpio_0_31__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad12_gpio_0_32__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad12_gpio_0_32__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae11_gpio_0_33__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae11_gpio_0_33__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af11_gpio_0_34__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af11_gpio_0_34__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae12_gpio_0_35__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae12_gpio_0_35__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y15_gpio_1_0__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y15_gpio_1_0__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag28_gpio_1_1__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag28_gpio_1_1__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa15_gpio_1_2__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa15_gpio_1_2__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah27_gpio_1_3__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah27_gpio_1_3__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag26_gpio_1_4__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag26_gpio_1_4__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah24_gpio_1_5__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah24_gpio_1_5__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af23_gpio_1_6__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af23_gpio_1_6__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae22_gpio_1_7__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae22_gpio_1_7__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af21_gpio_1_8__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af21_gpio_1_8__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag20_gpio_1_9__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag20_gpio_1_9__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag19_gpio_1_10__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag19_gpio_1_10__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af20_gpio_1_11__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af20_gpio_1_11__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac23_gpio_1_12__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac23_gpio_1_12__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag18_gpio_1_13__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag18_gpio_1_13__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah26_gpio_1_14__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah26_gpio_1_14__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa19_gpio_1_15__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa19_gpio_1_15__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag24_gpio_1_16__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag24_gpio_1_16__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af25_gpio_1_17__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af25_gpio_1_17__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah23_gpio_1_18__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah23_gpio_1_18__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag23_gpio_1_19__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag23_gpio_1_19__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae19_gpio_1_20__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae19_gpio_1_20__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af18_gpio_1_21__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af18_gpio_1_21__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad19_gpio_1_22__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad19_gpio_1_22__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae20_gpio_1_23__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae20_gpio_1_23__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae24_gpio_1_24__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae24_gpio_1_24__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad20_gpio_1_25__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad20_gpio_1_25__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af22_gpio_1_26__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_af22_gpio_1_26__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah22_gpio_1_27__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah22_gpio_1_27__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah19_gpio_1_28__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah19_gpio_1_28__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah21_gpio_1_29__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah21_gpio_1_29__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag21_gpio_1_30__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ag21_gpio_1_30__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah18_gpio_1_31__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ah18_gpio_1_31__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad23_gpio_1_32__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ad23_gpio_1_32__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae23_gpio_1_33__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ae23_gpio_1_33__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa18_gpio_1_34__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_aa18_gpio_1_34__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac22_gpio_1_35__in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac22_gpio_1_35__out.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v11_fpga_clk_50_in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_octrt_calibrated.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/output_delay_control.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/lvds_vod_select.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/lvds_preemphasis_select.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/slew_rate_control.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/drive_select_io.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_ss.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_input_load.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_tt.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer_octrt.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_oct_load.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_oct_rd.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_octrs_calibrated.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_output.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_load.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_output_load.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/package.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer_load.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer_octrs.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_ff.inc for board level analysis
+Info: TOTAL BSCAN REGISTERS IS 399
+Info: TOTAL IO PAD COUNT IS 379
+Info: CYCLONE_V_5CSEMA4U23 has 333 JTAG SEQUENCE AVAILABLE
+Info (199065): Generated Boundary-Scan Description Language output file /root/fpgamess/board/bsd/5CSEMA4U23C6_pre.bsd for board-level analysis
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 1159 megabytes
+    Info: Processing ended: Sat Dec 23 15:07:11 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

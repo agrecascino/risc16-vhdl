@@ -1,0 +1,1664 @@
+Analysis & Synthesis report for testpga
+Sat Dec 23 15:06:21 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "alu32:a32"
+ 12. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:15:registers"
+ 13. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:14:registers"
+ 14. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:13:registers"
+ 15. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:12:registers"
+ 16. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:11:registers"
+ 17. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:10:registers"
+ 18. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:9:registers"
+ 19. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:8:registers"
+ 20. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:7:registers"
+ 21. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:6:registers"
+ 22. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:5:registers"
+ 23. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:4:registers"
+ 24. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:3:registers"
+ 25. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:2:registers"
+ 26. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:1:registers"
+ 27. Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:0:registers"
+ 28. Port Connectivity Checks: "regbank32:b32"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Dec 23 15:06:21 2017       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                   ; testpga                                     ;
+; Top-level Entity Name           ; de0_nano_soc_baseline                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 202                                         ;
+; Total pins                      ; 110                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                ;
++---------------------------------------------------------------------------------+-----------------------+--------------------+
+; Option                                                                          ; Setting               ; Default Value      ;
++---------------------------------------------------------------------------------+-----------------------+--------------------+
+; Device                                                                          ; 5CSEMA4U23C6          ;                    ;
+; Top-level entity name                                                           ; de0_nano_soc_baseline ; testpga            ;
+; Family name                                                                     ; Cyclone V             ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                   ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                    ; On                 ;
+; Enable compact report table                                                     ; Off                   ; Off                ;
+; Restructure Multiplexers                                                        ; Auto                  ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                   ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                   ; Off                ;
+; Preserve fewer node names                                                       ; On                    ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable                ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001          ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993             ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto                  ; Auto               ;
+; Safe State Machine                                                              ; Off                   ; Off                ;
+; Extract Verilog State Machines                                                  ; On                    ; On                 ;
+; Extract VHDL State Machines                                                     ; On                    ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                   ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000                  ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                   ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                    ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                    ; On                 ;
+; Parallel Synthesis                                                              ; On                    ; On                 ;
+; DSP Block Balancing                                                             ; Auto                  ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                    ; On                 ;
+; Power-Up Don't Care                                                             ; On                    ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                   ; Off                ;
+; Remove Duplicate Registers                                                      ; On                    ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                   ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                   ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                   ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                   ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                   ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                    ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                   ; Off                ;
+; Optimization Technique                                                          ; Balanced              ; Balanced           ;
+; Carry Chain Length                                                              ; 70                    ; 70                 ;
+; Auto Carry Chains                                                               ; On                    ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                    ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                   ; Off                ;
+; Auto ROM Replacement                                                            ; On                    ; On                 ;
+; Auto RAM Replacement                                                            ; On                    ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                    ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto                  ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                  ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                    ; On                 ;
+; Strict RAM Replacement                                                          ; Off                   ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                    ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                   ; Off                ;
+; Auto Resource Sharing                                                           ; Off                   ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                   ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                   ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                   ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                    ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                   ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                    ; On                 ;
+; Report Parameter Settings                                                       ; On                    ; On                 ;
+; Report Source Assignments                                                       ; On                    ; On                 ;
+; Report Connectivity Checks                                                      ; On                    ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                   ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                     ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation    ; Normal compilation ;
+; HDL message level                                                               ; Level2                ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                   ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                  ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                  ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                   ; 100                ;
+; Clock MUX Protection                                                            ; On                    ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                   ; Off                ;
+; Block Design Naming                                                             ; Auto                  ; Auto               ;
+; SDC constraint protection                                                       ; Off                   ; Off                ;
+; Synthesis Effort                                                                ; Auto                  ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                    ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                   ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium                ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                  ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                    ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                    ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                   ; Off                ;
++---------------------------------------------------------------------------------+-----------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+-----------------------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+-----------------------------+-------------------------------------------+---------+
+; typelib.vhd                      ; yes             ; User VHDL File              ; /root/fpgamess/typelib.vhd                ;         ;
+; pipeline.vhd                     ; yes             ; User VHDL File              ; /root/fpgamess/pipeline.vhd               ;         ;
+; de0_nano_soc_baseline.vhdl       ; yes             ; User VHDL File              ; /root/fpgamess/de0_nano_soc_baseline.vhdl ;         ;
+; rfile.vhd                        ; yes             ; User VHDL File              ; /root/fpgamess/rfile.vhd                  ;         ;
+; register.vhd                     ; yes             ; User VHDL File              ; /root/fpgamess/register.vhd               ;         ;
+; alu.vhd                          ; yes             ; User VHDL File              ; /root/fpgamess/alu.vhd                    ;         ;
+; sprom.vhd                        ; yes             ; User Wizard-Generated File  ; /root/fpgamess/sprom.vhd                  ;         ;
+; dpram.vhd                        ; yes             ; User Wizard-Generated File  ; /root/fpgamess/dpram.vhd                  ;         ;
++----------------------------------+-----------------+-----------------------------+-------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimate of Logic utilization (ALMs needed) ; 101               ;
+;                                             ;                   ;
+; Combinational ALUT usage for logic          ; 32                ;
+;     -- 7 input functions                    ; 0                 ;
+;     -- 6 input functions                    ; 0                 ;
+;     -- 5 input functions                    ; 0                 ;
+;     -- 4 input functions                    ; 0                 ;
+;     -- <=3 input functions                  ; 32                ;
+;                                             ;                   ;
+; Dedicated logic registers                   ; 202               ;
+;                                             ;                   ;
+; I/O pins                                    ; 110               ;
+;                                             ;                   ;
+; Total DSP Blocks                            ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; FPGA_CLK_50~input ;
+; Maximum fan-out                             ; 202               ;
+; Total fan-out                               ; 770               ;
+; Average fan-out                             ; 1.42              ;
++---------------------------------------------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name           ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-----------------------+--------------+
+; |de0_nano_soc_baseline           ; 32 (0)              ; 202 (73)                  ; 0                 ; 0          ; 110  ; 0            ; |de0_nano_soc_baseline                                        ; de0_nano_soc_baseline ; work         ;
+;    |alu32:a32|                   ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|alu32:a32                              ; alu32                 ; work         ;
+;    |regbank32:b32|               ; 0 (0)               ; 97 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|regbank32:b32                          ; regbank32             ; work         ;
+;       |r32:\r32_gen:0:registers| ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|regbank32:b32|r32:\r32_gen:0:registers ; r32                   ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-----------------------------------------------------+----------------------------------------+
+; Register name                                       ; Reason for Removal                     ;
++-----------------------------------------------------+----------------------------------------+
+; aluin2[1..31]                                       ; Stuck at GND due to stuck port data_in ;
+; port1[0..3]                                         ; Stuck at GND due to stuck port data_in ;
+; regbank32:b32|regclr[1..15]                         ; Stuck at GND due to stuck port data_in ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[0..31] ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[0..31] ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[0..31] ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[0..31] ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[0..31] ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[0..31] ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:4:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:3:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:2:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|r32:\r32_gen:1:registers|rout[0..31]  ; Lost fanout                            ;
+; regbank32:b32|regin[15][0]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][1]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][2]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][3]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][4]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][5]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][6]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][7]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][8]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][9]                          ; Lost fanout                            ;
+; regbank32:b32|regin[15][10]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][11]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][12]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][13]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][14]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][15]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][16]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][17]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][18]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][19]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][20]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][21]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][22]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][23]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][24]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][25]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][26]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][27]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][28]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][29]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][30]                         ; Lost fanout                            ;
+; regbank32:b32|regin[15][31]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][0]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][1]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][2]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][3]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][4]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][5]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][6]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][7]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][8]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][9]                          ; Lost fanout                            ;
+; regbank32:b32|regin[14][10]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][11]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][12]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][13]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][14]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][15]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][16]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][17]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][18]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][19]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][20]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][21]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][22]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][23]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][24]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][25]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][26]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][27]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][28]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][29]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][30]                         ; Lost fanout                            ;
+; regbank32:b32|regin[14][31]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][0]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][1]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][2]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][3]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][4]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][5]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][6]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][7]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][8]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][9]                          ; Lost fanout                            ;
+; regbank32:b32|regin[13][10]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][11]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][12]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][13]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][14]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][15]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][16]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][17]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][18]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][19]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][20]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][21]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][22]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][23]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][24]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][25]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][26]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][27]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][28]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][29]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][30]                         ; Lost fanout                            ;
+; regbank32:b32|regin[13][31]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][0]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][1]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][2]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][3]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][4]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][5]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][6]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][7]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][8]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][9]                          ; Lost fanout                            ;
+; regbank32:b32|regin[12][10]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][11]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][12]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][13]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][14]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][15]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][16]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][17]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][18]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][19]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][20]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][21]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][22]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][23]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][24]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][25]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][26]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][27]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][28]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][29]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][30]                         ; Lost fanout                            ;
+; regbank32:b32|regin[12][31]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][0]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][1]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][2]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][3]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][4]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][5]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][6]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][7]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][8]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][9]                          ; Lost fanout                            ;
+; regbank32:b32|regin[11][10]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][11]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][12]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][13]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][14]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][15]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][16]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][17]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][18]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][19]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][20]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][21]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][22]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][23]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][24]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][25]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][26]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][27]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][28]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][29]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][30]                         ; Lost fanout                            ;
+; regbank32:b32|regin[11][31]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][0]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][1]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][2]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][3]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][4]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][5]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][6]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][7]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][8]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][9]                          ; Lost fanout                            ;
+; regbank32:b32|regin[10][10]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][11]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][12]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][13]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][14]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][15]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][16]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][17]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][18]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][19]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][20]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][21]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][22]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][23]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][24]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][25]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][26]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][27]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][28]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][29]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][30]                         ; Lost fanout                            ;
+; regbank32:b32|regin[10][31]                         ; Lost fanout                            ;
+; regbank32:b32|regin[9][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[9][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[9][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[8][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[8][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[7][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[7][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[6][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[6][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[5][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[5][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[4][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[4][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[3][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[3][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[2][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[2][31]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][0]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][1]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][2]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][3]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][4]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][5]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][6]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][7]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][8]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][9]                           ; Lost fanout                            ;
+; regbank32:b32|regin[1][10]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][11]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][12]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][13]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][14]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][15]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][16]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][17]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][18]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][19]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][20]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][21]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][22]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][23]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][24]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][25]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][26]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][27]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][28]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][29]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][30]                          ; Lost fanout                            ;
+; regbank32:b32|regin[1][31]                          ; Lost fanout                            ;
+; enable                                              ; Merged with aluin2[0]                  ;
+; aluin2[0]                                           ; Merged with aluop[0]                   ;
+; Total Number of Removed Registers = 1012            ;                                        ;
++-----------------------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                        ;
++--------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                                    ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++--------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; port1[0]                                         ; Stuck at GND              ; regbank32:b32|r32:\r32_gen:4:registers|rout[0],                                     ;
+;                                                  ; due to stuck port data_in ; regbank32:b32|r32:\r32_gen:4:registers|rout[1],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[2],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[3],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[4],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[5],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[6],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[7],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[8],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[9],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[10],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[11],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[12],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[13],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[14],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[15],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[16],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[17],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[18],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[19],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[20],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[21],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[22],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[23],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[24],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[25],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[26],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[27],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[28],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[29],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[30],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:4:registers|rout[31],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[0],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[1],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[2],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[3],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[4],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[5],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[6],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[7],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[8],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[9],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[10],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[11],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[12],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[13],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[14],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[15],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[16],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[17],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[18],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[19],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[20],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[21],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[22],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[23],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[24],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[25],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[26],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[27],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[28],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[29],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[30],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:3:registers|rout[31],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[0],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[1],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[2],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[3],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[4],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[5],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[6],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[7],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[8],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[9],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[10],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[11],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[12],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[13],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[14],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[15],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[16],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[17],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[18],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[19],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[20],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[21],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[22],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[23],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[24],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[25],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[26],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[27],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[28],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[29],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[30],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:2:registers|rout[31],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[0],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[1],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[2],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[3],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[4],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[5],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[6],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[7],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[8],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[9],                                     ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[10],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[11],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[12],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[13],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[14],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[15],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[16],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[17],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[18],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[19],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[20],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[21],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[22],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[23],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[24],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[25],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[26],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[27],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[28],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[29],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[30],                                    ;
+;                                                  ;                           ; regbank32:b32|r32:\r32_gen:1:registers|rout[31], regbank32:b32|regin[4][0],         ;
+;                                                  ;                           ; regbank32:b32|regin[4][1], regbank32:b32|regin[4][2], regbank32:b32|regin[4][3],    ;
+;                                                  ;                           ; regbank32:b32|regin[4][4], regbank32:b32|regin[4][5], regbank32:b32|regin[4][6],    ;
+;                                                  ;                           ; regbank32:b32|regin[4][7], regbank32:b32|regin[4][8], regbank32:b32|regin[4][9],    ;
+;                                                  ;                           ; regbank32:b32|regin[4][10], regbank32:b32|regin[4][11], regbank32:b32|regin[4][12], ;
+;                                                  ;                           ; regbank32:b32|regin[4][13], regbank32:b32|regin[4][14], regbank32:b32|regin[4][15], ;
+;                                                  ;                           ; regbank32:b32|regin[4][16], regbank32:b32|regin[4][17], regbank32:b32|regin[4][18], ;
+;                                                  ;                           ; regbank32:b32|regin[4][19], regbank32:b32|regin[4][20], regbank32:b32|regin[4][21], ;
+;                                                  ;                           ; regbank32:b32|regin[4][22], regbank32:b32|regin[4][23], regbank32:b32|regin[4][24], ;
+;                                                  ;                           ; regbank32:b32|regin[4][25], regbank32:b32|regin[4][26], regbank32:b32|regin[4][27], ;
+;                                                  ;                           ; regbank32:b32|regin[4][28], regbank32:b32|regin[4][29], regbank32:b32|regin[4][30], ;
+;                                                  ;                           ; regbank32:b32|regin[4][31], regbank32:b32|regin[3][0], regbank32:b32|regin[3][1],   ;
+;                                                  ;                           ; regbank32:b32|regin[3][2], regbank32:b32|regin[3][3], regbank32:b32|regin[3][4],    ;
+;                                                  ;                           ; regbank32:b32|regin[3][5], regbank32:b32|regin[3][6], regbank32:b32|regin[3][7],    ;
+;                                                  ;                           ; regbank32:b32|regin[3][8], regbank32:b32|regin[3][9], regbank32:b32|regin[3][10],   ;
+;                                                  ;                           ; regbank32:b32|regin[3][11], regbank32:b32|regin[3][12], regbank32:b32|regin[3][13], ;
+;                                                  ;                           ; regbank32:b32|regin[3][14], regbank32:b32|regin[3][15], regbank32:b32|regin[3][16], ;
+;                                                  ;                           ; regbank32:b32|regin[3][17], regbank32:b32|regin[3][18], regbank32:b32|regin[3][19], ;
+;                                                  ;                           ; regbank32:b32|regin[3][20], regbank32:b32|regin[3][21], regbank32:b32|regin[3][22], ;
+;                                                  ;                           ; regbank32:b32|regin[3][23], regbank32:b32|regin[3][24], regbank32:b32|regin[3][25], ;
+;                                                  ;                           ; regbank32:b32|regin[3][26], regbank32:b32|regin[3][27], regbank32:b32|regin[3][28], ;
+;                                                  ;                           ; regbank32:b32|regin[3][29], regbank32:b32|regin[3][30], regbank32:b32|regin[3][31], ;
+;                                                  ;                           ; regbank32:b32|regin[2][0], regbank32:b32|regin[2][1], regbank32:b32|regin[2][2],    ;
+;                                                  ;                           ; regbank32:b32|regin[2][3], regbank32:b32|regin[2][4], regbank32:b32|regin[2][5],    ;
+;                                                  ;                           ; regbank32:b32|regin[2][6], regbank32:b32|regin[2][7], regbank32:b32|regin[2][8],    ;
+;                                                  ;                           ; regbank32:b32|regin[2][9], regbank32:b32|regin[2][10], regbank32:b32|regin[2][11],  ;
+;                                                  ;                           ; regbank32:b32|regin[2][12], regbank32:b32|regin[2][13], regbank32:b32|regin[2][14], ;
+;                                                  ;                           ; regbank32:b32|regin[2][15], regbank32:b32|regin[2][16], regbank32:b32|regin[2][17], ;
+;                                                  ;                           ; regbank32:b32|regin[2][18], regbank32:b32|regin[2][19], regbank32:b32|regin[2][20], ;
+;                                                  ;                           ; regbank32:b32|regin[2][21], regbank32:b32|regin[2][22], regbank32:b32|regin[2][23], ;
+;                                                  ;                           ; regbank32:b32|regin[2][24], regbank32:b32|regin[2][25], regbank32:b32|regin[2][26], ;
+;                                                  ;                           ; regbank32:b32|regin[2][27], regbank32:b32|regin[2][28], regbank32:b32|regin[2][29], ;
+;                                                  ;                           ; regbank32:b32|regin[2][30], regbank32:b32|regin[2][31], regbank32:b32|regin[1][0],  ;
+;                                                  ;                           ; regbank32:b32|regin[1][1], regbank32:b32|regin[1][2], regbank32:b32|regin[1][3],    ;
+;                                                  ;                           ; regbank32:b32|regin[1][4], regbank32:b32|regin[1][5], regbank32:b32|regin[1][6],    ;
+;                                                  ;                           ; regbank32:b32|regin[1][7], regbank32:b32|regin[1][8], regbank32:b32|regin[1][9],    ;
+;                                                  ;                           ; regbank32:b32|regin[1][10], regbank32:b32|regin[1][11], regbank32:b32|regin[1][12], ;
+;                                                  ;                           ; regbank32:b32|regin[1][13], regbank32:b32|regin[1][14], regbank32:b32|regin[1][15], ;
+;                                                  ;                           ; regbank32:b32|regin[1][16], regbank32:b32|regin[1][17], regbank32:b32|regin[1][18], ;
+;                                                  ;                           ; regbank32:b32|regin[1][19], regbank32:b32|regin[1][20], regbank32:b32|regin[1][21], ;
+;                                                  ;                           ; regbank32:b32|regin[1][22], regbank32:b32|regin[1][23], regbank32:b32|regin[1][24], ;
+;                                                  ;                           ; regbank32:b32|regin[1][25], regbank32:b32|regin[1][26], regbank32:b32|regin[1][27], ;
+;                                                  ;                           ; regbank32:b32|regin[1][28], regbank32:b32|regin[1][29], regbank32:b32|regin[1][30], ;
+;                                                  ;                           ; regbank32:b32|regin[1][31]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[16]  ; Lost Fanouts              ; regbank32:b32|regin[8][16]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[17]  ; Lost Fanouts              ; regbank32:b32|regin[8][17]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[30]  ; Lost Fanouts              ; regbank32:b32|regin[9][30]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[15]  ; Lost Fanouts              ; regbank32:b32|regin[8][15]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[14]  ; Lost Fanouts              ; regbank32:b32|regin[8][14]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[13]  ; Lost Fanouts              ; regbank32:b32|regin[8][13]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[12]  ; Lost Fanouts              ; regbank32:b32|regin[8][12]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[11]  ; Lost Fanouts              ; regbank32:b32|regin[8][11]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[10]  ; Lost Fanouts              ; regbank32:b32|regin[8][10]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[9]   ; Lost Fanouts              ; regbank32:b32|regin[8][9]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[8]   ; Lost Fanouts              ; regbank32:b32|regin[8][8]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[7]   ; Lost Fanouts              ; regbank32:b32|regin[8][7]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[6]   ; Lost Fanouts              ; regbank32:b32|regin[8][6]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[5]   ; Lost Fanouts              ; regbank32:b32|regin[8][5]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[4]   ; Lost Fanouts              ; regbank32:b32|regin[8][4]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[3]   ; Lost Fanouts              ; regbank32:b32|regin[8][3]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[2]   ; Lost Fanouts              ; regbank32:b32|regin[8][2]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[1]   ; Lost Fanouts              ; regbank32:b32|regin[8][1]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[0]   ; Lost Fanouts              ; regbank32:b32|regin[8][0]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[31]  ; Lost Fanouts              ; regbank32:b32|regin[9][31]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[6]   ; Lost Fanouts              ; regbank32:b32|regin[7][6]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[29]  ; Lost Fanouts              ; regbank32:b32|regin[9][29]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[29]  ; Lost Fanouts              ; regbank32:b32|regin[8][29]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[7]   ; Lost Fanouts              ; regbank32:b32|regin[7][7]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[8]   ; Lost Fanouts              ; regbank32:b32|regin[7][8]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[5]   ; Lost Fanouts              ; regbank32:b32|regin[7][5]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[4]   ; Lost Fanouts              ; regbank32:b32|regin[7][4]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[3]   ; Lost Fanouts              ; regbank32:b32|regin[7][3]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[2]   ; Lost Fanouts              ; regbank32:b32|regin[7][2]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[1]   ; Lost Fanouts              ; regbank32:b32|regin[7][1]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[0]   ; Lost Fanouts              ; regbank32:b32|regin[7][0]                                                           ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[31]  ; Lost Fanouts              ; regbank32:b32|regin[8][31]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[30]  ; Lost Fanouts              ; regbank32:b32|regin[8][30]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[18]  ; Lost Fanouts              ; regbank32:b32|regin[8][18]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[28]  ; Lost Fanouts              ; regbank32:b32|regin[8][28]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[27]  ; Lost Fanouts              ; regbank32:b32|regin[8][27]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[26]  ; Lost Fanouts              ; regbank32:b32|regin[8][26]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[25]  ; Lost Fanouts              ; regbank32:b32|regin[8][25]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[24]  ; Lost Fanouts              ; regbank32:b32|regin[8][24]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[23]  ; Lost Fanouts              ; regbank32:b32|regin[8][23]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[22]  ; Lost Fanouts              ; regbank32:b32|regin[8][22]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[21]  ; Lost Fanouts              ; regbank32:b32|regin[8][21]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[20]  ; Lost Fanouts              ; regbank32:b32|regin[8][20]                                                          ;
+; regbank32:b32|r32:\r32_gen:8:registers|rout[19]  ; Lost Fanouts              ; regbank32:b32|regin[8][19]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[27] ; Lost Fanouts              ; regbank32:b32|regin[10][27]                                                         ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[5]   ; Lost Fanouts              ; regbank32:b32|regin[9][5]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[4]   ; Lost Fanouts              ; regbank32:b32|regin[9][4]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[3]   ; Lost Fanouts              ; regbank32:b32|regin[9][3]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[2]   ; Lost Fanouts              ; regbank32:b32|regin[9][2]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[1]   ; Lost Fanouts              ; regbank32:b32|regin[9][1]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[0]   ; Lost Fanouts              ; regbank32:b32|regin[9][0]                                                           ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[31] ; Lost Fanouts              ; regbank32:b32|regin[10][31]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[30] ; Lost Fanouts              ; regbank32:b32|regin[10][30]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[29] ; Lost Fanouts              ; regbank32:b32|regin[10][29]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[28] ; Lost Fanouts              ; regbank32:b32|regin[10][28]                                                         ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[6]   ; Lost Fanouts              ; regbank32:b32|regin[9][6]                                                           ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[26] ; Lost Fanouts              ; regbank32:b32|regin[10][26]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[25] ; Lost Fanouts              ; regbank32:b32|regin[10][25]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[24] ; Lost Fanouts              ; regbank32:b32|regin[10][24]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[23] ; Lost Fanouts              ; regbank32:b32|regin[10][23]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[22] ; Lost Fanouts              ; regbank32:b32|regin[10][22]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[21] ; Lost Fanouts              ; regbank32:b32|regin[10][21]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[20] ; Lost Fanouts              ; regbank32:b32|regin[10][20]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[19] ; Lost Fanouts              ; regbank32:b32|regin[10][19]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[18] ; Lost Fanouts              ; regbank32:b32|regin[10][18]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[17] ; Lost Fanouts              ; regbank32:b32|regin[10][17]                                                         ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[17]  ; Lost Fanouts              ; regbank32:b32|regin[9][17]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[27]  ; Lost Fanouts              ; regbank32:b32|regin[9][27]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[26]  ; Lost Fanouts              ; regbank32:b32|regin[9][26]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[25]  ; Lost Fanouts              ; regbank32:b32|regin[9][25]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[24]  ; Lost Fanouts              ; regbank32:b32|regin[9][24]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[23]  ; Lost Fanouts              ; regbank32:b32|regin[9][23]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[22]  ; Lost Fanouts              ; regbank32:b32|regin[9][22]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[21]  ; Lost Fanouts              ; regbank32:b32|regin[9][21]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[20]  ; Lost Fanouts              ; regbank32:b32|regin[9][20]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[19]  ; Lost Fanouts              ; regbank32:b32|regin[9][19]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[18]  ; Lost Fanouts              ; regbank32:b32|regin[9][18]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[28]  ; Lost Fanouts              ; regbank32:b32|regin[9][28]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[16]  ; Lost Fanouts              ; regbank32:b32|regin[9][16]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[15]  ; Lost Fanouts              ; regbank32:b32|regin[9][15]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[14]  ; Lost Fanouts              ; regbank32:b32|regin[9][14]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[13]  ; Lost Fanouts              ; regbank32:b32|regin[9][13]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[12]  ; Lost Fanouts              ; regbank32:b32|regin[9][12]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[11]  ; Lost Fanouts              ; regbank32:b32|regin[9][11]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[10]  ; Lost Fanouts              ; regbank32:b32|regin[9][10]                                                          ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[9]   ; Lost Fanouts              ; regbank32:b32|regin[9][9]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[8]   ; Lost Fanouts              ; regbank32:b32|regin[9][8]                                                           ;
+; regbank32:b32|r32:\r32_gen:9:registers|rout[7]   ; Lost Fanouts              ; regbank32:b32|regin[9][7]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[31]  ; Lost Fanouts              ; regbank32:b32|regin[6][31]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[9]   ; Lost Fanouts              ; regbank32:b32|regin[5][9]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[8]   ; Lost Fanouts              ; regbank32:b32|regin[5][8]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[7]   ; Lost Fanouts              ; regbank32:b32|regin[5][7]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[6]   ; Lost Fanouts              ; regbank32:b32|regin[5][6]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[5]   ; Lost Fanouts              ; regbank32:b32|regin[5][5]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[4]   ; Lost Fanouts              ; regbank32:b32|regin[5][4]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[3]   ; Lost Fanouts              ; regbank32:b32|regin[5][3]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[2]   ; Lost Fanouts              ; regbank32:b32|regin[5][2]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[1]   ; Lost Fanouts              ; regbank32:b32|regin[5][1]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[0]   ; Lost Fanouts              ; regbank32:b32|regin[5][0]                                                           ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[10]  ; Lost Fanouts              ; regbank32:b32|regin[5][10]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[30]  ; Lost Fanouts              ; regbank32:b32|regin[6][30]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[29]  ; Lost Fanouts              ; regbank32:b32|regin[6][29]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[28]  ; Lost Fanouts              ; regbank32:b32|regin[6][28]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[27]  ; Lost Fanouts              ; regbank32:b32|regin[6][27]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[26]  ; Lost Fanouts              ; regbank32:b32|regin[6][26]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[25]  ; Lost Fanouts              ; regbank32:b32|regin[6][25]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[24]  ; Lost Fanouts              ; regbank32:b32|regin[6][24]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[23]  ; Lost Fanouts              ; regbank32:b32|regin[6][23]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[22]  ; Lost Fanouts              ; regbank32:b32|regin[6][22]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[21]  ; Lost Fanouts              ; regbank32:b32|regin[6][21]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[21]  ; Lost Fanouts              ; regbank32:b32|regin[5][21]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[31]  ; Lost Fanouts              ; regbank32:b32|regin[5][31]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[30]  ; Lost Fanouts              ; regbank32:b32|regin[5][30]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[29]  ; Lost Fanouts              ; regbank32:b32|regin[5][29]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[28]  ; Lost Fanouts              ; regbank32:b32|regin[5][28]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[27]  ; Lost Fanouts              ; regbank32:b32|regin[5][27]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[26]  ; Lost Fanouts              ; regbank32:b32|regin[5][26]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[25]  ; Lost Fanouts              ; regbank32:b32|regin[5][25]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[24]  ; Lost Fanouts              ; regbank32:b32|regin[5][24]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[23]  ; Lost Fanouts              ; regbank32:b32|regin[5][23]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[22]  ; Lost Fanouts              ; regbank32:b32|regin[5][22]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[20]  ; Lost Fanouts              ; regbank32:b32|regin[6][20]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[20]  ; Lost Fanouts              ; regbank32:b32|regin[5][20]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[19]  ; Lost Fanouts              ; regbank32:b32|regin[5][19]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[18]  ; Lost Fanouts              ; regbank32:b32|regin[5][18]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[17]  ; Lost Fanouts              ; regbank32:b32|regin[5][17]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[16]  ; Lost Fanouts              ; regbank32:b32|regin[5][16]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[15]  ; Lost Fanouts              ; regbank32:b32|regin[5][15]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[14]  ; Lost Fanouts              ; regbank32:b32|regin[5][14]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[13]  ; Lost Fanouts              ; regbank32:b32|regin[5][13]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[12]  ; Lost Fanouts              ; regbank32:b32|regin[5][12]                                                          ;
+; regbank32:b32|r32:\r32_gen:5:registers|rout[11]  ; Lost Fanouts              ; regbank32:b32|regin[5][11]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[19]  ; Lost Fanouts              ; regbank32:b32|regin[7][19]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[29]  ; Lost Fanouts              ; regbank32:b32|regin[7][29]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[28]  ; Lost Fanouts              ; regbank32:b32|regin[7][28]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[27]  ; Lost Fanouts              ; regbank32:b32|regin[7][27]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[26]  ; Lost Fanouts              ; regbank32:b32|regin[7][26]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[25]  ; Lost Fanouts              ; regbank32:b32|regin[7][25]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[24]  ; Lost Fanouts              ; regbank32:b32|regin[7][24]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[23]  ; Lost Fanouts              ; regbank32:b32|regin[7][23]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[22]  ; Lost Fanouts              ; regbank32:b32|regin[7][22]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[21]  ; Lost Fanouts              ; regbank32:b32|regin[7][21]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[20]  ; Lost Fanouts              ; regbank32:b32|regin[7][20]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[30]  ; Lost Fanouts              ; regbank32:b32|regin[7][30]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[18]  ; Lost Fanouts              ; regbank32:b32|regin[7][18]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[17]  ; Lost Fanouts              ; regbank32:b32|regin[7][17]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[16]  ; Lost Fanouts              ; regbank32:b32|regin[7][16]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[15]  ; Lost Fanouts              ; regbank32:b32|regin[7][15]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[14]  ; Lost Fanouts              ; regbank32:b32|regin[7][14]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[13]  ; Lost Fanouts              ; regbank32:b32|regin[7][13]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[12]  ; Lost Fanouts              ; regbank32:b32|regin[7][12]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[11]  ; Lost Fanouts              ; regbank32:b32|regin[7][11]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[10]  ; Lost Fanouts              ; regbank32:b32|regin[7][10]                                                          ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[9]   ; Lost Fanouts              ; regbank32:b32|regin[7][9]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[9]   ; Lost Fanouts              ; regbank32:b32|regin[6][9]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[19]  ; Lost Fanouts              ; regbank32:b32|regin[6][19]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[18]  ; Lost Fanouts              ; regbank32:b32|regin[6][18]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[17]  ; Lost Fanouts              ; regbank32:b32|regin[6][17]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[16]  ; Lost Fanouts              ; regbank32:b32|regin[6][16]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[15]  ; Lost Fanouts              ; regbank32:b32|regin[6][15]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[14]  ; Lost Fanouts              ; regbank32:b32|regin[6][14]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[13]  ; Lost Fanouts              ; regbank32:b32|regin[6][13]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[12]  ; Lost Fanouts              ; regbank32:b32|regin[6][12]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[11]  ; Lost Fanouts              ; regbank32:b32|regin[6][11]                                                          ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[10]  ; Lost Fanouts              ; regbank32:b32|regin[6][10]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[15] ; Lost Fanouts              ; regbank32:b32|regin[10][15]                                                         ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[8]   ; Lost Fanouts              ; regbank32:b32|regin[6][8]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[7]   ; Lost Fanouts              ; regbank32:b32|regin[6][7]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[6]   ; Lost Fanouts              ; regbank32:b32|regin[6][6]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[5]   ; Lost Fanouts              ; regbank32:b32|regin[6][5]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[4]   ; Lost Fanouts              ; regbank32:b32|regin[6][4]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[3]   ; Lost Fanouts              ; regbank32:b32|regin[6][3]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[2]   ; Lost Fanouts              ; regbank32:b32|regin[6][2]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[1]   ; Lost Fanouts              ; regbank32:b32|regin[6][1]                                                           ;
+; regbank32:b32|r32:\r32_gen:6:registers|rout[0]   ; Lost Fanouts              ; regbank32:b32|regin[6][0]                                                           ;
+; regbank32:b32|r32:\r32_gen:7:registers|rout[31]  ; Lost Fanouts              ; regbank32:b32|regin[7][31]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[22] ; Lost Fanouts              ; regbank32:b32|regin[14][22]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[0]  ; Lost Fanouts              ; regbank32:b32|regin[13][0]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[31] ; Lost Fanouts              ; regbank32:b32|regin[14][31]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[30] ; Lost Fanouts              ; regbank32:b32|regin[14][30]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[29] ; Lost Fanouts              ; regbank32:b32|regin[14][29]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[28] ; Lost Fanouts              ; regbank32:b32|regin[14][28]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[27] ; Lost Fanouts              ; regbank32:b32|regin[14][27]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[26] ; Lost Fanouts              ; regbank32:b32|regin[14][26]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[25] ; Lost Fanouts              ; regbank32:b32|regin[14][25]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[24] ; Lost Fanouts              ; regbank32:b32|regin[14][24]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[23] ; Lost Fanouts              ; regbank32:b32|regin[14][23]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[1]  ; Lost Fanouts              ; regbank32:b32|regin[13][1]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[21] ; Lost Fanouts              ; regbank32:b32|regin[14][21]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[20] ; Lost Fanouts              ; regbank32:b32|regin[14][20]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[19] ; Lost Fanouts              ; regbank32:b32|regin[14][19]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[18] ; Lost Fanouts              ; regbank32:b32|regin[14][18]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[17] ; Lost Fanouts              ; regbank32:b32|regin[14][17]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[16] ; Lost Fanouts              ; regbank32:b32|regin[14][16]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[15] ; Lost Fanouts              ; regbank32:b32|regin[14][15]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[14] ; Lost Fanouts              ; regbank32:b32|regin[14][14]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[13] ; Lost Fanouts              ; regbank32:b32|regin[14][13]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[12] ; Lost Fanouts              ; regbank32:b32|regin[14][12]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[12] ; Lost Fanouts              ; regbank32:b32|regin[13][12]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[22] ; Lost Fanouts              ; regbank32:b32|regin[13][22]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[21] ; Lost Fanouts              ; regbank32:b32|regin[13][21]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[20] ; Lost Fanouts              ; regbank32:b32|regin[13][20]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[19] ; Lost Fanouts              ; regbank32:b32|regin[13][19]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[18] ; Lost Fanouts              ; regbank32:b32|regin[13][18]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[17] ; Lost Fanouts              ; regbank32:b32|regin[13][17]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[16] ; Lost Fanouts              ; regbank32:b32|regin[13][16]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[15] ; Lost Fanouts              ; regbank32:b32|regin[13][15]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[14] ; Lost Fanouts              ; regbank32:b32|regin[13][14]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[13] ; Lost Fanouts              ; regbank32:b32|regin[13][13]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[11] ; Lost Fanouts              ; regbank32:b32|regin[14][11]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[11] ; Lost Fanouts              ; regbank32:b32|regin[13][11]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[10] ; Lost Fanouts              ; regbank32:b32|regin[13][10]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[9]  ; Lost Fanouts              ; regbank32:b32|regin[13][9]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[8]  ; Lost Fanouts              ; regbank32:b32|regin[13][8]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[7]  ; Lost Fanouts              ; regbank32:b32|regin[13][7]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[6]  ; Lost Fanouts              ; regbank32:b32|regin[13][6]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[5]  ; Lost Fanouts              ; regbank32:b32|regin[13][5]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[4]  ; Lost Fanouts              ; regbank32:b32|regin[13][4]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[3]  ; Lost Fanouts              ; regbank32:b32|regin[13][3]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[2]  ; Lost Fanouts              ; regbank32:b32|regin[13][2]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[10] ; Lost Fanouts              ; regbank32:b32|regin[15][10]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[20] ; Lost Fanouts              ; regbank32:b32|regin[15][20]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[19] ; Lost Fanouts              ; regbank32:b32|regin[15][19]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[18] ; Lost Fanouts              ; regbank32:b32|regin[15][18]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[17] ; Lost Fanouts              ; regbank32:b32|regin[15][17]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[16] ; Lost Fanouts              ; regbank32:b32|regin[15][16]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[15] ; Lost Fanouts              ; regbank32:b32|regin[15][15]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[14] ; Lost Fanouts              ; regbank32:b32|regin[15][14]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[13] ; Lost Fanouts              ; regbank32:b32|regin[15][13]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[12] ; Lost Fanouts              ; regbank32:b32|regin[15][12]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[11] ; Lost Fanouts              ; regbank32:b32|regin[15][11]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[21] ; Lost Fanouts              ; regbank32:b32|regin[15][21]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[9]  ; Lost Fanouts              ; regbank32:b32|regin[15][9]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[8]  ; Lost Fanouts              ; regbank32:b32|regin[15][8]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[7]  ; Lost Fanouts              ; regbank32:b32|regin[15][7]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[6]  ; Lost Fanouts              ; regbank32:b32|regin[15][6]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[5]  ; Lost Fanouts              ; regbank32:b32|regin[15][5]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[4]  ; Lost Fanouts              ; regbank32:b32|regin[15][4]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[3]  ; Lost Fanouts              ; regbank32:b32|regin[15][3]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[2]  ; Lost Fanouts              ; regbank32:b32|regin[15][2]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[1]  ; Lost Fanouts              ; regbank32:b32|regin[15][1]                                                          ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[0]  ; Lost Fanouts              ; regbank32:b32|regin[15][0]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[0]  ; Lost Fanouts              ; regbank32:b32|regin[14][0]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[10] ; Lost Fanouts              ; regbank32:b32|regin[14][10]                                                         ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[9]  ; Lost Fanouts              ; regbank32:b32|regin[14][9]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[8]  ; Lost Fanouts              ; regbank32:b32|regin[14][8]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[7]  ; Lost Fanouts              ; regbank32:b32|regin[14][7]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[6]  ; Lost Fanouts              ; regbank32:b32|regin[14][6]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[5]  ; Lost Fanouts              ; regbank32:b32|regin[14][5]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[4]  ; Lost Fanouts              ; regbank32:b32|regin[14][4]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[3]  ; Lost Fanouts              ; regbank32:b32|regin[14][3]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[2]  ; Lost Fanouts              ; regbank32:b32|regin[14][2]                                                          ;
+; regbank32:b32|r32:\r32_gen:14:registers|rout[1]  ; Lost Fanouts              ; regbank32:b32|regin[14][1]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[23] ; Lost Fanouts              ; regbank32:b32|regin[13][23]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[31] ; Lost Fanouts              ; regbank32:b32|regin[15][31]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[30] ; Lost Fanouts              ; regbank32:b32|regin[15][30]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[29] ; Lost Fanouts              ; regbank32:b32|regin[15][29]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[28] ; Lost Fanouts              ; regbank32:b32|regin[15][28]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[27] ; Lost Fanouts              ; regbank32:b32|regin[15][27]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[26] ; Lost Fanouts              ; regbank32:b32|regin[15][26]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[25] ; Lost Fanouts              ; regbank32:b32|regin[15][25]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[24] ; Lost Fanouts              ; regbank32:b32|regin[15][24]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[23] ; Lost Fanouts              ; regbank32:b32|regin[15][23]                                                         ;
+; regbank32:b32|r32:\r32_gen:15:registers|rout[22] ; Lost Fanouts              ; regbank32:b32|regin[15][22]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[14] ; Lost Fanouts              ; regbank32:b32|regin[11][14]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[24] ; Lost Fanouts              ; regbank32:b32|regin[11][24]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[23] ; Lost Fanouts              ; regbank32:b32|regin[11][23]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[22] ; Lost Fanouts              ; regbank32:b32|regin[11][22]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[21] ; Lost Fanouts              ; regbank32:b32|regin[11][21]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[20] ; Lost Fanouts              ; regbank32:b32|regin[11][20]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[19] ; Lost Fanouts              ; regbank32:b32|regin[11][19]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[18] ; Lost Fanouts              ; regbank32:b32|regin[11][18]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[17] ; Lost Fanouts              ; regbank32:b32|regin[11][17]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[16] ; Lost Fanouts              ; regbank32:b32|regin[11][16]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[15] ; Lost Fanouts              ; regbank32:b32|regin[11][15]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[25] ; Lost Fanouts              ; regbank32:b32|regin[11][25]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[13] ; Lost Fanouts              ; regbank32:b32|regin[11][13]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[12] ; Lost Fanouts              ; regbank32:b32|regin[11][12]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[11] ; Lost Fanouts              ; regbank32:b32|regin[11][11]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[10] ; Lost Fanouts              ; regbank32:b32|regin[11][10]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[9]  ; Lost Fanouts              ; regbank32:b32|regin[11][9]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[8]  ; Lost Fanouts              ; regbank32:b32|regin[11][8]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[7]  ; Lost Fanouts              ; regbank32:b32|regin[11][7]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[6]  ; Lost Fanouts              ; regbank32:b32|regin[11][6]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[5]  ; Lost Fanouts              ; regbank32:b32|regin[11][5]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[4]  ; Lost Fanouts              ; regbank32:b32|regin[11][4]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[4]  ; Lost Fanouts              ; regbank32:b32|regin[10][4]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[14] ; Lost Fanouts              ; regbank32:b32|regin[10][14]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[13] ; Lost Fanouts              ; regbank32:b32|regin[10][13]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[12] ; Lost Fanouts              ; regbank32:b32|regin[10][12]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[11] ; Lost Fanouts              ; regbank32:b32|regin[10][11]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[10] ; Lost Fanouts              ; regbank32:b32|regin[10][10]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[9]  ; Lost Fanouts              ; regbank32:b32|regin[10][9]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[8]  ; Lost Fanouts              ; regbank32:b32|regin[10][8]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[7]  ; Lost Fanouts              ; regbank32:b32|regin[10][7]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[6]  ; Lost Fanouts              ; regbank32:b32|regin[10][6]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[5]  ; Lost Fanouts              ; regbank32:b32|regin[10][5]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[3]  ; Lost Fanouts              ; regbank32:b32|regin[11][3]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[3]  ; Lost Fanouts              ; regbank32:b32|regin[10][3]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[2]  ; Lost Fanouts              ; regbank32:b32|regin[10][2]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[1]  ; Lost Fanouts              ; regbank32:b32|regin[10][1]                                                          ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[0]  ; Lost Fanouts              ; regbank32:b32|regin[10][0]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[31] ; Lost Fanouts              ; regbank32:b32|regin[11][31]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[30] ; Lost Fanouts              ; regbank32:b32|regin[11][30]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[29] ; Lost Fanouts              ; regbank32:b32|regin[11][29]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[28] ; Lost Fanouts              ; regbank32:b32|regin[11][28]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[27] ; Lost Fanouts              ; regbank32:b32|regin[11][27]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[26] ; Lost Fanouts              ; regbank32:b32|regin[11][26]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[2]  ; Lost Fanouts              ; regbank32:b32|regin[12][2]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[12] ; Lost Fanouts              ; regbank32:b32|regin[12][12]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[11] ; Lost Fanouts              ; regbank32:b32|regin[12][11]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[10] ; Lost Fanouts              ; regbank32:b32|regin[12][10]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[9]  ; Lost Fanouts              ; regbank32:b32|regin[12][9]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[8]  ; Lost Fanouts              ; regbank32:b32|regin[12][8]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[7]  ; Lost Fanouts              ; regbank32:b32|regin[12][7]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[6]  ; Lost Fanouts              ; regbank32:b32|regin[12][6]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[5]  ; Lost Fanouts              ; regbank32:b32|regin[12][5]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[4]  ; Lost Fanouts              ; regbank32:b32|regin[12][4]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[3]  ; Lost Fanouts              ; regbank32:b32|regin[12][3]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[13] ; Lost Fanouts              ; regbank32:b32|regin[12][13]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[1]  ; Lost Fanouts              ; regbank32:b32|regin[12][1]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[0]  ; Lost Fanouts              ; regbank32:b32|regin[12][0]                                                          ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[31] ; Lost Fanouts              ; regbank32:b32|regin[13][31]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[30] ; Lost Fanouts              ; regbank32:b32|regin[13][30]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[29] ; Lost Fanouts              ; regbank32:b32|regin[13][29]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[28] ; Lost Fanouts              ; regbank32:b32|regin[13][28]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[27] ; Lost Fanouts              ; regbank32:b32|regin[13][27]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[26] ; Lost Fanouts              ; regbank32:b32|regin[13][26]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[25] ; Lost Fanouts              ; regbank32:b32|regin[13][25]                                                         ;
+; regbank32:b32|r32:\r32_gen:13:registers|rout[24] ; Lost Fanouts              ; regbank32:b32|regin[13][24]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[24] ; Lost Fanouts              ; regbank32:b32|regin[12][24]                                                         ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[2]  ; Lost Fanouts              ; regbank32:b32|regin[11][2]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[1]  ; Lost Fanouts              ; regbank32:b32|regin[11][1]                                                          ;
+; regbank32:b32|r32:\r32_gen:11:registers|rout[0]  ; Lost Fanouts              ; regbank32:b32|regin[11][0]                                                          ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[31] ; Lost Fanouts              ; regbank32:b32|regin[12][31]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[30] ; Lost Fanouts              ; regbank32:b32|regin[12][30]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[29] ; Lost Fanouts              ; regbank32:b32|regin[12][29]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[28] ; Lost Fanouts              ; regbank32:b32|regin[12][28]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[27] ; Lost Fanouts              ; regbank32:b32|regin[12][27]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[26] ; Lost Fanouts              ; regbank32:b32|regin[12][26]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[25] ; Lost Fanouts              ; regbank32:b32|regin[12][25]                                                         ;
+; regbank32:b32|r32:\r32_gen:10:registers|rout[16] ; Lost Fanouts              ; regbank32:b32|regin[10][16]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[23] ; Lost Fanouts              ; regbank32:b32|regin[12][23]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[22] ; Lost Fanouts              ; regbank32:b32|regin[12][22]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[21] ; Lost Fanouts              ; regbank32:b32|regin[12][21]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[20] ; Lost Fanouts              ; regbank32:b32|regin[12][20]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[19] ; Lost Fanouts              ; regbank32:b32|regin[12][19]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[18] ; Lost Fanouts              ; regbank32:b32|regin[12][18]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[17] ; Lost Fanouts              ; regbank32:b32|regin[12][17]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[16] ; Lost Fanouts              ; regbank32:b32|regin[12][16]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[15] ; Lost Fanouts              ; regbank32:b32|regin[12][15]                                                         ;
+; regbank32:b32|r32:\r32_gen:12:registers|rout[14] ; Lost Fanouts              ; regbank32:b32|regin[12][14]                                                         ;
++--------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 202   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu32:a32"                                                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; op[1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; except ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; etype  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; extend ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:15:registers"                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:14:registers"                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:13:registers"                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:12:registers"                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:11:registers"                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:10:registers"                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:9:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:8:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:7:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:6:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:5:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:4:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:3:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:2:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:1:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32|r32:\r32_gen:0:registers"                                              ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                             ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+; enable ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regbank32:b32"                                                                       ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; regp3 ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rout2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 202                         ;
+;     ENA               ; 96                          ;
+;     plain             ; 106                         ;
+; arriav_io_obuf        ; 89                          ;
+; arriav_lcell_comb     ; 33                          ;
+;     arith             ; 32                          ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 110                         ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 0.83                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Sat Dec 23 15:06:07 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testpga -c testpga
+Warning (125092): Tcl Script File ddr3.sip not found
+    Info (125063): set_global_assignment -name SIP_FILE ddr3.sip
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file typelib.vhd
+    Info (12022): Found design unit 1: types File: /root/fpgamess/typelib.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file pipeline.vhd
+    Info (12022): Found design unit 1: de0_nano_soc_baseline-r32 File: /root/fpgamess/pipeline.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file de0_nano_soc_baseline.vhdl
+    Info (12023): Found entity 1: de0_nano_soc_baseline File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file rfile.vhd
+    Info (12022): Found design unit 1: regbank32-bank File: /root/fpgamess/rfile.vhd Line: 21
+    Info (12023): Found entity 1: regbank32 File: /root/fpgamess/rfile.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file register.vhd
+    Info (12022): Found design unit 1: r32-register32 File: /root/fpgamess/register.vhd Line: 13
+    Info (12023): Found entity 1: r32 File: /root/fpgamess/register.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu32-alu File: /root/fpgamess/alu.vhd Line: 17
+    Info (12023): Found entity 1: alu32 File: /root/fpgamess/alu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file sprom.vhd
+    Info (12022): Found design unit 1: sprom-SYN File: /root/fpgamess/sprom.vhd Line: 54
+    Info (12023): Found entity 1: sprom File: /root/fpgamess/sprom.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file dpram.vhd
+    Info (12022): Found design unit 1: dpram-SYN File: /root/fpgamess/dpram.vhd Line: 61
+    Info (12023): Found entity 1: dpram File: /root/fpgamess/dpram.vhd Line: 43
+Info (12127): Elaborating entity "de0_nano_soc_baseline" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at de0_nano_soc_baseline.vhdl(8): used implicit default value for signal "ADC_CONVST" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 8
+Warning (10541): VHDL Signal Declaration warning at de0_nano_soc_baseline.vhdl(9): used implicit default value for signal "ADC_SCLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 9
+Warning (10541): VHDL Signal Declaration warning at de0_nano_soc_baseline.vhdl(10): used implicit default value for signal "ADC_SDI" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 10
+Warning (10540): VHDL Signal Declaration warning at pipeline.vhd(34): used explicit default value for signal "port3" because signal was never assigned a value File: /root/fpgamess/pipeline.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at pipeline.vhd(37): object "regout2" assigned a value but never read File: /root/fpgamess/pipeline.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at pipeline.vhd(39): object "aluexcept" assigned a value but never read File: /root/fpgamess/pipeline.vhd Line: 39
+Warning (10036): Verilog HDL or VHDL warning at pipeline.vhd(40): object "aluetype" assigned a value but never read File: /root/fpgamess/pipeline.vhd Line: 40
+Warning (10036): Verilog HDL or VHDL warning at pipeline.vhd(44): object "alutop" assigned a value but never read File: /root/fpgamess/pipeline.vhd Line: 44
+Info (12128): Elaborating entity "regbank32" for hierarchy "regbank32:b32" File: /root/fpgamess/pipeline.vhd Line: 48
+Info (12128): Elaborating entity "r32" for hierarchy "regbank32:b32|r32:\r32_gen:0:registers" File: /root/fpgamess/rfile.vhd Line: 36
+Info (12128): Elaborating entity "alu32" for hierarchy "alu32:a32" File: /root/fpgamess/pipeline.vhd Line: 49
+Warning (12241): 16 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "ARDUINO_IO[0]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[1]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[2]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[3]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[4]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[5]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[6]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[7]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[8]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[9]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[10]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[11]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[12]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[13]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[14]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_IO[15]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Warning (13040): bidirectional pin "ARDUINO_RESET_N" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 13
+    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[16]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[18]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[32]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[33]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_0[35]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[16]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[17]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[18]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[34]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Warning (13040): bidirectional pin "GPIO_1[35]" has no driver File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 8
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 9
+    Warning (13410): Pin "ADC_SDI" is stuck at GND File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 960 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "FPGA_CLK2_50" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 6
+    Warning (15610): No output dependent on input pin "FPGA_CLK3_50" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 7
+    Warning (15610): No output dependent on input pin "ADC_SDO" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 11
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 64
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 64
+    Warning (15610): No output dependent on input pin "SW[0]" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 66
+    Warning (15610): No output dependent on input pin "SW[1]" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 66
+    Warning (15610): No output dependent on input pin "SW[2]" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 66
+    Warning (15610): No output dependent on input pin "SW[3]" File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 66
+Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21060): Implemented 89 bidirectional pins
+    Info (21061): Implemented 202 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
+    Info: Peak virtual memory: 1076 megabytes
+    Info: Processing ended: Sat Dec 23 15:06:21 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:33
+
+
