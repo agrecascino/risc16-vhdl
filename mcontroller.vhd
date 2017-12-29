@@ -40,7 +40,7 @@ architecture mctl of memctrl is
 	signal romenable : std_logic;
 	signal romout : std_logic_vector(31 downto 0);
 	signal last_input : std_logic;
-	signal mask :
+	signal mask : std_logic_vector(31 downto 0);
 	signal ramaddra : std_logic_vector(15 downto 0);
 	signal ramaddrb : std_logic_vector(15 downto 0);
 	signal ramouta  : std_logic_vector(31 downto 0);
@@ -59,7 +59,7 @@ begin
 	begin
 		if falling_edge(clk) then
 			if ren = '1' then
-				
+				if ap1 >
 			end if;
 		end if;
 	end process;
