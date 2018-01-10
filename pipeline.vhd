@@ -28,6 +28,14 @@ architecture r32 of de0_nano_soc_baseline is
 		extend : out std_logic_vector(31 downto 0)
 	);
 	end component;
+	component r32 is 
+	port(
+		clk : in std_logic;
+		rval : in std_logic_vector(31 downto 0);
+		rout : out std_logic_vector(31 downto 0);
+		enable : inout std_logic
+	);
+	end component;
 	signal enable : std_logic := '0';
 	signal port1  : std_logic_vector(3 downto 0) := "0000";
 	signal port2  : std_logic_vector(3 downto 0) := "0000";
@@ -42,19 +50,31 @@ architecture r32 of de0_nano_soc_baseline is
 	signal aluin2 : std_logic_vector(31 downto 0) := x"00000000";
 	signal aluout : std_logic_vector(31 downto 0) := x"00000000";
 	signal alutop : std_logic_vector(31 downto 0) := x"00000000";
-	
+	signal macclen : std_logic_vector(1 downto 0) := "00";
+	signal maccadd : std_logic_vector(31 downto 0) := x"00000000";
+	signal maccwen : std_logic := '0';
+	signal maccren : std_logic := '0';
+	signal maccdat : std_logic_vector(31 downto 0) := x"00000000";
+	signal maccuna : std_logic := '0';
+	signal maccrdy : std_logic := '0';
+	signal pcin : std_logic_vector(31 downto 0);
+	signal pcout : std_logic_vector(31 downto 0);
+	signal pcenable : std_logic;
 	
 begin
 	b32 : regbank32 port map(FPGA_CLK_50, enable, port1, port2, port3, reginput, regout1, regout2);
 	a32 : alu32 port map(FPGA_CLK_50, aluop, aluexcept, aluetype, aluin1, aluin2, aluout, alutop);
+	mem : memctrl port map(FPGA_CLK_50, macclen, maccadd, maccwen, maccren, maccdat, maccuna, maccrdy);
+	pc  : r32 port map(FPGA_CLK_50, pcin, pcout, pcenable);
 	process(FPGA_CLK_50)
 	begin
 		if rising_edge(FPGA_CLK_50) then
+			
 			port1 <= "0000";
 			port2 <= "0000";
 			enable <= '1';
 			reginput <= aluout;
-			led <= regout1(31 downto 24);
+			led <= regout1(23 downto 16);
 			aluop(0) <= '1';
 			aluin1 <= regout1;
 			aluin2 <= x"00000001";
