@@ -21,3 +21,15 @@ begin
 			end if;
 		end process;
 end register32;
+
+architecture fallingregister32 of r32 is 
+begin
+		process(clk)
+	   begin 
+			if falling_edge(clk) then
+				if enable = '1' then
+					rout <= rval;
+				end if;
+			end if;
+		end process;
+end fallingregister32;

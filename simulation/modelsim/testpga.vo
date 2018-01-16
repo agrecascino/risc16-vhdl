@@ -1,4 +1,4 @@
-// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Copyright (C) 2016  Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions 
 // and other software and tools, and its AMPP partner logic 
 // functions, and any output files from any of the foregoing 
@@ -6,17 +6,18 @@
 // associated documentation or information are expressly subject 
 // to the terms and conditions of the Intel Program License 
 // Subscription Agreement, the Intel Quartus Prime License Agreement,
-// the Intel FPGA IP License Agreement, or other applicable license
-// agreement, including, without limitation, that your use is for
-// the sole purpose of programming logic devices manufactured by
-// Intel and sold by Intel or its authorized distributors.  Please
-// refer to the applicable agreement for further details.
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
 
 // VENDOR "Altera"
 // PROGRAM "Quartus Prime"
-// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+// VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
 
-// DATE "01/10/2018 10:25:43"
+// DATE "01/14/2018 18:58:11"
 
 // 
 // Device: Altera 5CSEMA4U23C6 Package UFBGA672
@@ -59,8 +60,8 @@ output 	[7:0] LED;
 input 	[3:0] SW;
 
 // Design Ports Information
-// FPGA_CLK2_50	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// FPGA_CLK3_50	=>  Location: PIN_AD17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// FPGA_CLK2_50	=>  Location: PIN_AA11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// FPGA_CLK3_50	=>  Location: PIN_Y19,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // ADC_CONVST	=>  Location: PIN_U9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 // ADC_SCLK	=>  Location: PIN_V10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 // ADC_SDI	=>  Location: PIN_AC4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
@@ -287,44 +288,46 @@ wire \aluin1[16]~feeder_combout ;
 wire \enable~feeder_combout ;
 wire \enable~q ;
 wire \a32|Add0~93_sumout ;
+wire \b32|regin[0][0]~feeder_combout ;
 wire \b32|regin[0][0]~q ;
 wire \b32|r32_gen:0:registers|rout[0]~feeder_combout ;
-wire \b32|rout[0]~feeder_combout ;
 wire \aluin1[0]~feeder_combout ;
 wire \a32|Add0~94 ;
 wire \a32|Add0~89_sumout ;
-wire \b32|regin[0][1]~feeder_combout ;
+wire \reginput[1]~feeder_combout ;
 wire \b32|regin[0][1]~q ;
 wire \b32|r32_gen:0:registers|rout[1]~feeder_combout ;
-wire \b32|rout[1]~feeder_combout ;
 wire \aluin1[1]~feeder_combout ;
 wire \a32|Add0~90 ;
 wire \a32|Add0~85_sumout ;
 wire \reginput[2]~feeder_combout ;
 wire \b32|regin[0][2]~feeder_combout ;
 wire \b32|regin[0][2]~q ;
+wire \b32|r32_gen:0:registers|rout[2]~feeder_combout ;
 wire \b32|rout[2]~feeder_combout ;
 wire \aluin1[2]~feeder_combout ;
 wire \a32|Add0~86 ;
 wire \a32|Add0~81_sumout ;
-wire \reginput[3]~feeder_combout ;
+wire \b32|regin[0][3]~feeder_combout ;
 wire \b32|regin[0][3]~q ;
-wire \b32|rout[3]~feeder_combout ;
+wire \b32|r32_gen:0:registers|rout[3]~feeder_combout ;
 wire \aluin1[3]~feeder_combout ;
 wire \a32|Add0~82 ;
 wire \a32|Add0~77_sumout ;
 wire \reginput[4]~feeder_combout ;
 wire \b32|regin[0][4]~feeder_combout ;
 wire \b32|regin[0][4]~q ;
+wire \b32|r32_gen:0:registers|rout[4]~feeder_combout ;
+wire \aluin1[4]~feeder_combout ;
 wire \a32|Add0~78 ;
 wire \a32|Add0~73_sumout ;
-wire \reginput[5]~feeder_combout ;
-wire \b32|regin[0][5]~feeder_combout ;
 wire \b32|regin[0][5]~q ;
-wire \b32|r32_gen:0:registers|rout[5]~feeder_combout ;
+wire \b32|rout[5]~feeder_combout ;
+wire \aluin1[5]~feeder_combout ;
 wire \a32|Add0~74 ;
 wire \a32|Add0~69_sumout ;
 wire \reginput[6]~feeder_combout ;
+wire \b32|regin[0][6]~feeder_combout ;
 wire \b32|regin[0][6]~q ;
 wire \b32|r32_gen:0:registers|rout[6]~feeder_combout ;
 wire \b32|rout[6]~feeder_combout ;
@@ -332,40 +335,40 @@ wire \aluin1[6]~feeder_combout ;
 wire \a32|Add0~70 ;
 wire \a32|Add0~65_sumout ;
 wire \reginput[7]~feeder_combout ;
+wire \b32|regin[0][7]~feeder_combout ;
 wire \b32|regin[0][7]~q ;
 wire \b32|r32_gen:0:registers|rout[7]~feeder_combout ;
-wire \b32|rout[7]~feeder_combout ;
 wire \aluin1[7]~feeder_combout ;
 wire \a32|Add0~66 ;
 wire \a32|Add0~61_sumout ;
 wire \reginput[8]~feeder_combout ;
-wire \b32|regin[0][8]~feeder_combout ;
 wire \b32|regin[0][8]~q ;
 wire \b32|r32_gen:0:registers|rout[8]~feeder_combout ;
 wire \b32|rout[8]~feeder_combout ;
 wire \aluin1[8]~feeder_combout ;
 wire \a32|Add0~62 ;
 wire \a32|Add0~57_sumout ;
+wire \reginput[9]~feeder_combout ;
 wire \b32|regin[0][9]~feeder_combout ;
 wire \b32|regin[0][9]~q ;
+wire \b32|r32_gen:0:registers|rout[9]~feeder_combout ;
+wire \b32|rout[9]~feeder_combout ;
 wire \aluin1[9]~feeder_combout ;
 wire \a32|Add0~58 ;
 wire \a32|Add0~53_sumout ;
 wire \b32|regin[0][10]~q ;
 wire \b32|r32_gen:0:registers|rout[10]~feeder_combout ;
 wire \b32|rout[10]~feeder_combout ;
-wire \aluin1[10]~feeder_combout ;
 wire \a32|Add0~54 ;
 wire \a32|Add0~49_sumout ;
-wire \reginput[11]~feeder_combout ;
+wire \b32|regin[0][11]~feeder_combout ;
 wire \b32|regin[0][11]~q ;
 wire \b32|r32_gen:0:registers|rout[11]~feeder_combout ;
-wire \aluin1[11]~feeder_combout ;
+wire \b32|rout[11]~feeder_combout ;
 wire \a32|Add0~50 ;
 wire \a32|Add0~45_sumout ;
 wire \b32|regin[0][12]~feeder_combout ;
 wire \b32|regin[0][12]~q ;
-wire \b32|r32_gen:0:registers|rout[12]~feeder_combout ;
 wire \b32|rout[12]~feeder_combout ;
 wire \a32|Add0~46 ;
 wire \a32|Add0~41_sumout ;
@@ -373,15 +376,15 @@ wire \b32|regin[0][13]~feeder_combout ;
 wire \b32|regin[0][13]~q ;
 wire \b32|r32_gen:0:registers|rout[13]~feeder_combout ;
 wire \b32|rout[13]~feeder_combout ;
+wire \aluin1[13]~feeder_combout ;
 wire \a32|Add0~42 ;
 wire \a32|Add0~37_sumout ;
-wire \b32|regin[0][14]~feeder_combout ;
+wire \reginput[14]~feeder_combout ;
 wire \b32|regin[0][14]~q ;
-wire \b32|r32_gen:0:registers|rout[14]~feeder_combout ;
 wire \b32|rout[14]~feeder_combout ;
+wire \aluin1[14]~feeder_combout ;
 wire \a32|Add0~38 ;
 wire \a32|Add0~33_sumout ;
-wire \reginput[15]~feeder_combout ;
 wire \b32|regin[0][15]~feeder_combout ;
 wire \b32|regin[0][15]~q ;
 wire \b32|r32_gen:0:registers|rout[15]~feeder_combout ;
@@ -390,7 +393,6 @@ wire \aluin1[15]~feeder_combout ;
 wire \a32|Add0~34 ;
 wire \a32|Add0~1_sumout ;
 wire \reginput[16]~feeder_combout ;
-wire \b32|regin[0][16]~feeder_combout ;
 wire \b32|regin[0][16]~q ;
 wire \b32|rout[16]~feeder_combout ;
 wire \LED[0]~reg0feeder_combout ;
@@ -398,10 +400,10 @@ wire \LED[0]~reg0_q ;
 wire \aluin1[17]~feeder_combout ;
 wire \a32|Add0~2 ;
 wire \a32|Add0~5_sumout ;
+wire \b32|regin[0][17]~feeder_combout ;
 wire \b32|regin[0][17]~q ;
-wire \b32|rout[17]~feeder_combout ;
+wire \b32|r32_gen:0:registers|rout[17]~feeder_combout ;
 wire \LED[1]~reg0_q ;
-wire \aluin1[18]~feeder_combout ;
 wire \a32|Add0~6 ;
 wire \a32|Add0~9_sumout ;
 wire \reginput[18]~feeder_combout ;
@@ -411,33 +413,27 @@ wire \b32|r32_gen:0:registers|rout[18]~feeder_combout ;
 wire \b32|rout[18]~feeder_combout ;
 wire \LED[2]~reg0feeder_combout ;
 wire \LED[2]~reg0_q ;
-wire \aluin1[19]~feeder_combout ;
 wire \a32|Add0~10 ;
 wire \a32|Add0~13_sumout ;
-wire \reginput[19]~feeder_combout ;
 wire \b32|regin[0][19]~feeder_combout ;
 wire \b32|regin[0][19]~q ;
 wire \b32|r32_gen:0:registers|rout[19]~feeder_combout ;
 wire \b32|rout[19]~feeder_combout ;
 wire \LED[3]~reg0feeder_combout ;
 wire \LED[3]~reg0_q ;
+wire \aluin1[20]~feeder_combout ;
 wire \a32|Add0~14 ;
 wire \a32|Add0~17_sumout ;
-wire \reginput[20]~feeder_combout ;
-wire \b32|regin[0][20]~feeder_combout ;
 wire \b32|regin[0][20]~q ;
 wire \b32|r32_gen:0:registers|rout[20]~feeder_combout ;
-wire \b32|rout[20]~feeder_combout ;
 wire \LED[4]~reg0feeder_combout ;
 wire \LED[4]~reg0_q ;
 wire \aluin1[21]~feeder_combout ;
 wire \a32|Add0~18 ;
 wire \a32|Add0~21_sumout ;
-wire \b32|regin[0][21]~feeder_combout ;
+wire \reginput[21]~feeder_combout ;
 wire \b32|regin[0][21]~q ;
 wire \b32|r32_gen:0:registers|rout[21]~feeder_combout ;
-wire \b32|rout[21]~feeder_combout ;
-wire \LED[5]~reg0feeder_combout ;
 wire \LED[5]~reg0_q ;
 wire \aluin1[22]~feeder_combout ;
 wire \a32|Add0~22 ;
@@ -447,6 +443,7 @@ wire \b32|regin[0][22]~feeder_combout ;
 wire \b32|regin[0][22]~q ;
 wire \b32|r32_gen:0:registers|rout[22]~feeder_combout ;
 wire \b32|rout[22]~feeder_combout ;
+wire \LED[6]~reg0feeder_combout ;
 wire \LED[6]~reg0_q ;
 wire \a32|Add0~26 ;
 wire \a32|Add0~29_sumout ;
@@ -2089,7 +2086,7 @@ defparam \FPGA_CLK_50~inputCLKENA0 .ena_register_power_up = "high";
 defparam \FPGA_CLK_50~inputCLKENA0 .test_syn = "high";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N0
+// Location: LABCELL_X65_Y11_N3
 cyclonev_lcell_comb \aluin1[16]~feeder (
 // Equation(s):
 // \aluin1[16]~feeder_combout  = ( \b32|rout [16] )
@@ -2113,7 +2110,7 @@ defparam \aluin1[16]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[16]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N1
+// Location: FF_X65_Y11_N4
 dffeas \aluin1[16] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[16]~feeder_combout ),
@@ -2132,7 +2129,7 @@ defparam \aluin1[16] .is_wysiwyg = "true";
 defparam \aluin1[16] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N54
+// Location: MLABCELL_X60_Y12_N48
 cyclonev_lcell_comb \enable~feeder (
 // Equation(s):
 // \enable~feeder_combout  = VCC
@@ -2156,7 +2153,7 @@ defparam \enable~feeder .lut_mask = 64'hFFFFFFFFFFFFFFFF;
 defparam \enable~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N56
+// Location: FF_X60_Y12_N50
 dffeas enable(
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\enable~feeder_combout ),
@@ -2175,7 +2172,7 @@ defparam enable.is_wysiwyg = "true";
 defparam enable.power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N0
+// Location: MLABCELL_X60_Y12_N0
 cyclonev_lcell_comb \a32|Add0~93 (
 // Equation(s):
 // \a32|Add0~93_sumout  = SUM(( aluin1[0] ) + ( \enable~q  ) + ( !VCC ))
@@ -2200,7 +2197,7 @@ defparam \a32|Add0~93 .lut_mask = 64'h0000F0F0000000FF;
 defparam \a32|Add0~93 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N1
+// Location: FF_X60_Y12_N2
 dffeas \a32|out1[0] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~93_sumout ),
@@ -2219,7 +2216,7 @@ defparam \a32|out1[0] .is_wysiwyg = "true";
 defparam \a32|out1[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N26
+// Location: FF_X59_Y12_N17
 dffeas \reginput[0] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -2238,15 +2235,39 @@ defparam \reginput[0] .is_wysiwyg = "true";
 defparam \reginput[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N50
+// Location: LABCELL_X59_Y12_N27
+cyclonev_lcell_comb \b32|regin[0][0]~feeder (
+// Equation(s):
+// \b32|regin[0][0]~feeder_combout  = ( reginput[0] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!reginput[0]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|regin[0][0]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|regin[0][0]~feeder .extended_lut = "off";
+defparam \b32|regin[0][0]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|regin[0][0]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X59_Y12_N29
 dffeas \b32|regin[0][0] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(reginput[0]),
+	.d(\b32|regin[0][0]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2257,17 +2278,17 @@ defparam \b32|regin[0][0] .is_wysiwyg = "true";
 defparam \b32|regin[0][0] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N18
+// Location: LABCELL_X59_Y12_N57
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[0]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[0]~feeder_combout  = ( \b32|regin[0][0]~q  )
+// \b32|r32_gen:0:registers|rout[0]~feeder_combout  = \b32|regin[0][0]~q 
 
-	.dataa(gnd),
+	.dataa(!\b32|regin[0][0]~q ),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][0]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2277,11 +2298,11 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[0]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[0]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[0]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[0]~feeder .lut_mask = 64'h5555555555555555;
 defparam \b32|r32_gen:0:registers|rout[0]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N41
+// Location: FF_X64_Y11_N29
 dffeas \b32|regclr[0] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -2300,9 +2321,9 @@ defparam \b32|regclr[0] .is_wysiwyg = "true";
 defparam \b32|regclr[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N19
+// Location: FF_X59_Y12_N59
 dffeas \b32|r32_gen:0:registers|rout[0] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[0]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2319,39 +2340,15 @@ defparam \b32|r32_gen:0:registers|rout[0] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y9_N24
-cyclonev_lcell_comb \b32|rout[0]~feeder (
-// Equation(s):
-// \b32|rout[0]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [0] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [0]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|rout[0]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|rout[0]~feeder .extended_lut = "off";
-defparam \b32|rout[0]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|rout[0]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X59_Y9_N25
+// Location: FF_X58_Y12_N58
 dffeas \b32|rout[0] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|rout[0]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|r32_gen:0:registers|rout [0]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2362,7 +2359,7 @@ defparam \b32|rout[0] .is_wysiwyg = "true";
 defparam \b32|rout[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N45
+// Location: MLABCELL_X60_Y12_N57
 cyclonev_lcell_comb \aluin1[0]~feeder (
 // Equation(s):
 // \aluin1[0]~feeder_combout  = ( \b32|rout [0] )
@@ -2386,7 +2383,7 @@ defparam \aluin1[0]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[0]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N47
+// Location: FF_X60_Y12_N59
 dffeas \aluin1[0] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[0]~feeder_combout ),
@@ -2405,7 +2402,7 @@ defparam \aluin1[0] .is_wysiwyg = "true";
 defparam \aluin1[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N3
+// Location: MLABCELL_X60_Y12_N3
 cyclonev_lcell_comb \a32|Add0~89 (
 // Equation(s):
 // \a32|Add0~89_sumout  = SUM(( aluin1[1] ) + ( GND ) + ( \a32|Add0~94  ))
@@ -2430,7 +2427,7 @@ defparam \a32|Add0~89 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~89 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N4
+// Location: FF_X60_Y12_N4
 dffeas \a32|out1[1] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~89_sumout ),
@@ -2449,15 +2446,39 @@ defparam \a32|out1[1] .is_wysiwyg = "true";
 defparam \a32|out1[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X58_Y9_N5
+// Location: LABCELL_X59_Y12_N0
+cyclonev_lcell_comb \reginput[1]~feeder (
+// Equation(s):
+// \reginput[1]~feeder_combout  = ( \a32|out1 [1] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\a32|out1 [1]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\reginput[1]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \reginput[1]~feeder .extended_lut = "off";
+defparam \reginput[1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \reginput[1]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X59_Y12_N2
 dffeas \reginput[1] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\a32|out1 [1]),
+	.d(\reginput[1]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2468,39 +2489,15 @@ defparam \reginput[1] .is_wysiwyg = "true";
 defparam \reginput[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N6
-cyclonev_lcell_comb \b32|regin[0][1]~feeder (
-// Equation(s):
-// \b32|regin[0][1]~feeder_combout  = ( reginput[1] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!reginput[1]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|regin[0][1]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|regin[0][1]~feeder .extended_lut = "off";
-defparam \b32|regin[0][1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|regin[0][1]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X58_Y8_N8
+// Location: FF_X59_Y12_N8
 dffeas \b32|regin[0][1] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|regin[0][1]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(reginput[1]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2511,17 +2508,17 @@ defparam \b32|regin[0][1] .is_wysiwyg = "true";
 defparam \b32|regin[0][1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N18
+// Location: LABCELL_X59_Y12_N42
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[1]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[1]~feeder_combout  = ( \b32|regin[0][1]~q  )
+// \b32|r32_gen:0:registers|rout[1]~feeder_combout  = \b32|regin[0][1]~q 
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\b32|regin[0][1]~q ),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][1]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -2531,13 +2528,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[1]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[1]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[1]~feeder .lut_mask = 64'h3333333333333333;
 defparam \b32|r32_gen:0:registers|rout[1]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N20
+// Location: FF_X59_Y12_N44
 dffeas \b32|r32_gen:0:registers|rout[1] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[1]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -2554,39 +2551,15 @@ defparam \b32|r32_gen:0:registers|rout[1] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N24
-cyclonev_lcell_comb \b32|rout[1]~feeder (
-// Equation(s):
-// \b32|rout[1]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [1] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [1]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|rout[1]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|rout[1]~feeder .extended_lut = "off";
-defparam \b32|rout[1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|rout[1]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X58_Y8_N25
+// Location: FF_X58_Y12_N37
 dffeas \b32|rout[1] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|rout[1]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|r32_gen:0:registers|rout [1]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2597,7 +2570,7 @@ defparam \b32|rout[1] .is_wysiwyg = "true";
 defparam \b32|rout[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N36
+// Location: MLABCELL_X60_Y12_N36
 cyclonev_lcell_comb \aluin1[1]~feeder (
 // Equation(s):
 // \aluin1[1]~feeder_combout  = ( \b32|rout [1] )
@@ -2621,7 +2594,7 @@ defparam \aluin1[1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[1]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N38
+// Location: FF_X60_Y12_N38
 dffeas \aluin1[1] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[1]~feeder_combout ),
@@ -2640,7 +2613,7 @@ defparam \aluin1[1] .is_wysiwyg = "true";
 defparam \aluin1[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N6
+// Location: MLABCELL_X60_Y12_N6
 cyclonev_lcell_comb \a32|Add0~85 (
 // Equation(s):
 // \a32|Add0~85_sumout  = SUM(( aluin1[2] ) + ( GND ) + ( \a32|Add0~90  ))
@@ -2648,8 +2621,8 @@ cyclonev_lcell_comb \a32|Add0~85 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[2]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[2]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -2661,11 +2634,11 @@ cyclonev_lcell_comb \a32|Add0~85 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~85 .extended_lut = "off";
-defparam \a32|Add0~85 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~85 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~85 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N7
+// Location: FF_X60_Y12_N7
 dffeas \a32|out1[2] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~85_sumout ),
@@ -2684,7 +2657,7 @@ defparam \a32|out1[2] .is_wysiwyg = "true";
 defparam \a32|out1[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N39
+// Location: LABCELL_X59_Y12_N12
 cyclonev_lcell_comb \reginput[2]~feeder (
 // Equation(s):
 // \reginput[2]~feeder_combout  = ( \a32|out1 [2] )
@@ -2708,7 +2681,7 @@ defparam \reginput[2]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[2]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N41
+// Location: FF_X59_Y12_N14
 dffeas \reginput[2] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[2]~feeder_combout ),
@@ -2727,7 +2700,7 @@ defparam \reginput[2] .is_wysiwyg = "true";
 defparam \reginput[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N48
+// Location: LABCELL_X59_Y12_N24
 cyclonev_lcell_comb \b32|regin[0][2]~feeder (
 // Equation(s):
 // \b32|regin[0][2]~feeder_combout  = ( reginput[2] )
@@ -2751,7 +2724,7 @@ defparam \b32|regin[0][2]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][2]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N49
+// Location: FF_X59_Y12_N26
 dffeas \b32|regin[0][2] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][2]~feeder_combout ),
@@ -2770,15 +2743,39 @@ defparam \b32|regin[0][2] .is_wysiwyg = "true";
 defparam \b32|regin[0][2] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N7
+// Location: LABCELL_X59_Y12_N54
+cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[2]~feeder (
+// Equation(s):
+// \b32|r32_gen:0:registers|rout[2]~feeder_combout  = \b32|regin[0][2]~q 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\b32|regin[0][2]~q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|r32_gen:0:registers|rout[2]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|r32_gen:0:registers|rout[2]~feeder .extended_lut = "off";
+defparam \b32|r32_gen:0:registers|rout[2]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
+defparam \b32|r32_gen:0:registers|rout[2]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X59_Y12_N55
 dffeas \b32|r32_gen:0:registers|rout[2] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|regin[0][2]~q ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(\b32|r32_gen:0:registers|rout[2]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2789,7 +2786,7 @@ defparam \b32|r32_gen:0:registers|rout[2] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y9_N45
+// Location: LABCELL_X58_Y12_N33
 cyclonev_lcell_comb \b32|rout[2]~feeder (
 // Equation(s):
 // \b32|rout[2]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [2] )
@@ -2813,7 +2810,7 @@ defparam \b32|rout[2]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|rout[2]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y9_N46
+// Location: FF_X58_Y12_N34
 dffeas \b32|rout[2] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[2]~feeder_combout ),
@@ -2832,7 +2829,7 @@ defparam \b32|rout[2] .is_wysiwyg = "true";
 defparam \b32|rout[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N33
+// Location: MLABCELL_X60_Y12_N45
 cyclonev_lcell_comb \aluin1[2]~feeder (
 // Equation(s):
 // \aluin1[2]~feeder_combout  = ( \b32|rout [2] )
@@ -2856,7 +2853,7 @@ defparam \aluin1[2]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[2]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N35
+// Location: FF_X60_Y12_N47
 dffeas \aluin1[2] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[2]~feeder_combout ),
@@ -2875,7 +2872,7 @@ defparam \aluin1[2] .is_wysiwyg = "true";
 defparam \aluin1[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N9
+// Location: MLABCELL_X60_Y12_N9
 cyclonev_lcell_comb \a32|Add0~81 (
 // Equation(s):
 // \a32|Add0~81_sumout  = SUM(( aluin1[3] ) + ( GND ) + ( \a32|Add0~86  ))
@@ -2883,8 +2880,8 @@ cyclonev_lcell_comb \a32|Add0~81 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
-	.datad(!aluin1[3]),
+	.datac(!aluin1[3]),
+	.datad(gnd),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -2896,11 +2893,11 @@ cyclonev_lcell_comb \a32|Add0~81 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~81 .extended_lut = "off";
-defparam \a32|Add0~81 .lut_mask = 64'h0000FFFF000000FF;
+defparam \a32|Add0~81 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~81 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N10
+// Location: FF_X60_Y12_N11
 dffeas \a32|out1[3] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~81_sumout ),
@@ -2919,39 +2916,15 @@ defparam \a32|out1[3] .is_wysiwyg = "true";
 defparam \a32|out1[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N45
-cyclonev_lcell_comb \reginput[3]~feeder (
-// Equation(s):
-// \reginput[3]~feeder_combout  = ( \a32|out1 [3] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\a32|out1 [3]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\reginput[3]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \reginput[3]~feeder .extended_lut = "off";
-defparam \reginput[3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \reginput[3]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X59_Y8_N46
+// Location: FF_X59_Y12_N53
 dffeas \reginput[3] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\reginput[3]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\a32|out1 [3]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2962,15 +2935,39 @@ defparam \reginput[3] .is_wysiwyg = "true";
 defparam \reginput[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N5
+// Location: LABCELL_X59_Y12_N33
+cyclonev_lcell_comb \b32|regin[0][3]~feeder (
+// Equation(s):
+// \b32|regin[0][3]~feeder_combout  = ( reginput[3] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!reginput[3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|regin[0][3]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|regin[0][3]~feeder .extended_lut = "off";
+defparam \b32|regin[0][3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|regin[0][3]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X59_Y12_N35
 dffeas \b32|regin[0][3] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(reginput[3]),
+	.d(\b32|regin[0][3]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -2981,15 +2978,39 @@ defparam \b32|regin[0][3] .is_wysiwyg = "true";
 defparam \b32|regin[0][3] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N34
+// Location: LABCELL_X59_Y12_N21
+cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[3]~feeder (
+// Equation(s):
+// \b32|r32_gen:0:registers|rout[3]~feeder_combout  = \b32|regin[0][3]~q 
+
+	.dataa(!\b32|regin[0][3]~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|r32_gen:0:registers|rout[3]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|r32_gen:0:registers|rout[3]~feeder .extended_lut = "off";
+defparam \b32|r32_gen:0:registers|rout[3]~feeder .lut_mask = 64'h5555555555555555;
+defparam \b32|r32_gen:0:registers|rout[3]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X59_Y12_N22
 dffeas \b32|r32_gen:0:registers|rout[3] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|regin[0][3]~q ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(\b32|r32_gen:0:registers|rout[3]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3000,39 +3021,15 @@ defparam \b32|r32_gen:0:registers|rout[3] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y9_N39
-cyclonev_lcell_comb \b32|rout[3]~feeder (
-// Equation(s):
-// \b32|rout[3]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [3] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [3]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|rout[3]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|rout[3]~feeder .extended_lut = "off";
-defparam \b32|rout[3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|rout[3]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X59_Y9_N40
+// Location: FF_X61_Y12_N26
 dffeas \b32|rout[3] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|rout[3]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|r32_gen:0:registers|rout [3]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3043,7 +3040,7 @@ defparam \b32|rout[3] .is_wysiwyg = "true";
 defparam \b32|rout[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N48
+// Location: MLABCELL_X60_Y12_N30
 cyclonev_lcell_comb \aluin1[3]~feeder (
 // Equation(s):
 // \aluin1[3]~feeder_combout  = ( \b32|rout [3] )
@@ -3067,7 +3064,7 @@ defparam \aluin1[3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[3]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N49
+// Location: FF_X60_Y12_N32
 dffeas \aluin1[3] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[3]~feeder_combout ),
@@ -3086,7 +3083,7 @@ defparam \aluin1[3] .is_wysiwyg = "true";
 defparam \aluin1[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N12
+// Location: MLABCELL_X60_Y12_N12
 cyclonev_lcell_comb \a32|Add0~77 (
 // Equation(s):
 // \a32|Add0~77_sumout  = SUM(( aluin1[4] ) + ( GND ) + ( \a32|Add0~82  ))
@@ -3111,7 +3108,7 @@ defparam \a32|Add0~77 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~77 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N13
+// Location: FF_X60_Y12_N13
 dffeas \a32|out1[4] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~77_sumout ),
@@ -3130,7 +3127,7 @@ defparam \a32|out1[4] .is_wysiwyg = "true";
 defparam \a32|out1[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N42
+// Location: LABCELL_X59_Y12_N48
 cyclonev_lcell_comb \reginput[4]~feeder (
 // Equation(s):
 // \reginput[4]~feeder_combout  = ( \a32|out1 [4] )
@@ -3154,7 +3151,7 @@ defparam \reginput[4]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[4]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N44
+// Location: FF_X59_Y12_N50
 dffeas \reginput[4] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[4]~feeder_combout ),
@@ -3173,7 +3170,7 @@ defparam \reginput[4] .is_wysiwyg = "true";
 defparam \reginput[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N0
+// Location: LABCELL_X59_Y12_N30
 cyclonev_lcell_comb \b32|regin[0][4]~feeder (
 // Equation(s):
 // \b32|regin[0][4]~feeder_combout  = ( reginput[4] )
@@ -3197,7 +3194,7 @@ defparam \b32|regin[0][4]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][4]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N1
+// Location: FF_X59_Y12_N32
 dffeas \b32|regin[0][4] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][4]~feeder_combout ),
@@ -3216,15 +3213,39 @@ defparam \b32|regin[0][4] .is_wysiwyg = "true";
 defparam \b32|regin[0][4] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N31
+// Location: LABCELL_X59_Y12_N18
+cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[4]~feeder (
+// Equation(s):
+// \b32|r32_gen:0:registers|rout[4]~feeder_combout  = \b32|regin[0][4]~q 
+
+	.dataa(gnd),
+	.datab(!\b32|regin[0][4]~q ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|r32_gen:0:registers|rout[4]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|r32_gen:0:registers|rout[4]~feeder .extended_lut = "off";
+defparam \b32|r32_gen:0:registers|rout[4]~feeder .lut_mask = 64'h3333333333333333;
+defparam \b32|r32_gen:0:registers|rout[4]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X59_Y12_N19
 dffeas \b32|r32_gen:0:registers|rout[4] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|regin[0][4]~q ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(\b32|r32_gen:0:registers|rout[4]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3235,7 +3256,7 @@ defparam \b32|r32_gen:0:registers|rout[4] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y9_N34
+// Location: FF_X61_Y12_N13
 dffeas \b32|rout[4] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -3254,15 +3275,39 @@ defparam \b32|rout[4] .is_wysiwyg = "true";
 defparam \b32|rout[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N53
+// Location: MLABCELL_X60_Y12_N33
+cyclonev_lcell_comb \aluin1[4]~feeder (
+// Equation(s):
+// \aluin1[4]~feeder_combout  = ( \b32|rout [4] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\b32|rout [4]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\aluin1[4]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \aluin1[4]~feeder .extended_lut = "off";
+defparam \aluin1[4]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \aluin1[4]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X60_Y12_N35
 dffeas \aluin1[4] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|rout [4]),
+	.d(\aluin1[4]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3273,7 +3318,7 @@ defparam \aluin1[4] .is_wysiwyg = "true";
 defparam \aluin1[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N15
+// Location: MLABCELL_X60_Y12_N15
 cyclonev_lcell_comb \a32|Add0~73 (
 // Equation(s):
 // \a32|Add0~73_sumout  = SUM(( aluin1[5] ) + ( GND ) + ( \a32|Add0~78  ))
@@ -3298,7 +3343,7 @@ defparam \a32|Add0~73 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~73 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N17
+// Location: FF_X60_Y12_N17
 dffeas \a32|out1[5] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~73_sumout ),
@@ -3317,39 +3362,15 @@ defparam \a32|out1[5] .is_wysiwyg = "true";
 defparam \a32|out1[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N57
-cyclonev_lcell_comb \reginput[5]~feeder (
-// Equation(s):
-// \reginput[5]~feeder_combout  = ( \a32|out1 [5] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\a32|out1 [5]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\reginput[5]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \reginput[5]~feeder .extended_lut = "off";
-defparam \reginput[5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \reginput[5]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X60_Y9_N58
+// Location: FF_X59_Y12_N5
 dffeas \reginput[5] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\reginput[5]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\a32|out1 [5]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3360,39 +3381,15 @@ defparam \reginput[5] .is_wysiwyg = "true";
 defparam \reginput[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N15
-cyclonev_lcell_comb \b32|regin[0][5]~feeder (
-// Equation(s):
-// \b32|regin[0][5]~feeder_combout  = ( reginput[5] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!reginput[5]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|regin[0][5]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|regin[0][5]~feeder .extended_lut = "off";
-defparam \b32|regin[0][5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|regin[0][5]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X59_Y8_N17
+// Location: FF_X59_Y12_N41
 dffeas \b32|regin[0][5] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|regin[0][5]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(reginput[5]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3403,39 +3400,15 @@ defparam \b32|regin[0][5] .is_wysiwyg = "true";
 defparam \b32|regin[0][5] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N57
-cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[5]~feeder (
-// Equation(s):
-// \b32|r32_gen:0:registers|rout[5]~feeder_combout  = ( \b32|regin[0][5]~q  )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|regin[0][5]~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|r32_gen:0:registers|rout[5]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|r32_gen:0:registers|rout[5]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|r32_gen:0:registers|rout[5]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X59_Y8_N58
+// Location: FF_X58_Y12_N14
 dffeas \b32|r32_gen:0:registers|rout[5] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|r32_gen:0:registers|rout[5]~feeder_combout ),
-	.asdata(vcc),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\b32|regin[0][5]~q ),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3446,15 +3419,39 @@ defparam \b32|r32_gen:0:registers|rout[5] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y9_N13
+// Location: LABCELL_X58_Y12_N9
+cyclonev_lcell_comb \b32|rout[5]~feeder (
+// Equation(s):
+// \b32|rout[5]~feeder_combout  = \b32|r32_gen:0:registers|rout [5]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\b32|r32_gen:0:registers|rout [5]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|rout[5]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|rout[5]~feeder .extended_lut = "off";
+defparam \b32|rout[5]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
+defparam \b32|rout[5]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y12_N10
 dffeas \b32|rout[5] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|r32_gen:0:registers|rout [5]),
+	.d(\b32|rout[5]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3465,15 +3462,39 @@ defparam \b32|rout[5] .is_wysiwyg = "true";
 defparam \b32|rout[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N32
+// Location: MLABCELL_X60_Y12_N42
+cyclonev_lcell_comb \aluin1[5]~feeder (
+// Equation(s):
+// \aluin1[5]~feeder_combout  = ( \b32|rout [5] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\b32|rout [5]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\aluin1[5]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \aluin1[5]~feeder .extended_lut = "off";
+defparam \aluin1[5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \aluin1[5]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X60_Y12_N44
 dffeas \aluin1[5] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|rout [5]),
+	.d(\aluin1[5]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3484,7 +3505,7 @@ defparam \aluin1[5] .is_wysiwyg = "true";
 defparam \aluin1[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N18
+// Location: MLABCELL_X60_Y12_N18
 cyclonev_lcell_comb \a32|Add0~69 (
 // Equation(s):
 // \a32|Add0~69_sumout  = SUM(( aluin1[6] ) + ( GND ) + ( \a32|Add0~74  ))
@@ -3509,7 +3530,7 @@ defparam \a32|Add0~69 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~69 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N19
+// Location: FF_X60_Y12_N19
 dffeas \a32|out1[6] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~69_sumout ),
@@ -3528,7 +3549,7 @@ defparam \a32|out1[6] .is_wysiwyg = "true";
 defparam \a32|out1[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N36
+// Location: LABCELL_X61_Y12_N30
 cyclonev_lcell_comb \reginput[6]~feeder (
 // Equation(s):
 // \reginput[6]~feeder_combout  = ( \a32|out1 [6] )
@@ -3552,7 +3573,7 @@ defparam \reginput[6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[6]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N38
+// Location: FF_X61_Y12_N31
 dffeas \reginput[6] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[6]~feeder_combout ),
@@ -3571,15 +3592,39 @@ defparam \reginput[6] .is_wysiwyg = "true";
 defparam \reginput[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N13
+// Location: LABCELL_X58_Y11_N57
+cyclonev_lcell_comb \b32|regin[0][6]~feeder (
+// Equation(s):
+// \b32|regin[0][6]~feeder_combout  = ( reginput[6] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!reginput[6]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|regin[0][6]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|regin[0][6]~feeder .extended_lut = "off";
+defparam \b32|regin[0][6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|regin[0][6]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y11_N58
 dffeas \b32|regin[0][6] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(reginput[6]),
+	.d(\b32|regin[0][6]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3590,7 +3635,7 @@ defparam \b32|regin[0][6] .is_wysiwyg = "true";
 defparam \b32|regin[0][6] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N54
+// Location: LABCELL_X61_Y11_N6
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[6]~feeder (
 // Equation(s):
 // \b32|r32_gen:0:registers|rout[6]~feeder_combout  = ( \b32|regin[0][6]~q  )
@@ -3614,9 +3659,9 @@ defparam \b32|r32_gen:0:registers|rout[6]~feeder .lut_mask = 64'h00000000FFFFFFF
 defparam \b32|r32_gen:0:registers|rout[6]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N55
+// Location: FF_X61_Y11_N8
 dffeas \b32|r32_gen:0:registers|rout[6] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[6]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3633,17 +3678,17 @@ defparam \b32|r32_gen:0:registers|rout[6] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y9_N51
+// Location: LABCELL_X61_Y11_N27
 cyclonev_lcell_comb \b32|rout[6]~feeder (
 // Equation(s):
-// \b32|rout[6]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [6] )
+// \b32|rout[6]~feeder_combout  = \b32|r32_gen:0:registers|rout [6]
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|r32_gen:0:registers|rout [6]),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [6]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -3653,11 +3698,11 @@ cyclonev_lcell_comb \b32|rout[6]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[6]~feeder .extended_lut = "off";
-defparam \b32|rout[6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[6]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|rout[6]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y9_N53
+// Location: FF_X61_Y11_N28
 dffeas \b32|rout[6] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[6]~feeder_combout ),
@@ -3676,7 +3721,7 @@ defparam \b32|rout[6] .is_wysiwyg = "true";
 defparam \b32|rout[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N39
+// Location: MLABCELL_X60_Y12_N39
 cyclonev_lcell_comb \aluin1[6]~feeder (
 // Equation(s):
 // \aluin1[6]~feeder_combout  = ( \b32|rout [6] )
@@ -3700,7 +3745,7 @@ defparam \aluin1[6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[6]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N40
+// Location: FF_X60_Y12_N40
 dffeas \aluin1[6] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[6]~feeder_combout ),
@@ -3719,7 +3764,7 @@ defparam \aluin1[6] .is_wysiwyg = "true";
 defparam \aluin1[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N21
+// Location: MLABCELL_X60_Y12_N21
 cyclonev_lcell_comb \a32|Add0~65 (
 // Equation(s):
 // \a32|Add0~65_sumout  = SUM(( aluin1[7] ) + ( GND ) + ( \a32|Add0~70  ))
@@ -3727,8 +3772,8 @@ cyclonev_lcell_comb \a32|Add0~65 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[7]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[7]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -3740,11 +3785,11 @@ cyclonev_lcell_comb \a32|Add0~65 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~65 .extended_lut = "off";
-defparam \a32|Add0~65 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~65 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~65 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N22
+// Location: FF_X60_Y12_N22
 dffeas \a32|out1[7] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~65_sumout ),
@@ -3763,7 +3808,7 @@ defparam \a32|out1[7] .is_wysiwyg = "true";
 defparam \a32|out1[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N27
+// Location: LABCELL_X56_Y12_N51
 cyclonev_lcell_comb \reginput[7]~feeder (
 // Equation(s):
 // \reginput[7]~feeder_combout  = ( \a32|out1 [7] )
@@ -3787,7 +3832,7 @@ defparam \reginput[7]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[7]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N29
+// Location: FF_X56_Y12_N52
 dffeas \reginput[7] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[7]~feeder_combout ),
@@ -3806,15 +3851,39 @@ defparam \reginput[7] .is_wysiwyg = "true";
 defparam \reginput[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N53
+// Location: LABCELL_X58_Y11_N54
+cyclonev_lcell_comb \b32|regin[0][7]~feeder (
+// Equation(s):
+// \b32|regin[0][7]~feeder_combout  = ( reginput[7] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!reginput[7]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|regin[0][7]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|regin[0][7]~feeder .extended_lut = "off";
+defparam \b32|regin[0][7]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|regin[0][7]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y11_N56
 dffeas \b32|regin[0][7] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(reginput[7]),
+	.d(\b32|regin[0][7]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3825,17 +3894,17 @@ defparam \b32|regin[0][7] .is_wysiwyg = "true";
 defparam \b32|regin[0][7] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N21
+// Location: LABCELL_X58_Y11_N42
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[7]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[7]~feeder_combout  = ( \b32|regin[0][7]~q  )
+// \b32|r32_gen:0:registers|rout[7]~feeder_combout  = \b32|regin[0][7]~q 
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|regin[0][7]~q ),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][7]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -3845,13 +3914,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[7]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[7]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[7]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[7]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|r32_gen:0:registers|rout[7]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N22
+// Location: FF_X58_Y11_N43
 dffeas \b32|r32_gen:0:registers|rout[7] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[7]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -3868,39 +3937,15 @@ defparam \b32|r32_gen:0:registers|rout[7] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y9_N48
-cyclonev_lcell_comb \b32|rout[7]~feeder (
-// Equation(s):
-// \b32|rout[7]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [7] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [7]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|rout[7]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|rout[7]~feeder .extended_lut = "off";
-defparam \b32|rout[7]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|rout[7]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X61_Y9_N49
+// Location: FF_X58_Y11_N50
 dffeas \b32|rout[7] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|rout[7]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|r32_gen:0:registers|rout [7]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -3911,7 +3956,7 @@ defparam \b32|rout[7] .is_wysiwyg = "true";
 defparam \b32|rout[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N42
+// Location: MLABCELL_X60_Y12_N54
 cyclonev_lcell_comb \aluin1[7]~feeder (
 // Equation(s):
 // \aluin1[7]~feeder_combout  = ( \b32|rout [7] )
@@ -3935,7 +3980,7 @@ defparam \aluin1[7]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[7]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N44
+// Location: FF_X60_Y12_N56
 dffeas \aluin1[7] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[7]~feeder_combout ),
@@ -3954,7 +3999,7 @@ defparam \aluin1[7] .is_wysiwyg = "true";
 defparam \aluin1[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N24
+// Location: MLABCELL_X60_Y12_N24
 cyclonev_lcell_comb \a32|Add0~61 (
 // Equation(s):
 // \a32|Add0~61_sumout  = SUM(( aluin1[8] ) + ( GND ) + ( \a32|Add0~66  ))
@@ -3962,8 +4007,8 @@ cyclonev_lcell_comb \a32|Add0~61 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
-	.datad(!aluin1[8]),
+	.datac(!aluin1[8]),
+	.datad(gnd),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -3975,11 +4020,11 @@ cyclonev_lcell_comb \a32|Add0~61 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~61 .extended_lut = "off";
-defparam \a32|Add0~61 .lut_mask = 64'h0000FFFF000000FF;
+defparam \a32|Add0~61 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~61 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N25
+// Location: FF_X60_Y12_N25
 dffeas \a32|out1[8] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~61_sumout ),
@@ -3998,7 +4043,7 @@ defparam \a32|out1[8] .is_wysiwyg = "true";
 defparam \a32|out1[8] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N24
+// Location: LABCELL_X61_Y12_N42
 cyclonev_lcell_comb \reginput[8]~feeder (
 // Equation(s):
 // \reginput[8]~feeder_combout  = ( \a32|out1 [8] )
@@ -4022,7 +4067,7 @@ defparam \reginput[8]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[8]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N25
+// Location: FF_X61_Y12_N43
 dffeas \reginput[8] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[8]~feeder_combout ),
@@ -4041,39 +4086,15 @@ defparam \reginput[8] .is_wysiwyg = "true";
 defparam \reginput[8] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X59_Y8_N12
-cyclonev_lcell_comb \b32|regin[0][8]~feeder (
-// Equation(s):
-// \b32|regin[0][8]~feeder_combout  = ( reginput[8] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!reginput[8]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|regin[0][8]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|regin[0][8]~feeder .extended_lut = "off";
-defparam \b32|regin[0][8]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|regin[0][8]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X59_Y8_N14
+// Location: FF_X58_Y11_N5
 dffeas \b32|regin[0][8] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|regin[0][8]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(reginput[8]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4084,17 +4105,17 @@ defparam \b32|regin[0][8] .is_wysiwyg = "true";
 defparam \b32|regin[0][8] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N57
+// Location: LABCELL_X58_Y11_N21
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[8]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[8]~feeder_combout  = ( \b32|regin[0][8]~q  )
+// \b32|r32_gen:0:registers|rout[8]~feeder_combout  = \b32|regin[0][8]~q 
 
-	.dataa(gnd),
+	.dataa(!\b32|regin[0][8]~q ),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][8]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -4104,13 +4125,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[8]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[8]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[8]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[8]~feeder .lut_mask = 64'h5555555555555555;
 defparam \b32|r32_gen:0:registers|rout[8]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N58
+// Location: FF_X58_Y11_N23
 dffeas \b32|r32_gen:0:registers|rout[8] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[8]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4127,17 +4148,17 @@ defparam \b32|r32_gen:0:registers|rout[8] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[8] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y9_N57
+// Location: LABCELL_X58_Y11_N39
 cyclonev_lcell_comb \b32|rout[8]~feeder (
 // Equation(s):
-// \b32|rout[8]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [8] )
+// \b32|rout[8]~feeder_combout  = \b32|r32_gen:0:registers|rout [8]
 
-	.dataa(gnd),
+	.dataa(!\b32|r32_gen:0:registers|rout [8]),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [8]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -4147,11 +4168,11 @@ cyclonev_lcell_comb \b32|rout[8]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[8]~feeder .extended_lut = "off";
-defparam \b32|rout[8]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[8]~feeder .lut_mask = 64'h5555555555555555;
 defparam \b32|rout[8]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y9_N58
+// Location: FF_X58_Y11_N40
 dffeas \b32|rout[8] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[8]~feeder_combout ),
@@ -4170,7 +4191,7 @@ defparam \b32|rout[8] .is_wysiwyg = "true";
 defparam \b32|rout[8] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y9_N0
+// Location: MLABCELL_X60_Y12_N51
 cyclonev_lcell_comb \aluin1[8]~feeder (
 // Equation(s):
 // \aluin1[8]~feeder_combout  = ( \b32|rout [8] )
@@ -4194,7 +4215,7 @@ defparam \aluin1[8]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[8]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y9_N2
+// Location: FF_X60_Y12_N53
 dffeas \aluin1[8] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[8]~feeder_combout ),
@@ -4213,7 +4234,7 @@ defparam \aluin1[8] .is_wysiwyg = "true";
 defparam \aluin1[8] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y9_N27
+// Location: MLABCELL_X60_Y12_N27
 cyclonev_lcell_comb \a32|Add0~57 (
 // Equation(s):
 // \a32|Add0~57_sumout  = SUM(( aluin1[9] ) + ( GND ) + ( \a32|Add0~62  ))
@@ -4238,7 +4259,7 @@ defparam \a32|Add0~57 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~57 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y9_N28
+// Location: FF_X60_Y12_N28
 dffeas \a32|out1[9] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~57_sumout ),
@@ -4257,15 +4278,39 @@ defparam \a32|out1[9] .is_wysiwyg = "true";
 defparam \a32|out1[9] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X61_Y9_N34
+// Location: LABCELL_X58_Y12_N3
+cyclonev_lcell_comb \reginput[9]~feeder (
+// Equation(s):
+// \reginput[9]~feeder_combout  = ( \a32|out1 [9] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\a32|out1 [9]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\reginput[9]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \reginput[9]~feeder .extended_lut = "off";
+defparam \reginput[9]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \reginput[9]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y12_N5
 dffeas \reginput[9] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\a32|out1 [9]),
+	.d(\reginput[9]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4276,7 +4321,7 @@ defparam \reginput[9] .is_wysiwyg = "true";
 defparam \reginput[9] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N45
+// Location: LABCELL_X58_Y11_N0
 cyclonev_lcell_comb \b32|regin[0][9]~feeder (
 // Equation(s):
 // \b32|regin[0][9]~feeder_combout  = ( reginput[9] )
@@ -4300,7 +4345,7 @@ defparam \b32|regin[0][9]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][9]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N47
+// Location: FF_X58_Y11_N2
 dffeas \b32|regin[0][9] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][9]~feeder_combout ),
@@ -4319,15 +4364,39 @@ defparam \b32|regin[0][9] .is_wysiwyg = "true";
 defparam \b32|regin[0][9] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N56
+// Location: LABCELL_X58_Y11_N18
+cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[9]~feeder (
+// Equation(s):
+// \b32|r32_gen:0:registers|rout[9]~feeder_combout  = \b32|regin[0][9]~q 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\b32|regin[0][9]~q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|r32_gen:0:registers|rout[9]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|r32_gen:0:registers|rout[9]~feeder .extended_lut = "off";
+defparam \b32|r32_gen:0:registers|rout[9]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
+defparam \b32|r32_gen:0:registers|rout[9]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y11_N20
 dffeas \b32|r32_gen:0:registers|rout[9] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|regin[0][9]~q ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(\b32|r32_gen:0:registers|rout[9]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4338,15 +4407,39 @@ defparam \b32|r32_gen:0:registers|rout[9] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[9] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N26
+// Location: LABCELL_X58_Y11_N36
+cyclonev_lcell_comb \b32|rout[9]~feeder (
+// Equation(s):
+// \b32|rout[9]~feeder_combout  = \b32|r32_gen:0:registers|rout [9]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\b32|r32_gen:0:registers|rout [9]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|rout[9]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|rout[9]~feeder .extended_lut = "off";
+defparam \b32|rout[9]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
+defparam \b32|rout[9]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y11_N37
 dffeas \b32|rout[9] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|r32_gen:0:registers|rout [9]),
+	.d(\b32|rout[9]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4357,7 +4450,7 @@ defparam \b32|rout[9] .is_wysiwyg = "true";
 defparam \b32|rout[9] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N9
+// Location: LABCELL_X61_Y12_N3
 cyclonev_lcell_comb \aluin1[9]~feeder (
 // Equation(s):
 // \aluin1[9]~feeder_combout  = ( \b32|rout [9] )
@@ -4381,7 +4474,7 @@ defparam \aluin1[9]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[9]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N10
+// Location: FF_X61_Y12_N5
 dffeas \aluin1[9] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[9]~feeder_combout ),
@@ -4400,7 +4493,7 @@ defparam \aluin1[9] .is_wysiwyg = "true";
 defparam \aluin1[9] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N0
+// Location: MLABCELL_X60_Y11_N0
 cyclonev_lcell_comb \a32|Add0~53 (
 // Equation(s):
 // \a32|Add0~53_sumout  = SUM(( aluin1[10] ) + ( GND ) + ( \a32|Add0~58  ))
@@ -4408,8 +4501,8 @@ cyclonev_lcell_comb \a32|Add0~53 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[10]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[10]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -4421,11 +4514,11 @@ cyclonev_lcell_comb \a32|Add0~53 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~53 .extended_lut = "off";
-defparam \a32|Add0~53 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~53 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~53 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N2
+// Location: FF_X60_Y11_N2
 dffeas \a32|out1[10] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~53_sumout ),
@@ -4444,7 +4537,7 @@ defparam \a32|out1[10] .is_wysiwyg = "true";
 defparam \a32|out1[10] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N52
+// Location: FF_X59_Y11_N1
 dffeas \reginput[10] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -4463,7 +4556,7 @@ defparam \reginput[10] .is_wysiwyg = "true";
 defparam \reginput[10] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N10
+// Location: FF_X58_Y11_N11
 dffeas \b32|regin[0][10] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -4482,17 +4575,17 @@ defparam \b32|regin[0][10] .is_wysiwyg = "true";
 defparam \b32|regin[0][10] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N39
+// Location: LABCELL_X58_Y11_N27
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[10]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[10]~feeder_combout  = ( \b32|regin[0][10]~q  )
+// \b32|r32_gen:0:registers|rout[10]~feeder_combout  = \b32|regin[0][10]~q 
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|regin[0][10]~q ),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][10]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -4502,13 +4595,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[10]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[10]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[10]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[10]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|r32_gen:0:registers|rout[10]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N41
+// Location: FF_X58_Y11_N29
 dffeas \b32|r32_gen:0:registers|rout[10] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[10]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4525,17 +4618,17 @@ defparam \b32|r32_gen:0:registers|rout[10] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[10] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N15
+// Location: LABCELL_X58_Y11_N33
 cyclonev_lcell_comb \b32|rout[10]~feeder (
 // Equation(s):
-// \b32|rout[10]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [10] )
+// \b32|rout[10]~feeder_combout  = \b32|r32_gen:0:registers|rout [10]
 
-	.dataa(gnd),
+	.dataa(!\b32|r32_gen:0:registers|rout [10]),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [10]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -4545,11 +4638,11 @@ cyclonev_lcell_comb \b32|rout[10]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[10]~feeder .extended_lut = "off";
-defparam \b32|rout[10]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[10]~feeder .lut_mask = 64'h5555555555555555;
 defparam \b32|rout[10]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N16
+// Location: FF_X58_Y11_N34
 dffeas \b32|rout[10] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[10]~feeder_combout ),
@@ -4568,39 +4661,15 @@ defparam \b32|rout[10] .is_wysiwyg = "true";
 defparam \b32|rout[10] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N54
-cyclonev_lcell_comb \aluin1[10]~feeder (
-// Equation(s):
-// \aluin1[10]~feeder_combout  = ( \b32|rout [10] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|rout [10]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\aluin1[10]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \aluin1[10]~feeder .extended_lut = "off";
-defparam \aluin1[10]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \aluin1[10]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X60_Y8_N56
+// Location: FF_X59_Y11_N28
 dffeas \aluin1[10] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\aluin1[10]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|rout [10]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4611,7 +4680,7 @@ defparam \aluin1[10] .is_wysiwyg = "true";
 defparam \aluin1[10] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N3
+// Location: MLABCELL_X60_Y11_N3
 cyclonev_lcell_comb \a32|Add0~49 (
 // Equation(s):
 // \a32|Add0~49_sumout  = SUM(( aluin1[11] ) + ( GND ) + ( \a32|Add0~54  ))
@@ -4619,8 +4688,8 @@ cyclonev_lcell_comb \a32|Add0~49 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[11]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[11]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -4632,11 +4701,11 @@ cyclonev_lcell_comb \a32|Add0~49 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~49 .extended_lut = "off";
-defparam \a32|Add0~49 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~49 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~49 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N4
+// Location: FF_X60_Y11_N5
 dffeas \a32|out1[11] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~49_sumout ),
@@ -4655,39 +4724,15 @@ defparam \a32|out1[11] .is_wysiwyg = "true";
 defparam \a32|out1[11] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N57
-cyclonev_lcell_comb \reginput[11]~feeder (
-// Equation(s):
-// \reginput[11]~feeder_combout  = ( \a32|out1 [11] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\a32|out1 [11]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\reginput[11]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \reginput[11]~feeder .extended_lut = "off";
-defparam \reginput[11]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \reginput[11]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X61_Y8_N59
+// Location: FF_X59_Y11_N32
 dffeas \reginput[11] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\reginput[11]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\a32|out1 [11]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4698,15 +4743,39 @@ defparam \reginput[11] .is_wysiwyg = "true";
 defparam \reginput[11] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N35
+// Location: LABCELL_X58_Y11_N6
+cyclonev_lcell_comb \b32|regin[0][11]~feeder (
+// Equation(s):
+// \b32|regin[0][11]~feeder_combout  = ( reginput[11] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!reginput[11]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|regin[0][11]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|regin[0][11]~feeder .extended_lut = "off";
+defparam \b32|regin[0][11]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|regin[0][11]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y11_N8
 dffeas \b32|regin[0][11] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(reginput[11]),
+	.d(\b32|regin[0][11]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4717,17 +4786,17 @@ defparam \b32|regin[0][11] .is_wysiwyg = "true";
 defparam \b32|regin[0][11] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N36
+// Location: LABCELL_X58_Y11_N24
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[11]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[11]~feeder_combout  = ( \b32|regin[0][11]~q  )
+// \b32|r32_gen:0:registers|rout[11]~feeder_combout  = \b32|regin[0][11]~q 
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\b32|regin[0][11]~q ),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][11]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -4737,13 +4806,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[11]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[11]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[11]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[11]~feeder .lut_mask = 64'h3333333333333333;
 defparam \b32|r32_gen:0:registers|rout[11]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N38
+// Location: FF_X58_Y11_N26
 dffeas \b32|r32_gen:0:registers|rout[11] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[11]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -4760,15 +4829,39 @@ defparam \b32|r32_gen:0:registers|rout[11] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[11] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N13
+// Location: LABCELL_X58_Y11_N30
+cyclonev_lcell_comb \b32|rout[11]~feeder (
+// Equation(s):
+// \b32|rout[11]~feeder_combout  = \b32|r32_gen:0:registers|rout [11]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\b32|r32_gen:0:registers|rout [11]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|rout[11]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|rout[11]~feeder .extended_lut = "off";
+defparam \b32|rout[11]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
+defparam \b32|rout[11]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X58_Y11_N31
 dffeas \b32|rout[11] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|r32_gen:0:registers|rout [11]),
+	.d(\b32|rout[11]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4779,39 +4872,15 @@ defparam \b32|rout[11] .is_wysiwyg = "true";
 defparam \b32|rout[11] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N57
-cyclonev_lcell_comb \aluin1[11]~feeder (
-// Equation(s):
-// \aluin1[11]~feeder_combout  = ( \b32|rout [11] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|rout [11]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\aluin1[11]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \aluin1[11]~feeder .extended_lut = "off";
-defparam \aluin1[11]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \aluin1[11]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X60_Y8_N59
+// Location: FF_X60_Y11_N47
 dffeas \aluin1[11] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\aluin1[11]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|rout [11]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4822,7 +4891,7 @@ defparam \aluin1[11] .is_wysiwyg = "true";
 defparam \aluin1[11] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N6
+// Location: MLABCELL_X60_Y11_N6
 cyclonev_lcell_comb \a32|Add0~45 (
 // Equation(s):
 // \a32|Add0~45_sumout  = SUM(( aluin1[12] ) + ( GND ) + ( \a32|Add0~50  ))
@@ -4830,8 +4899,8 @@ cyclonev_lcell_comb \a32|Add0~45 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[12]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[12]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -4843,11 +4912,11 @@ cyclonev_lcell_comb \a32|Add0~45 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~45 .extended_lut = "off";
-defparam \a32|Add0~45 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~45 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~45 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N7
+// Location: FF_X60_Y11_N8
 dffeas \a32|out1[12] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~45_sumout ),
@@ -4866,7 +4935,7 @@ defparam \a32|out1[12] .is_wysiwyg = "true";
 defparam \a32|out1[12] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N37
+// Location: FF_X59_Y11_N41
 dffeas \reginput[12] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -4885,7 +4954,7 @@ defparam \reginput[12] .is_wysiwyg = "true";
 defparam \reginput[12] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N30
+// Location: LABCELL_X58_Y11_N12
 cyclonev_lcell_comb \b32|regin[0][12]~feeder (
 // Equation(s):
 // \b32|regin[0][12]~feeder_combout  = ( reginput[12] )
@@ -4909,7 +4978,7 @@ defparam \b32|regin[0][12]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][12]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N32
+// Location: FF_X58_Y11_N13
 dffeas \b32|regin[0][12] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][12]~feeder_combout ),
@@ -4928,39 +4997,15 @@ defparam \b32|regin[0][12] .is_wysiwyg = "true";
 defparam \b32|regin[0][12] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N51
-cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[12]~feeder (
-// Equation(s):
-// \b32|r32_gen:0:registers|rout[12]~feeder_combout  = ( \b32|regin[0][12]~q  )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|regin[0][12]~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|r32_gen:0:registers|rout[12]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|r32_gen:0:registers|rout[12]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[12]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|r32_gen:0:registers|rout[12]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X58_Y8_N53
+// Location: FF_X58_Y11_N44
 dffeas \b32|r32_gen:0:registers|rout[12] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|r32_gen:0:registers|rout[12]~feeder_combout ),
-	.asdata(vcc),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\b32|regin[0][12]~q ),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -4971,17 +5016,17 @@ defparam \b32|r32_gen:0:registers|rout[12] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[12] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N3
+// Location: LABCELL_X58_Y11_N48
 cyclonev_lcell_comb \b32|rout[12]~feeder (
 // Equation(s):
-// \b32|rout[12]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [12] )
+// \b32|rout[12]~feeder_combout  = \b32|r32_gen:0:registers|rout [12]
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\b32|r32_gen:0:registers|rout [12]),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [12]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -4991,11 +5036,11 @@ cyclonev_lcell_comb \b32|rout[12]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[12]~feeder .extended_lut = "off";
-defparam \b32|rout[12]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[12]~feeder .lut_mask = 64'h3333333333333333;
 defparam \b32|rout[12]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N4
+// Location: FF_X58_Y11_N49
 dffeas \b32|rout[12] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[12]~feeder_combout ),
@@ -5014,7 +5059,7 @@ defparam \b32|rout[12] .is_wysiwyg = "true";
 defparam \b32|rout[12] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N50
+// Location: FF_X59_Y11_N13
 dffeas \aluin1[12] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -5033,7 +5078,7 @@ defparam \aluin1[12] .is_wysiwyg = "true";
 defparam \aluin1[12] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N9
+// Location: MLABCELL_X60_Y11_N9
 cyclonev_lcell_comb \a32|Add0~41 (
 // Equation(s):
 // \a32|Add0~41_sumout  = SUM(( aluin1[13] ) + ( GND ) + ( \a32|Add0~46  ))
@@ -5058,7 +5103,7 @@ defparam \a32|Add0~41 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~41 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N10
+// Location: FF_X60_Y11_N11
 dffeas \a32|out1[13] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~41_sumout ),
@@ -5077,7 +5122,7 @@ defparam \a32|out1[13] .is_wysiwyg = "true";
 defparam \a32|out1[13] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N47
+// Location: FF_X59_Y11_N20
 dffeas \reginput[13] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -5096,7 +5141,7 @@ defparam \reginput[13] .is_wysiwyg = "true";
 defparam \reginput[13] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N9
+// Location: LABCELL_X58_Y11_N15
 cyclonev_lcell_comb \b32|regin[0][13]~feeder (
 // Equation(s):
 // \b32|regin[0][13]~feeder_combout  = ( reginput[13] )
@@ -5120,7 +5165,7 @@ defparam \b32|regin[0][13]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][13]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N11
+// Location: FF_X58_Y11_N17
 dffeas \b32|regin[0][13] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][13]~feeder_combout ),
@@ -5139,17 +5184,17 @@ defparam \b32|regin[0][13] .is_wysiwyg = "true";
 defparam \b32|regin[0][13] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N48
+// Location: LABCELL_X58_Y11_N45
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[13]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[13]~feeder_combout  = ( \b32|regin[0][13]~q  )
+// \b32|r32_gen:0:registers|rout[13]~feeder_combout  = \b32|regin[0][13]~q 
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|regin[0][13]~q ),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][13]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -5159,13 +5204,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[13]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[13]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[13]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[13]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|r32_gen:0:registers|rout[13]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N50
+// Location: FF_X58_Y11_N47
 dffeas \b32|r32_gen:0:registers|rout[13] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[13]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5182,17 +5227,17 @@ defparam \b32|r32_gen:0:registers|rout[13] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[13] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N0
+// Location: LABCELL_X58_Y11_N51
 cyclonev_lcell_comb \b32|rout[13]~feeder (
 // Equation(s):
-// \b32|rout[13]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [13] )
+// \b32|rout[13]~feeder_combout  = \b32|r32_gen:0:registers|rout [13]
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|r32_gen:0:registers|rout [13]),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [13]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -5202,11 +5247,11 @@ cyclonev_lcell_comb \b32|rout[13]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[13]~feeder .extended_lut = "off";
-defparam \b32|rout[13]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[13]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|rout[13]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N1
+// Location: FF_X58_Y11_N52
 dffeas \b32|rout[13] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[13]~feeder_combout ),
@@ -5225,15 +5270,39 @@ defparam \b32|rout[13] .is_wysiwyg = "true";
 defparam \b32|rout[13] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N44
+// Location: LABCELL_X61_Y11_N30
+cyclonev_lcell_comb \aluin1[13]~feeder (
+// Equation(s):
+// \aluin1[13]~feeder_combout  = ( \b32|rout [13] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\b32|rout [13]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\aluin1[13]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \aluin1[13]~feeder .extended_lut = "off";
+defparam \aluin1[13]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \aluin1[13]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X61_Y11_N31
 dffeas \aluin1[13] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|rout [13]),
+	.d(\aluin1[13]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -5244,7 +5313,7 @@ defparam \aluin1[13] .is_wysiwyg = "true";
 defparam \aluin1[13] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N12
+// Location: MLABCELL_X60_Y11_N12
 cyclonev_lcell_comb \a32|Add0~37 (
 // Equation(s):
 // \a32|Add0~37_sumout  = SUM(( aluin1[14] ) + ( GND ) + ( \a32|Add0~42  ))
@@ -5252,8 +5321,8 @@ cyclonev_lcell_comb \a32|Add0~37 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[14]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[14]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -5265,11 +5334,11 @@ cyclonev_lcell_comb \a32|Add0~37 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~37 .extended_lut = "off";
-defparam \a32|Add0~37 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~37 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~37 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N13
+// Location: FF_X60_Y11_N13
 dffeas \a32|out1[14] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~37_sumout ),
@@ -5288,15 +5357,39 @@ defparam \a32|out1[14] .is_wysiwyg = "true";
 defparam \a32|out1[14] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N43
+// Location: LABCELL_X63_Y11_N21
+cyclonev_lcell_comb \reginput[14]~feeder (
+// Equation(s):
+// \reginput[14]~feeder_combout  = ( \a32|out1 [14] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\a32|out1 [14]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\reginput[14]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \reginput[14]~feeder .extended_lut = "off";
+defparam \reginput[14]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \reginput[14]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y11_N22
 dffeas \reginput[14] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\a32|out1 [14]),
+	.d(\reginput[14]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -5307,39 +5400,15 @@ defparam \reginput[14] .is_wysiwyg = "true";
 defparam \reginput[14] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N42
-cyclonev_lcell_comb \b32|regin[0][14]~feeder (
-// Equation(s):
-// \b32|regin[0][14]~feeder_combout  = ( reginput[14] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!reginput[14]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|regin[0][14]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|regin[0][14]~feeder .extended_lut = "off";
-defparam \b32|regin[0][14]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|regin[0][14]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X58_Y8_N44
+// Location: FF_X64_Y11_N58
 dffeas \b32|regin[0][14] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|regin[0][14]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(reginput[14]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -5350,39 +5419,15 @@ defparam \b32|regin[0][14] .is_wysiwyg = "true";
 defparam \b32|regin[0][14] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N21
-cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[14]~feeder (
-// Equation(s):
-// \b32|r32_gen:0:registers|rout[14]~feeder_combout  = ( \b32|regin[0][14]~q  )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|regin[0][14]~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|r32_gen:0:registers|rout[14]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|r32_gen:0:registers|rout[14]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[14]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|r32_gen:0:registers|rout[14]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X58_Y8_N22
+// Location: FF_X61_Y11_N11
 dffeas \b32|r32_gen:0:registers|rout[14] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|r32_gen:0:registers|rout[14]~feeder_combout ),
-	.asdata(vcc),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\b32|regin[0][14]~q ),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -5393,17 +5438,17 @@ defparam \b32|r32_gen:0:registers|rout[14] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[14] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y8_N27
+// Location: LABCELL_X61_Y11_N24
 cyclonev_lcell_comb \b32|rout[14]~feeder (
 // Equation(s):
-// \b32|rout[14]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [14] )
+// \b32|rout[14]~feeder_combout  = \b32|r32_gen:0:registers|rout [14]
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\b32|r32_gen:0:registers|rout [14]),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [14]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -5413,11 +5458,11 @@ cyclonev_lcell_comb \b32|rout[14]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[14]~feeder .extended_lut = "off";
-defparam \b32|rout[14]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[14]~feeder .lut_mask = 64'h3333333333333333;
 defparam \b32|rout[14]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X58_Y8_N28
+// Location: FF_X61_Y11_N25
 dffeas \b32|rout[14] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[14]~feeder_combout ),
@@ -5436,15 +5481,39 @@ defparam \b32|rout[14] .is_wysiwyg = "true";
 defparam \b32|rout[14] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X59_Y8_N28
+// Location: MLABCELL_X60_Y11_N57
+cyclonev_lcell_comb \aluin1[14]~feeder (
+// Equation(s):
+// \aluin1[14]~feeder_combout  = ( \b32|rout [14] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\b32|rout [14]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\aluin1[14]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \aluin1[14]~feeder .extended_lut = "off";
+defparam \aluin1[14]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \aluin1[14]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X60_Y11_N59
 dffeas \aluin1[14] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|rout [14]),
+	.d(\aluin1[14]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -5455,7 +5524,7 @@ defparam \aluin1[14] .is_wysiwyg = "true";
 defparam \aluin1[14] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N15
+// Location: MLABCELL_X60_Y11_N15
 cyclonev_lcell_comb \a32|Add0~33 (
 // Equation(s):
 // \a32|Add0~33_sumout  = SUM(( aluin1[15] ) + ( GND ) + ( \a32|Add0~38  ))
@@ -5463,8 +5532,8 @@ cyclonev_lcell_comb \a32|Add0~33 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[15]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[15]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -5476,11 +5545,11 @@ cyclonev_lcell_comb \a32|Add0~33 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~33 .extended_lut = "off";
-defparam \a32|Add0~33 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~33 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~33 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N17
+// Location: FF_X60_Y11_N17
 dffeas \a32|out1[15] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~33_sumout ),
@@ -5499,39 +5568,15 @@ defparam \a32|out1[15] .is_wysiwyg = "true";
 defparam \a32|out1[15] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N48
-cyclonev_lcell_comb \reginput[15]~feeder (
-// Equation(s):
-// \reginput[15]~feeder_combout  = ( \a32|out1 [15] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\a32|out1 [15]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\reginput[15]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \reginput[15]~feeder .extended_lut = "off";
-defparam \reginput[15]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \reginput[15]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X60_Y8_N49
+// Location: FF_X59_Y11_N43
 dffeas \reginput[15] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\reginput[15]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\a32|out1 [15]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -5542,7 +5587,7 @@ defparam \reginput[15] .is_wysiwyg = "true";
 defparam \reginput[15] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N6
+// Location: LABCELL_X64_Y11_N54
 cyclonev_lcell_comb \b32|regin[0][15]~feeder (
 // Equation(s):
 // \b32|regin[0][15]~feeder_combout  = ( reginput[15] )
@@ -5566,7 +5611,7 @@ defparam \b32|regin[0][15]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][15]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N8
+// Location: FF_X64_Y11_N56
 dffeas \b32|regin[0][15] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][15]~feeder_combout ),
@@ -5585,17 +5630,17 @@ defparam \b32|regin[0][15] .is_wysiwyg = "true";
 defparam \b32|regin[0][15] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N18
+// Location: LABCELL_X64_Y11_N18
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[15]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[15]~feeder_combout  = ( \b32|regin[0][15]~q  )
+// \b32|r32_gen:0:registers|rout[15]~feeder_combout  = \b32|regin[0][15]~q 
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|regin[0][15]~q ),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][15]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -5605,13 +5650,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[15]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[15]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[15]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[15]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|r32_gen:0:registers|rout[15]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N20
+// Location: FF_X64_Y11_N20
 dffeas \b32|r32_gen:0:registers|rout[15] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[15]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -5628,7 +5673,7 @@ defparam \b32|r32_gen:0:registers|rout[15] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[15] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N6
+// Location: LABCELL_X61_Y11_N12
 cyclonev_lcell_comb \b32|rout[15]~feeder (
 // Equation(s):
 // \b32|rout[15]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [15] )
@@ -5652,7 +5697,7 @@ defparam \b32|rout[15]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|rout[15]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N8
+// Location: FF_X61_Y11_N13
 dffeas \b32|rout[15] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[15]~feeder_combout ),
@@ -5671,7 +5716,7 @@ defparam \b32|rout[15] .is_wysiwyg = "true";
 defparam \b32|rout[15] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N51
+// Location: MLABCELL_X60_Y11_N54
 cyclonev_lcell_comb \aluin1[15]~feeder (
 // Equation(s):
 // \aluin1[15]~feeder_combout  = ( \b32|rout [15] )
@@ -5695,7 +5740,7 @@ defparam \aluin1[15]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[15]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N52
+// Location: FF_X60_Y11_N56
 dffeas \aluin1[15] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[15]~feeder_combout ),
@@ -5714,7 +5759,7 @@ defparam \aluin1[15] .is_wysiwyg = "true";
 defparam \aluin1[15] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N18
+// Location: MLABCELL_X60_Y11_N18
 cyclonev_lcell_comb \a32|Add0~1 (
 // Equation(s):
 // \a32|Add0~1_sumout  = SUM(( aluin1[16] ) + ( GND ) + ( \a32|Add0~34  ))
@@ -5722,8 +5767,8 @@ cyclonev_lcell_comb \a32|Add0~1 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[16]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[16]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -5735,11 +5780,11 @@ cyclonev_lcell_comb \a32|Add0~1 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~1 .extended_lut = "off";
-defparam \a32|Add0~1 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~1 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N19
+// Location: FF_X60_Y11_N19
 dffeas \a32|out1[16] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~1_sumout ),
@@ -5758,7 +5803,7 @@ defparam \a32|out1[16] .is_wysiwyg = "true";
 defparam \a32|out1[16] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N51
+// Location: LABCELL_X63_Y11_N57
 cyclonev_lcell_comb \reginput[16]~feeder (
 // Equation(s):
 // \reginput[16]~feeder_combout  = ( \a32|out1 [16] )
@@ -5782,7 +5827,7 @@ defparam \reginput[16]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[16]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N52
+// Location: FF_X63_Y11_N58
 dffeas \reginput[16] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[16]~feeder_combout ),
@@ -5801,39 +5846,15 @@ defparam \reginput[16] .is_wysiwyg = "true";
 defparam \reginput[16] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N54
-cyclonev_lcell_comb \b32|regin[0][16]~feeder (
-// Equation(s):
-// \b32|regin[0][16]~feeder_combout  = ( reginput[16] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!reginput[16]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|regin[0][16]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|regin[0][16]~feeder .extended_lut = "off";
-defparam \b32|regin[0][16]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|regin[0][16]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X63_Y8_N56
+// Location: FF_X64_Y11_N7
 dffeas \b32|regin[0][16] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|regin[0][16]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(reginput[16]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -5844,9 +5865,9 @@ defparam \b32|regin[0][16] .is_wysiwyg = "true";
 defparam \b32|regin[0][16] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N19
+// Location: FF_X64_Y11_N19
 dffeas \b32|r32_gen:0:registers|rout[16] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\b32|regin[0][16]~q ),
 	.clrn(vcc),
@@ -5863,17 +5884,17 @@ defparam \b32|r32_gen:0:registers|rout[16] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[16] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N18
+// Location: LABCELL_X65_Y11_N30
 cyclonev_lcell_comb \b32|rout[16]~feeder (
 // Equation(s):
-// \b32|rout[16]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [16] )
+// \b32|rout[16]~feeder_combout  = \b32|r32_gen:0:registers|rout [16]
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\b32|r32_gen:0:registers|rout [16]),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [16]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -5883,11 +5904,11 @@ cyclonev_lcell_comb \b32|rout[16]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[16]~feeder .extended_lut = "off";
-defparam \b32|rout[16]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[16]~feeder .lut_mask = 64'h3333333333333333;
 defparam \b32|rout[16]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N19
+// Location: FF_X65_Y11_N32
 dffeas \b32|rout[16] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[16]~feeder_combout ),
@@ -5906,7 +5927,7 @@ defparam \b32|rout[16] .is_wysiwyg = "true";
 defparam \b32|rout[16] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N12
+// Location: LABCELL_X65_Y11_N36
 cyclonev_lcell_comb \LED[0]~reg0feeder (
 // Equation(s):
 // \LED[0]~reg0feeder_combout  = ( \b32|rout [16] )
@@ -5930,7 +5951,7 @@ defparam \LED[0]~reg0feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \LED[0]~reg0feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N13
+// Location: FF_X65_Y11_N37
 dffeas \LED[0]~reg0 (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\LED[0]~reg0feeder_combout ),
@@ -5949,7 +5970,7 @@ defparam \LED[0]~reg0 .is_wysiwyg = "true";
 defparam \LED[0]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N18
+// Location: LABCELL_X61_Y11_N3
 cyclonev_lcell_comb \aluin1[17]~feeder (
 // Equation(s):
 // \aluin1[17]~feeder_combout  = ( \b32|rout [17] )
@@ -5973,7 +5994,7 @@ defparam \aluin1[17]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[17]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N20
+// Location: FF_X61_Y11_N5
 dffeas \aluin1[17] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[17]~feeder_combout ),
@@ -5992,7 +6013,7 @@ defparam \aluin1[17] .is_wysiwyg = "true";
 defparam \aluin1[17] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N21
+// Location: MLABCELL_X60_Y11_N21
 cyclonev_lcell_comb \a32|Add0~5 (
 // Equation(s):
 // \a32|Add0~5_sumout  = SUM(( aluin1[17] ) + ( GND ) + ( \a32|Add0~2  ))
@@ -6000,8 +6021,8 @@ cyclonev_lcell_comb \a32|Add0~5 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[17]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[17]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -6013,11 +6034,11 @@ cyclonev_lcell_comb \a32|Add0~5 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~5 .extended_lut = "off";
-defparam \a32|Add0~5 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~5 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~5 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N22
+// Location: FF_X60_Y11_N23
 dffeas \a32|out1[17] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~5_sumout ),
@@ -6036,7 +6057,7 @@ defparam \a32|out1[17] .is_wysiwyg = "true";
 defparam \a32|out1[17] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N34
+// Location: FF_X60_Y11_N43
 dffeas \reginput[17] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -6055,15 +6076,39 @@ defparam \reginput[17] .is_wysiwyg = "true";
 defparam \reginput[17] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N59
+// Location: LABCELL_X64_Y11_N9
+cyclonev_lcell_comb \b32|regin[0][17]~feeder (
+// Equation(s):
+// \b32|regin[0][17]~feeder_combout  = ( reginput[17] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!reginput[17]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|regin[0][17]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|regin[0][17]~feeder .extended_lut = "off";
+defparam \b32|regin[0][17]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|regin[0][17]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X64_Y11_N11
 dffeas \b32|regin[0][17] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(reginput[17]),
+	.d(\b32|regin[0][17]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6074,15 +6119,39 @@ defparam \b32|regin[0][17] .is_wysiwyg = "true";
 defparam \b32|regin[0][17] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N22
+// Location: LABCELL_X64_Y11_N21
+cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[17]~feeder (
+// Equation(s):
+// \b32|r32_gen:0:registers|rout[17]~feeder_combout  = \b32|regin[0][17]~q 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\b32|regin[0][17]~q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\b32|r32_gen:0:registers|rout[17]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \b32|r32_gen:0:registers|rout[17]~feeder .extended_lut = "off";
+defparam \b32|r32_gen:0:registers|rout[17]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
+defparam \b32|r32_gen:0:registers|rout[17]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X64_Y11_N22
 dffeas \b32|r32_gen:0:registers|rout[17] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|regin[0][17]~q ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.d(\b32|r32_gen:0:registers|rout[17]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(\b32|regclr [0]),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6093,39 +6162,15 @@ defparam \b32|r32_gen:0:registers|rout[17] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[17] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X65_Y8_N51
-cyclonev_lcell_comb \b32|rout[17]~feeder (
-// Equation(s):
-// \b32|rout[17]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [17] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [17]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|rout[17]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|rout[17]~feeder .extended_lut = "off";
-defparam \b32|rout[17]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|rout[17]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X65_Y8_N52
+// Location: FF_X61_Y11_N50
 dffeas \b32|rout[17] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|rout[17]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|r32_gen:0:registers|rout [17]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6136,7 +6181,7 @@ defparam \b32|rout[17] .is_wysiwyg = "true";
 defparam \b32|rout[17] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X63_Y10_N13
+// Location: FF_X61_Y11_N1
 dffeas \LED[1]~reg0 (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -6155,39 +6200,15 @@ defparam \LED[1]~reg0 .is_wysiwyg = "true";
 defparam \LED[1]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N15
-cyclonev_lcell_comb \aluin1[18]~feeder (
-// Equation(s):
-// \aluin1[18]~feeder_combout  = ( \b32|rout [18] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|rout [18]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\aluin1[18]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \aluin1[18]~feeder .extended_lut = "off";
-defparam \aluin1[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \aluin1[18]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X61_Y8_N17
+// Location: FF_X61_Y11_N35
 dffeas \aluin1[18] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\aluin1[18]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|rout [18]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6198,7 +6219,7 @@ defparam \aluin1[18] .is_wysiwyg = "true";
 defparam \aluin1[18] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N24
+// Location: MLABCELL_X60_Y11_N24
 cyclonev_lcell_comb \a32|Add0~9 (
 // Equation(s):
 // \a32|Add0~9_sumout  = SUM(( aluin1[18] ) + ( GND ) + ( \a32|Add0~6  ))
@@ -6223,7 +6244,7 @@ defparam \a32|Add0~9 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~9 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N25
+// Location: FF_X60_Y11_N25
 dffeas \a32|out1[18] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~9_sumout ),
@@ -6242,7 +6263,7 @@ defparam \a32|out1[18] .is_wysiwyg = "true";
 defparam \a32|out1[18] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N24
+// Location: LABCELL_X63_Y11_N36
 cyclonev_lcell_comb \reginput[18]~feeder (
 // Equation(s):
 // \reginput[18]~feeder_combout  = ( \a32|out1 [18] )
@@ -6266,7 +6287,7 @@ defparam \reginput[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[18]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N25
+// Location: FF_X63_Y11_N37
 dffeas \reginput[18] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[18]~feeder_combout ),
@@ -6285,7 +6306,7 @@ defparam \reginput[18] .is_wysiwyg = "true";
 defparam \reginput[18] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N12
+// Location: LABCELL_X64_Y11_N36
 cyclonev_lcell_comb \b32|regin[0][18]~feeder (
 // Equation(s):
 // \b32|regin[0][18]~feeder_combout  = ( reginput[18] )
@@ -6309,7 +6330,7 @@ defparam \b32|regin[0][18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][18]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N14
+// Location: FF_X64_Y11_N38
 dffeas \b32|regin[0][18] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][18]~feeder_combout ),
@@ -6328,17 +6349,17 @@ defparam \b32|regin[0][18] .is_wysiwyg = "true";
 defparam \b32|regin[0][18] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N48
+// Location: LABCELL_X64_Y11_N48
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[18]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[18]~feeder_combout  = ( \b32|regin[0][18]~q  )
+// \b32|r32_gen:0:registers|rout[18]~feeder_combout  = \b32|regin[0][18]~q 
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|regin[0][18]~q ),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][18]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -6348,13 +6369,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[18]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[18]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[18]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|r32_gen:0:registers|rout[18]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N50
+// Location: FF_X64_Y11_N49
 dffeas \b32|r32_gen:0:registers|rout[18] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[18]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6371,7 +6392,7 @@ defparam \b32|r32_gen:0:registers|rout[18] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[18] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N36
+// Location: LABCELL_X61_Y11_N51
 cyclonev_lcell_comb \b32|rout[18]~feeder (
 // Equation(s):
 // \b32|rout[18]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [18] )
@@ -6395,7 +6416,7 @@ defparam \b32|rout[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|rout[18]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N37
+// Location: FF_X61_Y11_N52
 dffeas \b32|rout[18] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[18]~feeder_combout ),
@@ -6414,7 +6435,7 @@ defparam \b32|rout[18] .is_wysiwyg = "true";
 defparam \b32|rout[18] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X65_Y11_N36
+// Location: LABCELL_X67_Y13_N51
 cyclonev_lcell_comb \LED[2]~reg0feeder (
 // Equation(s):
 // \LED[2]~reg0feeder_combout  = ( \b32|rout [18] )
@@ -6438,7 +6459,7 @@ defparam \LED[2]~reg0feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \LED[2]~reg0feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X65_Y11_N37
+// Location: FF_X67_Y13_N52
 dffeas \LED[2]~reg0 (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\LED[2]~reg0feeder_combout ),
@@ -6457,39 +6478,15 @@ defparam \LED[2]~reg0 .is_wysiwyg = "true";
 defparam \LED[2]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y9_N39
-cyclonev_lcell_comb \aluin1[19]~feeder (
-// Equation(s):
-// \aluin1[19]~feeder_combout  = ( \b32|rout [19] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|rout [19]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\aluin1[19]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \aluin1[19]~feeder .extended_lut = "off";
-defparam \aluin1[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \aluin1[19]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X61_Y9_N40
+// Location: FF_X60_Y11_N52
 dffeas \aluin1[19] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\aluin1[19]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|rout [19]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6500,7 +6497,7 @@ defparam \aluin1[19] .is_wysiwyg = "true";
 defparam \aluin1[19] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N27
+// Location: MLABCELL_X60_Y11_N27
 cyclonev_lcell_comb \a32|Add0~13 (
 // Equation(s):
 // \a32|Add0~13_sumout  = SUM(( aluin1[19] ) + ( GND ) + ( \a32|Add0~10  ))
@@ -6508,8 +6505,8 @@ cyclonev_lcell_comb \a32|Add0~13 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
-	.datad(!aluin1[19]),
+	.datac(!aluin1[19]),
+	.datad(gnd),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -6521,11 +6518,11 @@ cyclonev_lcell_comb \a32|Add0~13 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~13 .extended_lut = "off";
-defparam \a32|Add0~13 .lut_mask = 64'h0000FFFF000000FF;
+defparam \a32|Add0~13 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~13 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N28
+// Location: FF_X60_Y11_N28
 dffeas \a32|out1[19] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~13_sumout ),
@@ -6544,39 +6541,15 @@ defparam \a32|out1[19] .is_wysiwyg = "true";
 defparam \a32|out1[19] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N42
-cyclonev_lcell_comb \reginput[19]~feeder (
-// Equation(s):
-// \reginput[19]~feeder_combout  = ( \a32|out1 [19] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\a32|out1 [19]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\reginput[19]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \reginput[19]~feeder .extended_lut = "off";
-defparam \reginput[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \reginput[19]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X64_Y8_N43
+// Location: FF_X65_Y11_N14
 dffeas \reginput[19] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\reginput[19]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\a32|out1 [19]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6587,7 +6560,7 @@ defparam \reginput[19] .is_wysiwyg = "true";
 defparam \reginput[19] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N15
+// Location: LABCELL_X64_Y11_N39
 cyclonev_lcell_comb \b32|regin[0][19]~feeder (
 // Equation(s):
 // \b32|regin[0][19]~feeder_combout  = ( reginput[19] )
@@ -6611,7 +6584,7 @@ defparam \b32|regin[0][19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][19]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N16
+// Location: FF_X64_Y11_N41
 dffeas \b32|regin[0][19] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][19]~feeder_combout ),
@@ -6630,17 +6603,17 @@ defparam \b32|regin[0][19] .is_wysiwyg = "true";
 defparam \b32|regin[0][19] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N51
+// Location: LABCELL_X64_Y11_N51
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[19]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[19]~feeder_combout  = ( \b32|regin[0][19]~q  )
+// \b32|r32_gen:0:registers|rout[19]~feeder_combout  = \b32|regin[0][19]~q 
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|regin[0][19]~q ),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][19]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -6650,13 +6623,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[19]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[19]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[19]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|r32_gen:0:registers|rout[19]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N52
+// Location: FF_X64_Y11_N52
 dffeas \b32|r32_gen:0:registers|rout[19] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[19]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6673,7 +6646,7 @@ defparam \b32|r32_gen:0:registers|rout[19] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[19] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y9_N15
+// Location: LABCELL_X61_Y11_N42
 cyclonev_lcell_comb \b32|rout[19]~feeder (
 // Equation(s):
 // \b32|rout[19]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [19] )
@@ -6697,7 +6670,7 @@ defparam \b32|rout[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|rout[19]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y9_N16
+// Location: FF_X61_Y11_N44
 dffeas \b32|rout[19] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[19]~feeder_combout ),
@@ -6716,7 +6689,7 @@ defparam \b32|rout[19] .is_wysiwyg = "true";
 defparam \b32|rout[19] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X67_Y13_N0
+// Location: LABCELL_X61_Y11_N18
 cyclonev_lcell_comb \LED[3]~reg0feeder (
 // Equation(s):
 // \LED[3]~reg0feeder_combout  = ( \b32|rout [19] )
@@ -6740,7 +6713,7 @@ defparam \LED[3]~reg0feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \LED[3]~reg0feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X67_Y13_N1
+// Location: FF_X61_Y11_N19
 dffeas \LED[3]~reg0 (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\LED[3]~reg0feeder_combout ),
@@ -6759,15 +6732,39 @@ defparam \LED[3]~reg0 .is_wysiwyg = "true";
 defparam \LED[3]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X67_Y8_N20
+// Location: LABCELL_X61_Y11_N39
+cyclonev_lcell_comb \aluin1[20]~feeder (
+// Equation(s):
+// \aluin1[20]~feeder_combout  = ( \b32|rout [20] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\b32|rout [20]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\aluin1[20]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \aluin1[20]~feeder .extended_lut = "off";
+defparam \aluin1[20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \aluin1[20]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X61_Y11_N41
 dffeas \aluin1[20] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|rout [20]),
+	.d(\aluin1[20]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6778,7 +6775,7 @@ defparam \aluin1[20] .is_wysiwyg = "true";
 defparam \aluin1[20] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N30
+// Location: MLABCELL_X60_Y11_N30
 cyclonev_lcell_comb \a32|Add0~17 (
 // Equation(s):
 // \a32|Add0~17_sumout  = SUM(( aluin1[20] ) + ( GND ) + ( \a32|Add0~14  ))
@@ -6803,7 +6800,7 @@ defparam \a32|Add0~17 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~17 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N32
+// Location: FF_X60_Y11_N31
 dffeas \a32|out1[20] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~17_sumout ),
@@ -6822,39 +6819,15 @@ defparam \a32|out1[20] .is_wysiwyg = "true";
 defparam \a32|out1[20] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N45
-cyclonev_lcell_comb \reginput[20]~feeder (
-// Equation(s):
-// \reginput[20]~feeder_combout  = ( \a32|out1 [20] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\a32|out1 [20]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\reginput[20]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \reginput[20]~feeder .extended_lut = "off";
-defparam \reginput[20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \reginput[20]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X60_Y8_N46
+// Location: FF_X63_Y11_N7
 dffeas \reginput[20] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\reginput[20]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\a32|out1 [20]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6865,39 +6838,15 @@ defparam \reginput[20] .is_wysiwyg = "true";
 defparam \reginput[20] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N30
-cyclonev_lcell_comb \b32|regin[0][20]~feeder (
-// Equation(s):
-// \b32|regin[0][20]~feeder_combout  = ( reginput[20] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!reginput[20]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|regin[0][20]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|regin[0][20]~feeder .extended_lut = "off";
-defparam \b32|regin[0][20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|regin[0][20]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X63_Y8_N32
+// Location: FF_X64_Y11_N32
 dffeas \b32|regin[0][20] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|regin[0][20]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(reginput[20]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -6908,17 +6857,17 @@ defparam \b32|regin[0][20] .is_wysiwyg = "true";
 defparam \b32|regin[0][20] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N42
+// Location: LABCELL_X64_Y11_N42
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[20]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[20]~feeder_combout  = ( \b32|regin[0][20]~q  )
+// \b32|r32_gen:0:registers|rout[20]~feeder_combout  = \b32|regin[0][20]~q 
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\b32|regin[0][20]~q ),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][20]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -6928,13 +6877,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[20]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[20]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[20]~feeder .lut_mask = 64'h3333333333333333;
 defparam \b32|r32_gen:0:registers|rout[20]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N43
+// Location: FF_X64_Y11_N43
 dffeas \b32|r32_gen:0:registers|rout[20] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[20]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -6951,39 +6900,15 @@ defparam \b32|r32_gen:0:registers|rout[20] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[20] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X67_Y8_N51
-cyclonev_lcell_comb \b32|rout[20]~feeder (
-// Equation(s):
-// \b32|rout[20]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [20] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [20]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|rout[20]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|rout[20]~feeder .extended_lut = "off";
-defparam \b32|rout[20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|rout[20]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X67_Y8_N52
+// Location: FF_X61_Y11_N16
 dffeas \b32|rout[20] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|rout[20]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|r32_gen:0:registers|rout [20]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -7037,7 +6962,7 @@ defparam \LED[4]~reg0 .is_wysiwyg = "true";
 defparam \LED[4]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N33
+// Location: LABCELL_X63_Y11_N15
 cyclonev_lcell_comb \aluin1[21]~feeder (
 // Equation(s):
 // \aluin1[21]~feeder_combout  = ( \b32|rout [21] )
@@ -7061,7 +6986,7 @@ defparam \aluin1[21]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[21]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N34
+// Location: FF_X63_Y11_N16
 dffeas \aluin1[21] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[21]~feeder_combout ),
@@ -7080,7 +7005,7 @@ defparam \aluin1[21] .is_wysiwyg = "true";
 defparam \aluin1[21] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N33
+// Location: MLABCELL_X60_Y11_N33
 cyclonev_lcell_comb \a32|Add0~21 (
 // Equation(s):
 // \a32|Add0~21_sumout  = SUM(( aluin1[21] ) + ( GND ) + ( \a32|Add0~18  ))
@@ -7088,8 +7013,8 @@ cyclonev_lcell_comb \a32|Add0~21 (
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(!aluin1[21]),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(!aluin1[21]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -7101,11 +7026,11 @@ cyclonev_lcell_comb \a32|Add0~21 (
 	.shareout());
 // synopsys translate_off
 defparam \a32|Add0~21 .extended_lut = "off";
-defparam \a32|Add0~21 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \a32|Add0~21 .lut_mask = 64'h0000FFFF000000FF;
 defparam \a32|Add0~21 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N34
+// Location: FF_X60_Y11_N34
 dffeas \a32|out1[21] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~21_sumout ),
@@ -7124,15 +7049,39 @@ defparam \a32|out1[21] .is_wysiwyg = "true";
 defparam \a32|out1[21] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N43
+// Location: LABCELL_X63_Y11_N27
+cyclonev_lcell_comb \reginput[21]~feeder (
+// Equation(s):
+// \reginput[21]~feeder_combout  = ( \a32|out1 [21] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\a32|out1 [21]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\reginput[21]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \reginput[21]~feeder .extended_lut = "off";
+defparam \reginput[21]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \reginput[21]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y11_N28
 dffeas \reginput[21] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\a32|out1 [21]),
+	.d(\reginput[21]~feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -7143,39 +7092,15 @@ defparam \reginput[21] .is_wysiwyg = "true";
 defparam \reginput[21] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N33
-cyclonev_lcell_comb \b32|regin[0][21]~feeder (
-// Equation(s):
-// \b32|regin[0][21]~feeder_combout  = ( reginput[21] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!reginput[21]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|regin[0][21]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|regin[0][21]~feeder .extended_lut = "off";
-defparam \b32|regin[0][21]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|regin[0][21]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X63_Y8_N35
+// Location: FF_X64_Y11_N35
 dffeas \b32|regin[0][21] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|regin[0][21]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(reginput[21]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(\enable~q ),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -7186,17 +7111,17 @@ defparam \b32|regin[0][21] .is_wysiwyg = "true";
 defparam \b32|regin[0][21] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N45
+// Location: LABCELL_X64_Y11_N45
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[21]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[21]~feeder_combout  = ( \b32|regin[0][21]~q  )
+// \b32|r32_gen:0:registers|rout[21]~feeder_combout  = \b32|regin[0][21]~q 
 
-	.dataa(gnd),
+	.dataa(!\b32|regin[0][21]~q ),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][21]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -7206,13 +7131,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[21]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[21]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[21]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[21]~feeder .lut_mask = 64'h5555555555555555;
 defparam \b32|r32_gen:0:registers|rout[21]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N46
+// Location: FF_X64_Y11_N47
 dffeas \b32|r32_gen:0:registers|rout[21] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[21]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7229,39 +7154,15 @@ defparam \b32|r32_gen:0:registers|rout[21] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[21] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X65_Y8_N45
-cyclonev_lcell_comb \b32|rout[21]~feeder (
-// Equation(s):
-// \b32|rout[21]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [21] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [21]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\b32|rout[21]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \b32|rout[21]~feeder .extended_lut = "off";
-defparam \b32|rout[21]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \b32|rout[21]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X65_Y8_N47
+// Location: FF_X63_Y11_N50
 dffeas \b32|rout[21] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\b32|rout[21]~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|r32_gen:0:registers|rout [21]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -7272,39 +7173,15 @@ defparam \b32|rout[21] .is_wysiwyg = "true";
 defparam \b32|rout[21] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N57
-cyclonev_lcell_comb \LED[5]~reg0feeder (
-// Equation(s):
-// \LED[5]~reg0feeder_combout  = ( \b32|rout [21] )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\b32|rout [21]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\LED[5]~reg0feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \LED[5]~reg0feeder .extended_lut = "off";
-defparam \LED[5]~reg0feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \LED[5]~reg0feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X64_Y8_N58
+// Location: FF_X63_Y11_N13
 dffeas \LED[5]~reg0 (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(\LED[5]~reg0feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\b32|rout [21]),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -7315,7 +7192,7 @@ defparam \LED[5]~reg0 .is_wysiwyg = "true";
 defparam \LED[5]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N3
+// Location: LABCELL_X63_Y11_N3
 cyclonev_lcell_comb \aluin1[22]~feeder (
 // Equation(s):
 // \aluin1[22]~feeder_combout  = ( \b32|rout [22] )
@@ -7339,7 +7216,7 @@ defparam \aluin1[22]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \aluin1[22]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N4
+// Location: FF_X63_Y11_N4
 dffeas \aluin1[22] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\aluin1[22]~feeder_combout ),
@@ -7358,7 +7235,7 @@ defparam \aluin1[22] .is_wysiwyg = "true";
 defparam \aluin1[22] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N36
+// Location: MLABCELL_X60_Y11_N36
 cyclonev_lcell_comb \a32|Add0~25 (
 // Equation(s):
 // \a32|Add0~25_sumout  = SUM(( aluin1[22] ) + ( GND ) + ( \a32|Add0~22  ))
@@ -7383,7 +7260,7 @@ defparam \a32|Add0~25 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~25 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N37
+// Location: FF_X60_Y11_N37
 dffeas \a32|out1[22] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~25_sumout ),
@@ -7402,7 +7279,7 @@ defparam \a32|out1[22] .is_wysiwyg = "true";
 defparam \a32|out1[22] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X61_Y8_N48
+// Location: LABCELL_X65_Y11_N18
 cyclonev_lcell_comb \reginput[22]~feeder (
 // Equation(s):
 // \reginput[22]~feeder_combout  = ( \a32|out1 [22] )
@@ -7426,7 +7303,7 @@ defparam \reginput[22]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[22]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X61_Y8_N49
+// Location: FF_X65_Y11_N20
 dffeas \reginput[22] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[22]~feeder_combout ),
@@ -7445,7 +7322,7 @@ defparam \reginput[22] .is_wysiwyg = "true";
 defparam \reginput[22] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N24
+// Location: LABCELL_X64_Y11_N0
 cyclonev_lcell_comb \b32|regin[0][22]~feeder (
 // Equation(s):
 // \b32|regin[0][22]~feeder_combout  = ( reginput[22] )
@@ -7469,7 +7346,7 @@ defparam \b32|regin[0][22]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][22]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N25
+// Location: FF_X64_Y11_N2
 dffeas \b32|regin[0][22] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][22]~feeder_combout ),
@@ -7488,17 +7365,17 @@ defparam \b32|regin[0][22] .is_wysiwyg = "true";
 defparam \b32|regin[0][22] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N0
+// Location: LABCELL_X64_Y11_N12
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[22]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[22]~feeder_combout  = ( \b32|regin[0][22]~q  )
+// \b32|r32_gen:0:registers|rout[22]~feeder_combout  = \b32|regin[0][22]~q 
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(gnd),
+	.datac(!\b32|regin[0][22]~q ),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][22]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -7508,13 +7385,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[22]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[22]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[22]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[22]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
 defparam \b32|r32_gen:0:registers|rout[22]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N1
+// Location: FF_X64_Y11_N14
 dffeas \b32|r32_gen:0:registers|rout[22] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[22]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7531,17 +7408,17 @@ defparam \b32|r32_gen:0:registers|rout[22] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[22] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N27
+// Location: LABCELL_X64_Y11_N24
 cyclonev_lcell_comb \b32|rout[22]~feeder (
 // Equation(s):
-// \b32|rout[22]~feeder_combout  = ( \b32|r32_gen:0:registers|rout [22] )
+// \b32|rout[22]~feeder_combout  = \b32|r32_gen:0:registers|rout [22]
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(!\b32|r32_gen:0:registers|rout [22]),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|r32_gen:0:registers|rout [22]),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -7551,11 +7428,11 @@ cyclonev_lcell_comb \b32|rout[22]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|rout[22]~feeder .extended_lut = "off";
-defparam \b32|rout[22]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|rout[22]~feeder .lut_mask = 64'h3333333333333333;
 defparam \b32|rout[22]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N28
+// Location: FF_X64_Y11_N25
 dffeas \b32|rout[22] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|rout[22]~feeder_combout ),
@@ -7574,15 +7451,39 @@ defparam \b32|rout[22] .is_wysiwyg = "true";
 defparam \b32|rout[22] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N1
+// Location: LABCELL_X63_Y11_N30
+cyclonev_lcell_comb \LED[6]~reg0feeder (
+// Equation(s):
+// \LED[6]~reg0feeder_combout  = ( \b32|rout [22] )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\b32|rout [22]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\LED[6]~reg0feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \LED[6]~reg0feeder .extended_lut = "off";
+defparam \LED[6]~reg0feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \LED[6]~reg0feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y11_N31
 dffeas \LED[6]~reg0 (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
-	.d(gnd),
-	.asdata(\b32|rout [22]),
+	.d(\LED[6]~reg0feeder_combout ),
+	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -7593,7 +7494,7 @@ defparam \LED[6]~reg0 .is_wysiwyg = "true";
 defparam \LED[6]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X61_Y9_N22
+// Location: FF_X61_Y11_N59
 dffeas \aluin1[23] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -7612,7 +7513,7 @@ defparam \aluin1[23] .is_wysiwyg = "true";
 defparam \aluin1[23] .power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X60_Y8_N39
+// Location: MLABCELL_X60_Y11_N39
 cyclonev_lcell_comb \a32|Add0~29 (
 // Equation(s):
 // \a32|Add0~29_sumout  = SUM(( aluin1[23] ) + ( GND ) + ( \a32|Add0~26  ))
@@ -7636,7 +7537,7 @@ defparam \a32|Add0~29 .lut_mask = 64'h0000FFFF00000F0F;
 defparam \a32|Add0~29 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X60_Y8_N40
+// Location: FF_X60_Y11_N40
 dffeas \a32|out1[23] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\a32|Add0~29_sumout ),
@@ -7655,7 +7556,7 @@ defparam \a32|out1[23] .is_wysiwyg = "true";
 defparam \a32|out1[23] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X64_Y8_N39
+// Location: LABCELL_X63_Y11_N45
 cyclonev_lcell_comb \reginput[23]~feeder (
 // Equation(s):
 // \reginput[23]~feeder_combout  = ( \a32|out1 [23] )
@@ -7679,7 +7580,7 @@ defparam \reginput[23]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \reginput[23]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X64_Y8_N41
+// Location: FF_X63_Y11_N46
 dffeas \reginput[23] (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\reginput[23]~feeder_combout ),
@@ -7698,7 +7599,7 @@ defparam \reginput[23] .is_wysiwyg = "true";
 defparam \reginput[23] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N27
+// Location: LABCELL_X64_Y11_N3
 cyclonev_lcell_comb \b32|regin[0][23]~feeder (
 // Equation(s):
 // \b32|regin[0][23]~feeder_combout  = ( reginput[23] )
@@ -7722,7 +7623,7 @@ defparam \b32|regin[0][23]~feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \b32|regin[0][23]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N28
+// Location: FF_X64_Y11_N5
 dffeas \b32|regin[0][23] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|regin[0][23]~feeder_combout ),
@@ -7741,17 +7642,17 @@ defparam \b32|regin[0][23] .is_wysiwyg = "true";
 defparam \b32|regin[0][23] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X63_Y8_N3
+// Location: LABCELL_X64_Y11_N15
 cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[23]~feeder (
 // Equation(s):
-// \b32|r32_gen:0:registers|rout[23]~feeder_combout  = ( \b32|regin[0][23]~q  )
+// \b32|r32_gen:0:registers|rout[23]~feeder_combout  = \b32|regin[0][23]~q 
 
-	.dataa(gnd),
+	.dataa(!\b32|regin[0][23]~q ),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\b32|regin[0][23]~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -7761,13 +7662,13 @@ cyclonev_lcell_comb \b32|r32_gen:0:registers|rout[23]~feeder (
 	.shareout());
 // synopsys translate_off
 defparam \b32|r32_gen:0:registers|rout[23]~feeder .extended_lut = "off";
-defparam \b32|r32_gen:0:registers|rout[23]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \b32|r32_gen:0:registers|rout[23]~feeder .lut_mask = 64'h5555555555555555;
 defparam \b32|r32_gen:0:registers|rout[23]~feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X63_Y8_N4
+// Location: FF_X64_Y11_N16
 dffeas \b32|r32_gen:0:registers|rout[23] (
-	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
+	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\b32|r32_gen:0:registers|rout[23]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
@@ -7784,7 +7685,7 @@ defparam \b32|r32_gen:0:registers|rout[23] .is_wysiwyg = "true";
 defparam \b32|r32_gen:0:registers|rout[23] .power_up = "low";
 // synopsys translate_on
 
-// Location: FF_X61_Y9_N43
+// Location: FF_X61_Y11_N46
 dffeas \b32|rout[23] (
 	.clk(!\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(gnd),
@@ -7803,7 +7704,7 @@ defparam \b32|rout[23] .is_wysiwyg = "true";
 defparam \b32|rout[23] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X67_Y13_N33
+// Location: LABCELL_X67_Y13_N42
 cyclonev_lcell_comb \LED[7]~reg0feeder (
 // Equation(s):
 // \LED[7]~reg0feeder_combout  = ( \b32|rout [23] )
@@ -7827,7 +7728,7 @@ defparam \LED[7]~reg0feeder .lut_mask = 64'h00000000FFFFFFFF;
 defparam \LED[7]~reg0feeder .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X67_Y13_N34
+// Location: FF_X67_Y13_N43
 dffeas \LED[7]~reg0 (
 	.clk(\FPGA_CLK_50~inputCLKENA0_outclk ),
 	.d(\LED[7]~reg0feeder_combout ),
@@ -7846,7 +7747,7 @@ defparam \LED[7]~reg0 .is_wysiwyg = "true";
 defparam \LED[7]~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: IOIBUF_X21_Y61_N18
+// Location: IOIBUF_X7_Y0_N18
 cyclonev_io_ibuf \FPGA_CLK2_50~input (
 	.i(FPGA_CLK2_50),
 	.ibar(gnd),
@@ -7857,7 +7758,7 @@ defparam \FPGA_CLK2_50~input .bus_hold = "false";
 defparam \FPGA_CLK2_50~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X44_Y0_N1
+// Location: IOIBUF_X68_Y10_N61
 cyclonev_io_ibuf \FPGA_CLK3_50~input (
 	.i(FPGA_CLK3_50),
 	.ibar(gnd),
@@ -8924,7 +8825,7 @@ defparam \GPIO_1[35]~input .bus_hold = "false";
 defparam \GPIO_1[35]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X58_Y3_N0
+// Location: LABCELL_X15_Y59_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

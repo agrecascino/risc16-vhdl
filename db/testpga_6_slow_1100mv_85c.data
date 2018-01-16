@@ -6,11 +6,11 @@ TIMINGDATA
 ARCDATA
 pos_FPGA_CLK_50__LED[0]__delay:
 CELL_RISE( scalar ) {
-VALUES ("7.134");
+VALUES ("7.379");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("7.134");
+VALUES ("7.379");
 }
 
 ENDARCDATA
@@ -18,11 +18,11 @@ ENDARCDATA
 ARCDATA
 pos_FPGA_CLK_50__LED[1]__delay:
 CELL_RISE( scalar ) {
-VALUES ("7.525");
+VALUES ("7.697");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("7.525");
+VALUES ("7.697");
 }
 
 ENDARCDATA
@@ -30,11 +30,11 @@ ENDARCDATA
 ARCDATA
 pos_FPGA_CLK_50__LED[2]__delay:
 CELL_RISE( scalar ) {
-VALUES ("7.336");
+VALUES ("6.969");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("7.336");
+VALUES ("6.969");
 }
 
 ENDARCDATA
@@ -42,11 +42,11 @@ ENDARCDATA
 ARCDATA
 pos_FPGA_CLK_50__LED[3]__delay:
 CELL_RISE( scalar ) {
-VALUES ("6.988");
+VALUES ("7.520");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("6.988");
+VALUES ("7.520");
 }
 
 ENDARCDATA
@@ -66,11 +66,11 @@ ENDARCDATA
 ARCDATA
 pos_FPGA_CLK_50__LED[5]__delay:
 CELL_RISE( scalar ) {
-VALUES ("7.106");
+VALUES ("7.429");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("7.106");
+VALUES ("7.429");
 }
 
 ENDARCDATA
@@ -78,11 +78,11 @@ ENDARCDATA
 ARCDATA
 pos_FPGA_CLK_50__LED[6]__delay:
 CELL_RISE( scalar ) {
-VALUES ("7.222");
+VALUES ("7.356");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("7.222");
+VALUES ("7.356");
 }
 
 ENDARCDATA
@@ -90,11 +90,11 @@ ENDARCDATA
 ARCDATA
 pos_FPGA_CLK_50__LED[7]__delay:
 CELL_RISE( scalar ) {
-VALUES ("7.023");
+VALUES ("7.021");
 }
 
 CELL_FALL( scalar ) {
-VALUES ("7.023");
+VALUES ("7.021");
 }
 
 ENDARCDATA

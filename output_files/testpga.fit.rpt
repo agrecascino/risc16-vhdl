@@ -1,6 +1,6 @@
 Fitter report for testpga
-Wed Jan 10 10:25:21 2018
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Sun Jan 14 18:57:53 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -45,7 +45,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -53,19 +53,20 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jan 10 10:25:21 2018       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Fitter Status                   ; Successful - Sun Jan 14 18:57:53 2018       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; testpga                                     ;
 ; Top-level Entity Name           ; de0_nano_soc_baseline                       ;
 ; Family                          ; Cyclone V                                   ;
@@ -108,7 +109,7 @@ refer to the applicable agreement for further details.
 ; Auto RAM to MLAB Conversion                                                ; On                                    ; On                                    ;
 ; Equivalent RAM and MLAB Power Up                                           ; Auto                                  ; Auto                                  ;
 ; Equivalent RAM and MLAB Paused Read Capabilities                           ; Care                                  ; Care                                  ;
-; Power Optimization During Fitting                                          ; Normal compilation                    ; Normal compilation                    ;
+; PowerPlay Power Optimization During Fitting                                ; Normal compilation                    ; Normal compilation                    ;
 ; SSN Optimization                                                           ; Off                                   ; Off                                   ;
 ; Optimize Timing                                                            ; Normal compilation                    ; Normal compilation                    ;
 ; Optimize Timing for ECOs                                                   ; Off                                   ; Off                                   ;
@@ -155,14 +156,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
-;     Processor 3            ;   0.5%      ;
-;     Processor 4            ;   0.5%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processor 3            ;   0.7%      ;
+;     Processor 4            ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -460,7 +461,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testpga.pin.
+The pin-out file can be found in /root/fpgamess/output_files/testpga.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -470,12 +471,12 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 39 / 15,880        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 39                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 74 / 15,880        ; < 1 % ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 77 / 15,880        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 13                 ;       ;
 ;         [b] ALMs used for LUT logic                         ; 1                  ;       ;
-;         [c] ALMs used for registers                         ; 60                 ;       ;
+;         [c] ALMs used for registers                         ; 63                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 35 / 15,880        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 38 / 15,880        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 15,880         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -484,8 +485,8 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 17 / 1,588         ; 1 %   ;
-;     -- Logic LABs                                           ; 17                 ;       ;
+; Total LABs:  partially or completely used                   ; 15 / 1,588         ; < 1 % ;
+;     -- Logic LABs                                           ; 15                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 26                 ;       ;
@@ -494,19 +495,19 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ;     -- 5 input functions                                    ; 0                  ;       ;
 ;     -- 4 input functions                                    ; 0                  ;       ;
 ;     -- <=3 input functions                                  ; 26                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 92                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 88                 ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 154                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 145 / 31,760       ; < 1 % ;
-;         -- Secondary logic registers                        ; 9 / 31,760         ; < 1 % ;
+;         -- Primary logic registers                          ; 151 / 31,760       ; < 1 % ;
+;         -- Secondary logic registers                        ; 3 / 31,760         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 154                ;       ;
 ;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 110 / 314          ; 35 %  ;
-;     -- Clock pins                                           ; 4 / 6              ; 67 %  ;
+;     -- Clock pins                                           ; 3 / 6              ; 50 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 21             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; Hard processor system peripheral utilization                ;                    ;       ;
@@ -558,10 +559,10 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.6% / 0.6% / 0.6% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.5% / 0.5% / 0.4% ;       ;
 ; Maximum fan-out                                             ; 154                ;       ;
 ; Highest non-global fan-out                                  ; 50                 ;       ;
-; Total fan-out                                               ; 728                ;       ;
+; Total fan-out                                               ; 724                ;       ;
 ; Average fan-out                                             ; 1.25               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
@@ -573,12 +574,12 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 39 / 15880 ( < 1 % )  ; 0 / 15880 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 39                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 74 / 15880 ( < 1 % )  ; 0 / 15880 ( 0 % )              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 77 / 15880 ( < 1 % )  ; 0 / 15880 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 13                    ; 0                              ;
 ;         [b] ALMs used for LUT logic                         ; 1                     ; 0                              ;
-;         [c] ALMs used for registers                         ; 60                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 63                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 35 / 15880 ( < 1 % )  ; 0 / 15880 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 38 / 15880 ( < 1 % )  ; 0 / 15880 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 15880 ( 0 % )     ; 0 / 15880 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -587,8 +588,8 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 17 / 1588 ( 1 % )     ; 0 / 1588 ( 0 % )               ;
-;     -- Logic LABs                                           ; 17                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 15 / 1588 ( < 1 % )   ; 0 / 1588 ( 0 % )               ;
+;     -- Logic LABs                                           ; 15                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Combinational ALUT usage for logic                          ; 26                    ; 0                              ;
@@ -597,15 +598,15 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ;     -- 5 input functions                                    ; 0                     ; 0                              ;
 ;     -- 4 input functions                                    ; 0                     ; 0                              ;
 ;     -- <=3 input functions                                  ; 26                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 92                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 88                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 145 / 31760 ( < 1 % ) ; 0 / 31760 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 9 / 31760 ( < 1 % )   ; 0 / 31760 ( 0 % )              ;
+;         -- Primary logic registers                          ; 151 / 31760 ( < 1 % ) ; 0 / 31760 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 3 / 31760 ( < 1 % )   ; 0 / 31760 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 154                   ; 0                              ;
 ;         -- Routing optimization registers                   ; 0                     ; 0                              ;
@@ -625,7 +626,7 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 728                   ; 0                              ;
+;     -- Total Connections                                    ; 724                   ; 0                              ;
 ;     -- Registered Connections                               ; 234                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
@@ -659,8 +660,8 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; ADC_SDO      ; AD4   ; 3A       ; 6            ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; FPGA_CLK2_50 ; C12   ; 8A       ; 21           ; 61           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; FPGA_CLK3_50 ; AD17  ; 4A       ; 44           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; FPGA_CLK2_50 ; AA11  ; 3A       ; 7            ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; FPGA_CLK3_50 ; Y19   ; 5A       ; 68           ; 10           ; 60           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; FPGA_CLK_50  ; V11   ; 3B       ; 15           ; 0            ; 0            ; 154                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; KEY[0]       ; AH17  ; 4A       ; 46           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]       ; AH16  ; 4A       ; 46           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
@@ -793,17 +794,17 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
 +----------+------------------+---------------+--------------+---------------+
 ; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
-; 3A       ; 10 / 16 ( 63 % ) ; 3.3V          ; --           ; 3.3V          ;
+; 3A       ; 11 / 16 ( 69 % ) ; 3.3V          ; --           ; 3.3V          ;
 ; 3B       ; 31 / 32 ( 97 % ) ; 3.3V          ; --           ; 3.3V          ;
-; 4A       ; 56 / 68 ( 82 % ) ; 3.3V          ; --           ; 3.3V          ;
-; 5A       ; 8 / 16 ( 50 % )  ; 3.3V          ; --           ; 3.3V          ;
+; 4A       ; 55 / 68 ( 81 % ) ; 3.3V          ; --           ; 3.3V          ;
+; 5A       ; 9 / 16 ( 56 % )  ; 3.3V          ; --           ; 3.3V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7A       ; 0 / 19 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7B       ; 0 / 22 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7C       ; 0 / 12 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7D       ; 0 / 14 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 5 / 13 ( 38 % )  ; 3.3V          ; --           ; 3.3V          ;
+; 8A       ; 4 / 13 ( 31 % )  ; 3.3V          ; --           ; 3.3V          ;
 +----------+------------------+---------------+--------------+---------------+
 
 
@@ -847,7 +848,7 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ; AA8      ; 36         ; 3A             ; ^DCLK                           ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AA9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA10     ;            ; 3A             ; VCCPD3A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
-; AA11     ; 50         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA11     ; 50         ; 3A             ; FPGA_CLK2_50                    ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA12     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AA13     ; 98         ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA14     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
@@ -908,7 +909,7 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ; AD14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD15     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD16     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
-; AD17     ; 113        ; 4A             ; FPGA_CLK3_50                    ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD17     ; 113        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD18     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AD19     ; 119        ; 4A             ; GPIO_1[22]                      ; bidir  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AD20     ; 127        ; 4A             ; GPIO_1[25]                      ; bidir  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -1069,7 +1070,7 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ; C9       ; 367        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C10      ; 365        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C11      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; C12      ; 382        ; 8A             ; FPGA_CLK2_50                    ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C12      ; 382        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C13      ; 354        ; 7C             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C14      ; 348        ; 7B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C15      ; 340        ; 7B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1476,7 +1477,7 @@ The pin-out file can be found in /home/arecascino/risc16-vhdl/output_files/testp
 ; Y16      ; 175        ; 5A             ; LED[6]                          ; output ; 3.3-V LVTTL  ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; Y17      ; 171        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y18      ; 173        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; Y19      ; 169        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; Y19      ; 169        ; 5A             ; FPGA_CLK3_50                    ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; Y20      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y21      ;            ; 5A             ; VCCPD5A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; Y24      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1604,10 +1605,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node       ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name           ; Library Name ;
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+-----------------------+--------------+
-; |de0_nano_soc_baseline           ; 39.0 (16.0)          ; 73.0 (26.5)                      ; 34.0 (10.5)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (2)              ; 154 (57)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 110  ; 0            ; |de0_nano_soc_baseline                                        ; de0_nano_soc_baseline ; work         ;
+; |de0_nano_soc_baseline           ; 39.0 (16.0)          ; 76.0 (29.0)                      ; 37.0 (13.0)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (2)              ; 154 (57)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 110  ; 0            ; |de0_nano_soc_baseline                                        ; de0_nano_soc_baseline ; work         ;
 ;    |alu32:a32|                   ; 12.0 (12.0)          ; 12.0 (12.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 24 (24)             ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|alu32:a32                              ; alu32                 ; work         ;
-;    |regbank32:b32|               ; 11.0 (5.0)           ; 34.5 (23.0)                      ; 23.5 (18.0)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 73 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|regbank32:b32                          ; regbank32             ; work         ;
-;       |r32:\r32_gen:0:registers| ; 6.0 (6.0)            ; 11.5 (11.5)                      ; 5.5 (5.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|regbank32:b32|r32:\r32_gen:0:registers ; r32                   ; work         ;
+;    |regbank32:b32|               ; 11.0 (5.0)           ; 35.0 (24.0)                      ; 24.0 (19.0)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 73 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|regbank32:b32                          ; regbank32             ; work         ;
+;       |r32:\r32_gen:0:registers| ; 6.0 (6.0)            ; 11.0 (11.0)                      ; 5.0 (5.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |de0_nano_soc_baseline|regbank32:b32|r32:\r32_gen:0:registers ; r32                   ; work         ;
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1837,15 +1838,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                 ;
-+-------------------------+---------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                    ; Location      ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------+---------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; FPGA_CLK_50             ; PIN_V11       ; 154     ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; enable                  ; FF_X60_Y9_N56 ; 50      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; regbank32:b32|regclr[0] ; FF_X63_Y8_N41 ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+-------------------------+---------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                  ;
++-------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                    ; Location       ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; FPGA_CLK_50             ; PIN_V11        ; 154     ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; enable                  ; FF_X60_Y12_N50 ; 50      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; regbank32:b32|regclr[0] ; FF_X64_Y11_N29 ; 24      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -1862,14 +1863,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 122 / 130,276 ( < 1 % ) ;
+; Block interconnects                         ; 115 / 130,276 ( < 1 % ) ;
 ; C12 interconnects                           ; 0 / 6,848 ( 0 % )       ;
-; C2 interconnects                            ; 25 / 51,436 ( < 1 % )   ;
-; C4 interconnects                            ; 10 / 25,120 ( < 1 % )   ;
+; C2 interconnects                            ; 16 / 51,436 ( < 1 % )   ;
+; C4 interconnects                            ; 3 / 25,120 ( < 1 % )    ;
 ; DQS bus muxes                               ; 0 / 19 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 19 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 19 ( 0 % )          ;
-; Direct links                                ; 44 / 130,276 ( < 1 % )  ;
+; Direct links                                ; 48 / 130,276 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1925,13 +1926,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 12 ( 0 % )          ;
-; Local interconnects                         ; 45 / 31,760 ( < 1 % )   ;
+; Local interconnects                         ; 52 / 31,760 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 72 ( 0 % )          ;
 ; R14 interconnects                           ; 0 / 6,046 ( 0 % )       ;
 ; R14/C12 interconnect drivers                ; 0 / 8,584 ( 0 % )       ;
-; R3 interconnects                            ; 38 / 56,712 ( < 1 % )   ;
-; R6 interconnects                            ; 38 / 131,000 ( < 1 % )  ;
-; Spine clocks                                ; 2 / 150 ( 1 % )         ;
+; R3 interconnects                            ; 28 / 56,712 ( < 1 % )   ;
+; R6 interconnects                            ; 37 / 131,000 ( < 1 % )  ;
+; Spine clocks                                ; 1 / 150 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 6,650 ( 0 % )       ;
 +---------------------------------------------+-------------------------+
 
@@ -2155,18 +2156,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
+; FPGA_CLK_50     ; FPGA_CLK_50          ; 8.6               ;
++-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details              ;
-+-----------------+----------------------+-------------------+
-; Source Register ; Destination Register ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; enable          ; alu32:a32|out1[23]   ; 0.119             ;
-+-----------------+----------------------+-------------------+
-Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
++-----------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                         ;
++-------------------------------------------------+-------------------------------------------------+-------------------+
+; Source Register                                 ; Destination Register                            ; Delay Added in ns ;
++-------------------------------------------------+-------------------------------------------------+-------------------+
+; regbank32:b32|regin[0][22]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[22] ; 0.246             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[22] ; regbank32:b32|rout[22]                          ; 0.246             ;
+; regbank32:b32|regin[0][20]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[20] ; 0.246             ;
+; regbank32:b32|regin[0][18]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[18] ; 0.246             ;
+; regbank32:b32|regin[0][16]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[16] ; 0.246             ;
+; regbank32:b32|regin[0][15]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[15] ; 0.246             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[14] ; regbank32:b32|rout[14]                          ; 0.246             ;
+; regbank32:b32|regin[0][12]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[12] ; 0.246             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[12] ; regbank32:b32|rout[12]                          ; 0.246             ;
+; regbank32:b32|regin[0][11]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[11] ; 0.246             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[11] ; regbank32:b32|rout[11]                          ; 0.246             ;
+; regbank32:b32|regin[0][9]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[9]  ; 0.246             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[9]  ; regbank32:b32|rout[9]                           ; 0.246             ;
+; regbank32:b32|regin[0][7]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[7]  ; 0.246             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[7]  ; regbank32:b32|rout[7]                           ; 0.246             ;
+; regbank32:b32|regin[0][4]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[4]  ; 0.246             ;
+; regbank32:b32|regin[0][2]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[2]  ; 0.246             ;
+; regbank32:b32|regin[0][1]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[1]  ; 0.246             ;
+; regbank32:b32|regin[0][23]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[23] ; 0.233             ;
+; regbank32:b32|regin[0][21]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[21] ; 0.233             ;
+; regbank32:b32|regin[0][19]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[19] ; 0.233             ;
+; regbank32:b32|regin[0][17]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[17] ; 0.233             ;
+; regbank32:b32|regin[0][13]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[13] ; 0.233             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[13] ; regbank32:b32|rout[13]                          ; 0.233             ;
+; regbank32:b32|regin[0][10]                      ; regbank32:b32|r32:\r32_gen:0:registers|rout[10] ; 0.233             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[10] ; regbank32:b32|rout[10]                          ; 0.233             ;
+; regbank32:b32|regin[0][8]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[8]  ; 0.233             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[8]  ; regbank32:b32|rout[8]                           ; 0.233             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[6]  ; regbank32:b32|rout[6]                           ; 0.233             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[5]  ; regbank32:b32|rout[5]                           ; 0.233             ;
+; regbank32:b32|regin[0][3]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[3]  ; 0.233             ;
+; regbank32:b32|regin[0][0]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[0]  ; 0.233             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[16] ; regbank32:b32|rout[16]                          ; 0.185             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[21] ; regbank32:b32|rout[21]                          ; 0.154             ;
+; regbank32:b32|regin[0][5]                       ; regbank32:b32|r32:\r32_gen:0:registers|rout[5]  ; 0.154             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[0]  ; regbank32:b32|rout[0]                           ; 0.141             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[1]  ; regbank32:b32|rout[1]                           ; 0.132             ;
+; regbank32:b32|r32:\r32_gen:0:registers|rout[2]  ; regbank32:b32|rout[2]                           ; 0.120             ;
+; enable                                          ; alu32:a32|out1[23]                              ; 0.058             ;
++-------------------------------------------------+-------------------------------------------------+-------------------+
+Note: This table only shows the top 39 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2197,20 +2238,20 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "CLOCK2_50" is assigned to location or region, but does not exist in design
     Warning (15706): Node "CLOCK3_50" is assigned to location or region, but does not exist in design
     Warning (15706): Node "CLOCK_50" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X57_Y0 to location X68_Y11
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X57_Y12 to location X68_Y23
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.56 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.62 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2218,106 +2259,106 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169064): Following 89 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin ARDUINO_IO[0] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[1] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[2] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[3] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[4] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[5] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[6] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[7] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[8] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[9] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[10] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[11] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[12] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[13] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[14] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_IO[15] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 12
-    Info (169065): Pin ARDUINO_RESET_N has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 13
-    Info (169065): Pin GPIO_0[0] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[1] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[2] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[3] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[4] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[5] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[6] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[7] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[8] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[9] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[10] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[11] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[12] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[13] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[14] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[15] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[16] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[17] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[18] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[19] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[20] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[21] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[22] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[23] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[24] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[25] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[26] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[27] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[28] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[29] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[30] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[31] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[32] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[33] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[34] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_0[35] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 14
-    Info (169065): Pin GPIO_1[0] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[1] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[2] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[3] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[4] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[5] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[6] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[7] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[8] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[9] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[10] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[11] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[12] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[13] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[14] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[15] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[16] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[17] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[18] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[19] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[20] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[21] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[22] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[23] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[24] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[25] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[26] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[27] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[28] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[29] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[30] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[31] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[32] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[33] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[34] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-    Info (169065): Pin GPIO_1[35] has a permanently disabled output enable File: /home/arecascino/risc16-vhdl/de0_nano_soc_baseline.vhdl Line: 15
-Info (144001): Generated suppressed messages file /home/arecascino/risc16-vhdl/output_files/testpga.fit.smsg
+    Info (169065): Pin ARDUINO_IO[0] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[1] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[2] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[3] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[4] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[5] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[6] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[7] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[8] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[9] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[10] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[11] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[12] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[13] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[14] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_IO[15] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 12
+    Info (169065): Pin ARDUINO_RESET_N has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 13
+    Info (169065): Pin GPIO_0[0] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[1] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[2] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[3] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[4] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[5] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[6] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[7] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[8] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[9] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[10] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[11] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[12] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[13] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[14] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[15] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[16] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[17] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[18] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[19] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[20] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[21] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[22] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[23] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[24] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[25] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[26] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[27] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[28] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[29] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[30] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[31] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[32] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[33] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[34] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_0[35] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 14
+    Info (169065): Pin GPIO_1[0] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[1] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[2] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[3] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[4] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[5] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[6] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[7] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[8] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[9] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[10] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[11] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[12] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[13] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[14] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[15] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[16] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[17] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[18] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[19] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[20] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[21] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[22] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[23] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[24] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[25] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[26] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[27] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[28] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[29] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[30] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[31] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[32] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[33] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[34] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+    Info (169065): Pin GPIO_1[35] has a permanently disabled output enable File: /root/fpgamess/de0_nano_soc_baseline.vhdl Line: 15
+Info (144001): Generated suppressed messages file /root/fpgamess/output_files/testpga.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 2266 megabytes
-    Info: Processing ended: Wed Jan 10 10:25:22 2018
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 1888 megabytes
+    Info: Processing ended: Sun Jan 14 18:57:53 2018
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:51
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/arecascino/risc16-vhdl/output_files/testpga.fit.smsg.
+The suppressed messages can be found in /root/fpgamess/output_files/testpga.fit.smsg.
 
 

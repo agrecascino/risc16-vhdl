@@ -1,6 +1,6 @@
 Flow report for testpga
-Wed Jan 10 10:25:44 2018
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Sun Jan 14 18:58:13 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -29,19 +29,20 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Jan 10 10:25:44 2018       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Flow Status                     ; Successful - Sun Jan 14 18:58:13 2018       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; testpga                                     ;
 ; Top-level Entity Name           ; de0_nano_soc_baseline                       ;
 ; Family                          ; Cyclone V                                   ;
@@ -67,7 +68,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/10/2018 10:24:41 ;
+; Start date & time ; 01/14/2018 18:57:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; testpga             ;
 +-------------------+---------------------+
@@ -78,7 +79,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------+----------------------------------------+---------------+-----------------------+-----------------------------------+
 ; Assignment Name                        ; Value                                  ; Default Value ; Entity Name           ; Section Id                        ;
 +----------------------------------------+----------------------------------------+---------------+-----------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                  ; 220295154615787.151559788127811        ; --            ; --                    ; --                                ;
+; COMPILER_SIGNATURE_ID                  ; 127846691422327.151597422316299        ; --            ; --                    ; --                                ;
 ; EDA_BOARD_DESIGN_BOUNDARY_SCAN_TOOL    ; BSDL (Boundary Scan)                   ; <None>        ; --                    ; --                                ;
 ; EDA_BOARD_DESIGN_SIGNAL_INTEGRITY_TOOL ; HSPICE (Signal Integrity)              ; <None>        ; --                    ; --                                ;
 ; EDA_BOARD_DESIGN_SYMBOL_TOOL           ; ViewDraw (Symbol)                      ; <None>        ; --                    ; --                                ;
@@ -113,26 +114,26 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 1198 MB             ; 00:00:33                           ;
-; Fitter                    ; 00:00:26     ; 1.0                     ; 2266 MB             ; 00:00:42                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 1072 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1259 MB             ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 1263 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:51     ; --                      ; --                  ; 00:01:27                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 1084 MB             ; 00:00:36                           ;
+; Fitter                    ; 00:00:33     ; 1.0                     ; 1888 MB             ; 00:00:51                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 967 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.1                     ; 1152 MB             ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 1156 MB             ; 00:00:03                           ;
+; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:42                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                ;
-+---------------------------+-----------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname      ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+-----------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; localhost.localdomain ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; localhost.localdomain ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; localhost.localdomain ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; localhost.localdomain ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer        ; localhost.localdomain ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+-----------------------+-------------+-------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++---------------------------+------------------+---------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name ; OS Version ; Processor type ;
++---------------------------+------------------+---------+------------+----------------+
+; Analysis & Synthesis      ; serenity         ; \s \r   ; \s \r      ; x86_64         ;
+; Fitter                    ; serenity         ; \s \r   ; \s \r      ; x86_64         ;
+; Assembler                 ; serenity         ; \s \r   ; \s \r      ; x86_64         ;
+; TimeQuest Timing Analyzer ; serenity         ; \s \r   ; \s \r      ; x86_64         ;
+; EDA Netlist Writer        ; serenity         ; \s \r   ; \s \r      ; x86_64         ;
++---------------------------+------------------+---------+------------+----------------+
 
 
 ------------

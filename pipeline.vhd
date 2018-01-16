@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 library work;
 use work.all;
-architecture r32 of de0_nano_soc_baseline is
+architecture risc32 of de0_nano_soc_baseline is
 	component regbank32
 	port(
 		clk : in std_logic;
@@ -59,8 +59,8 @@ architecture r32 of de0_nano_soc_baseline is
 	signal maccrdy : std_logic := '0';
 	signal pcin : std_logic_vector(31 downto 0);
 	signal pcout : std_logic_vector(31 downto 0);
-	signal pcenable : std_logic;
-	
+	signal pcenable : std_logic := '0';
+	for pc: r32 use entity work.r32(fallingregister32);
 begin
 	b32 : regbank32 port map(FPGA_CLK_50, enable, port1, port2, port3, reginput, regout1, regout2);
 	a32 : alu32 port map(FPGA_CLK_50, aluop, aluexcept, aluetype, aluin1, aluin2, aluout, alutop);
@@ -68,8 +68,7 @@ begin
 	pc  : r32 port map(FPGA_CLK_50, pcin, pcout, pcenable);
 	process(FPGA_CLK_50)
 	begin
-		if rising_edge(FPGA_CLK_50) then
-			
+		if rising_edge(FPGA_CLK_50) then			
 			port1 <= "0000";
 			port2 <= "0000";
 			enable <= '1';
@@ -80,4 +79,4 @@ begin
 			aluin2 <= x"00000001";
 		end if;
 	end process;
-end r32;
+end risc32;
