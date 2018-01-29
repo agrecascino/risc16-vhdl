@@ -592,6 +592,7 @@ set_global_assignment -name EDA_BOARD_DESIGN_BOUNDARY_SCAN_TOOL "BSDL (Boundary 
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT BSDL -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE decode.vhd
 set_global_assignment -name VHDL_FILE typelib.vhd
 set_global_assignment -name VHDL_FILE pipeline.vhd
 set_global_assignment -name VHDL_FILE de0_nano_soc_baseline.vhdl

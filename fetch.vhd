@@ -14,7 +14,7 @@ entity fetchunit is
 		jump : in std_logic;
 		pcin : in std_logic_vector(31 downto 0);
 		pcout : out std_logic_vector(31 downto 0);
-		pcset : out std_logic = '0';
+		pcset : out std_logic;
 		instruction : out std_logic_vector(31 downto 0)
 		);
 end fetchunit;

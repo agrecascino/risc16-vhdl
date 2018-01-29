@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for testpga
-Sun Jan 14 18:58:08 2018
+Sat Jan 27 22:00:38 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -98,14 +98,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.2%      ;
+;     Processor 2            ;   2.0%      ;
+;     Processor 3            ;   1.9%      ;
+;     Processor 4            ;   1.9%      ;
 +----------------------------+-------------+
 
 
@@ -123,7 +123,7 @@ agreement for further details.
 +-----------+-----------------+-------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name  ; Note ;
 +-----------+-----------------+-------------+------+
-; 196.0 MHz ; 196.0 MHz       ; FPGA_CLK_50 ;      ;
+; 156.1 MHz ; 156.1 MHz       ; FPGA_CLK_50 ;      ;
 +-----------+-----------------+-------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -139,7 +139,7 @@ HTML report is unavailable in plain text report export.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; FPGA_CLK_50 ; -2.051 ; -137.633      ;
+; FPGA_CLK_50 ; -2.703 ; -151.741      ;
 +-------------+--------+---------------+
 
 
@@ -148,7 +148,7 @@ HTML report is unavailable in plain text report export.
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; FPGA_CLK_50 ; 0.317 ; 0.000         ;
+; FPGA_CLK_50 ; 0.491 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -169,7 +169,7 @@ No paths to report.
 +-------------+--------+----------------------------+
 ; Clock       ; Slack  ; End Point TNS              ;
 +-------------+--------+----------------------------+
-; FPGA_CLK_50 ; -0.394 ; -91.053                    ;
+; FPGA_CLK_50 ; -2.636 ; -147.064                   ;
 +-------------+--------+----------------------------+
 
 
@@ -184,7 +184,7 @@ No synchronizer chains to report.
 +------------+-----------------+-------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
 +------------+-----------------+-------------+------+
-; 185.53 MHz ; 185.53 MHz      ; FPGA_CLK_50 ;      ;
+; 153.47 MHz ; 153.47 MHz      ; FPGA_CLK_50 ;      ;
 +------------+-----------------+-------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -194,7 +194,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; FPGA_CLK_50 ; -2.195 ; -128.703      ;
+; FPGA_CLK_50 ; -2.758 ; -152.701      ;
 +-------------+--------+---------------+
 
 
@@ -203,7 +203,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; FPGA_CLK_50 ; 0.343 ; 0.000         ;
+; FPGA_CLK_50 ; 0.436 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -224,7 +224,7 @@ No paths to report.
 +-------------+--------+---------------------------+
 ; Clock       ; Slack  ; End Point TNS             ;
 +-------------+--------+---------------------------+
-; FPGA_CLK_50 ; -0.394 ; -98.049                   ;
+; FPGA_CLK_50 ; -2.636 ; -151.786                  ;
 +-------------+--------+---------------------------+
 
 
@@ -239,7 +239,7 @@ No synchronizer chains to report.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; FPGA_CLK_50 ; -0.884 ; -48.844       ;
+; FPGA_CLK_50 ; -1.777 ; -74.060       ;
 +-------------+--------+---------------+
 
 
@@ -248,7 +248,7 @@ No synchronizer chains to report.
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; FPGA_CLK_50 ; 0.209 ; 0.000         ;
+; FPGA_CLK_50 ; 0.369 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -269,7 +269,7 @@ No paths to report.
 +-------------+--------+----------------------------+
 ; Clock       ; Slack  ; End Point TNS              ;
 +-------------+--------+----------------------------+
-; FPGA_CLK_50 ; -0.087 ; -9.883                     ;
+; FPGA_CLK_50 ; -2.636 ; -108.863                   ;
 +-------------+--------+----------------------------+
 
 
@@ -284,7 +284,7 @@ No synchronizer chains to report.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; FPGA_CLK_50 ; -0.780 ; -40.510       ;
+; FPGA_CLK_50 ; -1.722 ; -69.245       ;
 +-------------+--------+---------------+
 
 
@@ -293,7 +293,7 @@ No synchronizer chains to report.
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; FPGA_CLK_50 ; 0.213 ; 0.000         ;
+; FPGA_CLK_50 ; 0.308 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -314,7 +314,7 @@ No paths to report.
 +-------------+--------+---------------------------+
 ; Clock       ; Slack  ; End Point TNS             ;
 +-------------+--------+---------------------------+
-; FPGA_CLK_50 ; -0.086 ; -11.225                   ;
+; FPGA_CLK_50 ; -2.636 ; -109.150                  ;
 +-------------+--------+---------------------------+
 
 
@@ -329,10 +329,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -2.195   ; 0.209 ; N/A      ; N/A     ; -0.394              ;
-;  FPGA_CLK_50     ; -2.195   ; 0.209 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS  ; -137.633 ; 0.0   ; 0.0      ; 0.0     ; -98.049             ;
-;  FPGA_CLK_50     ; -137.633 ; 0.000 ; N/A      ; N/A     ; -98.049             ;
+; Worst-case Slack ; -2.758   ; 0.308 ; N/A      ; N/A     ; -2.636              ;
+;  FPGA_CLK_50     ; -2.758   ; 0.308 ; N/A      ; N/A     ; -2.636              ;
+; Design-wide TNS  ; -152.701 ; 0.0   ; 0.0      ; 0.0     ; -151.786            ;
+;  FPGA_CLK_50     ; -152.701 ; 0.000 ; N/A      ; N/A     ; -151.786            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -988,7 +988,7 @@ No synchronizer chains to report.
 +-------------+-------------+----------+----------+----------+----------+
 ; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------+-------------+----------+----------+----------+----------+
-; FPGA_CLK_50 ; FPGA_CLK_50 ; 0        ; 56       ; 397      ; 72       ;
+; FPGA_CLK_50 ; FPGA_CLK_50 ; 0        ; 56       ; 373      ; 0        ;
 +-------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -998,7 +998,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------+-------------+----------+----------+----------+----------+
 ; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------+-------------+----------+----------+----------+----------+
-; FPGA_CLK_50 ; FPGA_CLK_50 ; 0        ; 56       ; 397      ; 72       ;
+; FPGA_CLK_50 ; FPGA_CLK_50 ; 0        ; 56       ; 373      ; 0        ;
 +-------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1076,7 +1076,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Jan 14 18:58:01 2018
+    Info: Processing started: Sat Jan 27 22:00:25 2018
 Info: Command: quartus_sta testpga -c testpga
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1093,84 +1093,84 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.051
+Info (332146): Worst-case setup slack is -2.703
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.051            -137.633 FPGA_CLK_50 
-Info (332146): Worst-case hold slack is 0.317
+    Info (332119):    -2.703            -151.741 FPGA_CLK_50 
+Info (332146): Worst-case hold slack is 0.491
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.317               0.000 FPGA_CLK_50 
+    Info (332119):     0.491               0.000 FPGA_CLK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.394
+Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -91.053 FPGA_CLK_50 
+    Info (332119):    -2.636            -147.064 FPGA_CLK_50 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.195
+Info (332146): Worst-case setup slack is -2.758
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.195            -128.703 FPGA_CLK_50 
-Info (332146): Worst-case hold slack is 0.343
+    Info (332119):    -2.758            -152.701 FPGA_CLK_50 
+Info (332146): Worst-case hold slack is 0.436
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.343               0.000 FPGA_CLK_50 
+    Info (332119):     0.436               0.000 FPGA_CLK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.394
+Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -98.049 FPGA_CLK_50 
+    Info (332119):    -2.636            -151.786 FPGA_CLK_50 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.884
+Info (332146): Worst-case setup slack is -1.777
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.884             -48.844 FPGA_CLK_50 
-Info (332146): Worst-case hold slack is 0.209
+    Info (332119):    -1.777             -74.060 FPGA_CLK_50 
+Info (332146): Worst-case hold slack is 0.369
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.209               0.000 FPGA_CLK_50 
+    Info (332119):     0.369               0.000 FPGA_CLK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.087
+Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.087              -9.883 FPGA_CLK_50 
+    Info (332119):    -2.636            -108.863 FPGA_CLK_50 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.780
+Info (332146): Worst-case setup slack is -1.722
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.780             -40.510 FPGA_CLK_50 
-Info (332146): Worst-case hold slack is 0.213
+    Info (332119):    -1.722             -69.245 FPGA_CLK_50 
+Info (332146): Worst-case hold slack is 0.308
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.213               0.000 FPGA_CLK_50 
+    Info (332119):     0.308               0.000 FPGA_CLK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.086
+Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.086             -11.225 FPGA_CLK_50 
+    Info (332119):    -2.636            -109.150 FPGA_CLK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 1152 megabytes
-    Info: Processing ended: Sun Jan 14 18:58:08 2018
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 1175 megabytes
+    Info: Processing ended: Sat Jan 27 22:00:38 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:11
 
 

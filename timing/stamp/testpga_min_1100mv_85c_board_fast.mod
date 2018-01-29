@@ -23,7 +23,7 @@ MODEL
 */
 MODEL_VERSION "1.0";
 DESIGN "testpga";
-DATE "01/14/2018 18:58:11";
+DATE "01/27/2018 22:00:43";
 PROGRAM "Quartus Prime";
 
 
