@@ -60,23 +60,30 @@ architecture risc32 of de0_nano_soc_baseline is
 	signal pcin : std_logic_vector(31 downto 0);
 	signal pcout : std_logic_vector(31 downto 0);
 	signal pcenable : std_logic := '0';
+	signal decodedins :  std_logic_vector(31 downto 0) := x"00000000";
+	signal ivalid : std_logic := '0';
+	signal dexcept : std_logic := '0';
+	signal cfl : std_logic := '0';
+	signal wbreg : std_logic_vector(3 downto 0) := "0000";
+	signal cflid : std_logic_vector(3 downto 0) := "0000";
 	for pc: r32 use entity work.r32(fallingregister32);
 begin
 	b32 : regbank32 port map(FPGA_CLK_50, enable, port1, port2, port3, reginput, regout1, regout2);
 	a32 : alu32 port map(FPGA_CLK_50, aluop, aluexcept, aluetype, aluin1, aluin2, aluout, alutop);
 	mem : memctrl port map(FPGA_CLK_50, macclen, maccadd, maccwen, maccren, maccdat, maccuna, maccrdy);
 	pc  : r32 port map(FPGA_CLK_50, pcin, pcout, pcenable);
+	dec : decodeunit port map(FPGA_CLK_50, decodedins, ivalid, dexcept, aluop, port1, port2, port3, cfl, cflid);
 	process(FPGA_CLK_50)
 	begin
 		if rising_edge(FPGA_CLK_50) then			
-			port1 <= "0000";
-			port2 <= "0000";
+			--port1 <= "0000";
+			--port2 <= "0000";
 			enable <= '1';
 			reginput <= aluout;
 			led <= regout1(23 downto 16);
-			aluop(0) <= '1';
-			aluin1 <= regout1;
-			aluin2 <= x"00000001";
+			--aluop(0) <= '1';
+			--aluin1 <= regout1;
+			--aluin2 <= x"00000001";
 		end if;
 	end process;
 end risc32;

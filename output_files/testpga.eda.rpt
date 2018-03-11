@@ -1,5 +1,5 @@
 EDA Netlist Writer report for testpga
-Sat Jan 27 22:00:46 2018
+Sun Feb 25 15:45:54 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                                    ;
 +---------------------------------------+---------------------------------------+
-; EDA Netlist Writer Status             ; Successful - Sat Jan 27 22:00:46 2018 ;
+; EDA Netlist Writer Status             ; Successful - Sun Feb 25 15:45:54 2018 ;
 ; Revision Name                         ; testpga                               ;
 ; Top-level Entity Name                 ; de0_nano_soc_baseline                 ;
 ; Family                                ; Cyclone V                             ;
@@ -98,8 +98,8 @@ agreement for further details.
 ; Generated Files                                                                                     ;
 +-----------------------------------------------------------------------------------------------------+
 ; Board Signal Integrity                                                                              ;
-;     /root/fpgamess/board/hspice/5csema4_ac24_fpga_clk2_50_in.sp                                     ;
-;     /root/fpgamess/board/hspice/5csema4_e8_fpga_clk3_50_in.sp                                       ;
+;     /root/fpgamess/board/hspice/5csema4_y18_fpga_clk2_50_in.sp                                      ;
+;     /root/fpgamess/board/hspice/5csema4_l8_fpga_clk3_50_in.sp                                       ;
 ;     /root/fpgamess/board/hspice/5csema4_u9_adc_convst_out.sp                                        ;
 ;     /root/fpgamess/board/hspice/5csema4_v10_adc_sclk_out.sp                                         ;
 ;     /root/fpgamess/board/hspice/5csema4_ac4_adc_sdi_out.sp                                          ;
@@ -298,25 +298,25 @@ agreement for further details.
 ;     /root/fpgamess/board/hspice/5csema4_ac22_gpio_1_35__out.sp                                      ;
 ;     /root/fpgamess/board/hspice/5csema4_v11_fpga_clk_50_in.sp                                       ;
 ;     /root/fpgamess/board/hspice/lib/io_octrt_calibrated.lib                                         ;
+;     /root/fpgamess/board/hspice/lib/io_octrs_calibrated.lib                                         ;
 ;     /root/fpgamess/board/hspice/lib/output_delay_control.lib                                        ;
-;     /root/fpgamess/board/hspice/lib/lvds_vod_select.lib                                             ;
 ;     /root/fpgamess/board/hspice/lib/lvds_preemphasis_select.lib                                     ;
 ;     /root/fpgamess/board/hspice/lib/slew_rate_control.lib                                           ;
 ;     /root/fpgamess/board/hspice/lib/drive_select_io.lib                                             ;
-;     /root/fpgamess/board/hspice/lib/cv_ss.inc                                                       ;
+;     /root/fpgamess/board/hspice/lib/lvds_vod_select.lib                                             ;
 ;     /root/fpgamess/board/hspice/cir/lvds_input_load.inc                                             ;
-;     /root/fpgamess/board/hspice/lib/cv_tt.inc                                                       ;
 ;     /root/fpgamess/board/hspice/cir/io_buffer_octrt.inc                                             ;
 ;     /root/fpgamess/board/hspice/cir/lvds_oct_load.inc                                               ;
+;     /root/fpgamess/board/hspice/lib/package.lib                                                     ;
 ;     /root/fpgamess/board/hspice/cir/lvds_oct_rd.inc                                                 ;
-;     /root/fpgamess/board/hspice/lib/io_octrs_calibrated.lib                                         ;
 ;     /root/fpgamess/board/hspice/cir/lvds_output.inc                                                 ;
-;     /root/fpgamess/board/hspice/lib/io_load.lib                                                     ;
 ;     /root/fpgamess/board/hspice/cir/lvds_output_load.inc                                            ;
 ;     /root/fpgamess/board/hspice/cir/io_buffer.inc                                                   ;
-;     /root/fpgamess/board/hspice/lib/package.lib                                                     ;
+;     /root/fpgamess/board/hspice/lib/cv_tt.inc                                                       ;
 ;     /root/fpgamess/board/hspice/cir/io_buffer_load.inc                                              ;
+;     /root/fpgamess/board/hspice/lib/cv_ss.inc                                                       ;
 ;     /root/fpgamess/board/hspice/cir/io_buffer_octrs.inc                                             ;
+;     /root/fpgamess/board/hspice/lib/io_load.lib                                                     ;
 ;     /root/fpgamess/board/hspice/lib/cv_ff.inc                                                       ;
 ; Board Timing Analysis                                                                               ;
 ;     /root/fpgamess/timing/stamp//root/fpgamess/timing/stamp//testpga_6_1100mv_85c_board_slow.mod    ;
@@ -340,7 +340,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat Jan 27 22:00:40 2018
+    Info: Processing started: Sun Feb 25 15:45:51 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off testpga -c testpga
 Warning (125092): Tcl Script File ddr3.sip not found
     Info (125063): set_global_assignment -name SIP_FILE ddr3.sip
@@ -354,8 +354,8 @@ Info (199047): Generated files "/root/fpgamess/timing/stamp//testpga_min_1100mv_
 Info (199047): Generated files "/root/fpgamess/timing/stamp//testpga_board.mod" and "/root/fpgamess/timing/stamp//testpga_board.data"
 Warning (199059): Can't generate files for ViewDraw EDA tool -- device family not supported in ViewDraw Flow
 Info (199053): Generated 220 HSPICE Output files for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac24_fpga_clk2_50_in.sp for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_e8_fpga_clk3_50_in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_y18_fpga_clk2_50_in.sp for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_l8_fpga_clk3_50_in.sp for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_u9_adc_convst_out.sp for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v10_adc_sclk_out.sp for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac4_adc_sdi_out.sp for board level analysis
@@ -554,34 +554,34 @@ Info (199053): Generated 220 HSPICE Output files for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_ac22_gpio_1_35__out.sp for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/5csema4_v11_fpga_clk_50_in.sp for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_octrt_calibrated.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_octrs_calibrated.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/output_delay_control.lib for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/lvds_vod_select.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/lvds_preemphasis_select.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/slew_rate_control.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/drive_select_io.lib for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_ss.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/lvds_vod_select.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_input_load.inc for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_tt.inc for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer_octrt.inc for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_oct_load.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/package.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_oct_rd.inc for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_octrs_calibrated.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_output.inc for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_load.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/lvds_output_load.inc for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer.inc for board level analysis
-    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/package.lib for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_tt.inc for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer_load.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_ss.inc for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/cir/io_buffer_octrs.inc for board level analysis
+    Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/io_load.lib for board level analysis
     Info (199051): Generated HSPICE Output File /root/fpgamess/board/hspice/lib/cv_ff.inc for board level analysis
 Info: TOTAL BSCAN REGISTERS IS 399
 Info: TOTAL IO PAD COUNT IS 379
 Info: CYCLONE_V_5CSEMA4U23 has 333 JTAG SEQUENCE AVAILABLE
 Info (199065): Generated Boundary-Scan Description Language output file /root/fpgamess/board/bsd/5CSEMA4U23C6_pre.bsd for board-level analysis
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1155 megabytes
-    Info: Processing ended: Sat Jan 27 22:00:46 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 1153 megabytes
+    Info: Processing ended: Sun Feb 25 15:45:54 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

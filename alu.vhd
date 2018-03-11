@@ -19,21 +19,18 @@ begin
 	process(clk)
 		variable temporary : unsigned(63 downto 0);
 	begin
-		temporary := x"0000000000000000";
-		if falling_edge(clk) then
-			if op(0) = '1' then
+	if falling_edge(clk) then
+			if op = "00" then
 				temporary := (x"00000000" & unsigned(in1)) + unsigned(in2);
 				extend <= std_logic_vector(temporary(63 downto 32));
 				out1 <= std_logic_vector(temporary(31 downto 0));
+				except <= temporary(32);
 			end if;
-			if op(1) = '1' then
+			if op = "01" then
 				temporary := (x"00000000" & unsigned(in1)) - unsigned(in2);
 				extend <= std_logic_vector(temporary(63 downto 32));
 				out1 <= std_logic_vector(temporary(31 downto 0));
-			end if;
-			if temporary /= 0 then
-				except <= '1';
-				etype <= "00";
+				except <= temporary(32);
 			end if;
 		end if;
 	end process;
